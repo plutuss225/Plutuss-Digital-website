@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f4f6f7;
+        padding: 6em 4em;
+      }
+
+      /* ================= HERO ================= */
+      .hero-portfolio {
+        background: linear-gradient(135deg, #0f2f2d, #1f9c8a);
+        color: #fff;
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .hero-portfolio h1 {
+        font-size: 38px;
+        margin-bottom: 15px;
+      }
+
+      .hero-portfolio p {
+        max-width: 700px;
+        margin: auto;
+        opacity: 0.9;
+      }
+
+      /* ================= MAIN LAYOUT ================= */
+      .portfolio-container {
+        max-width: 1200px;
+        margin: -60px auto 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 30px;
+        padding: 0 20px;
+      }
+
+      /* ================= LEFT ================= */
+      .portfolio-left {
+        position: sticky;
+        top: 100px;
+      }
+
+      .info-card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      .info-card h3 {
+        color: #1f9c8a;
+        margin-bottom: 15px;
+      }
+
+      .info-card li {
+        margin-bottom: 10px;
+      }
+
+      /* ================= CONTACT ================= */
+      .contact-card {
+        margin-top: 20px;
+        padding: 25px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, #1f9c8a, #0f2f2d);
+        color: white;
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .contact-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .contact-card a {
+        display: inline-block;
+        margin-top: 12px;
+        background: white;
+        color: #1f9c8a;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+      }
+
+      /* ================= RIGHT ================= */
+      .portfolio-right {
+        background: #fff;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      .portfolio-right h2 {
+        font-size: 28px;
+      }
+
+      /* ================= SERVICES ================= */
+      .services-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin: 25px 0;
+      }
+
+      .services-list div {
+        background: #f9f9f9;
+        padding: 12px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      /* ICON STYLE */
+      .services-list i {
+        color: #1f9c8a;
+        font-size: 18px;
+      }
+
+      /* ================= SERVICE BOX ================= */
+      .services-detail {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .service-box {
+        background: #fff;
+        border-radius: 14px;
+        padding: 20px;
+        border-left: 4px solid #1f9c8a;
+        transition: 0.3s;
+      }
+
+      .service-box:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      /* ================= IMAGES ================= */
+      .portfolio-images {
+        margin: 30px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+      }
+
+      .portfolio-images img {
+        width: 100%;
+        border-radius: 12px;
+      }
+
+      /* ================= STATS ================= */
+      .stats {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0;
+      }
+
+      .stat-box {
+        text-align: center;
+      }
+
+      .stat-box h3 {
+        color: #1f9c8a;
+      }
+
+      /* ================= FAQ ================= */
+      .faq-item {
+        border-bottom: 1px solid #eee;
+        padding: 15px 0;
+        cursor: pointer;
+      }
+
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 200px;
+        margin-top: 10px;
+      }
+      .service-box:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        background: #1f9c8a;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="portfolio-section">
+      <div class="portfolio-container">
+        <!-- LEFT PANEL -->
+        <div class="portfolio-left">
+          <div class="info-card">
+            <h3>Project Information</h3>
+
+            <ul>
+              <li>
+                <strong>Client Type:</strong> Political Leaders & Commercial
+                Brands
+              </li>
+              <li>
+                <strong>Services:</strong> SEO, SMM, Branding, Web Development
+              </li>
+              <li>
+                <strong>Industry:</strong> Politics, Real Estate, Business
+              </li>
+              <li>
+                <strong>Campaign Type:</strong> Growth & Visibility Campaigns
+              </li>
+              <li><strong>Location:</strong> Maharashtra, India</li>
+            </ul>
+          </div>
+
+          <div class="contact-card">
+            <img src="team.jpg" alt="" />
+            <p>Plutuss Digital</p>
+            <span>Powering Digital Growth</span>
+            <a href="#">Contact Team</a>
+          </div>
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="portfolio-right">
+          <h2>
+            Driving Digital Influence Through Strategic Campaigns & Brand
+            Building
+          </h2>
+
+          <p class="desc">
+            Plutuss Digital is a results-driven digital marketing agency
+            specializing in political and commercial campaigns. We focus on
+            building strong digital identities, increasing audience engagement,
+            and delivering measurable results through innovative strategies.
+          </p>
+
+          <p class="highlight">
+            Trusted by influential leaders and growing brands, we execute
+            high-impact campaigns that strengthen public presence and accelerate
+            business growth.
+          </p>
+
+          <!-- SERVICES OVERVIEW -->
+          <div class="services-list">
+            <div>✔ Search Engine Optimization (SEO)</div>
+            <div>✔ Social Media Management (SMM)</div>
+            <div>✔ Content Creation (Graphics, Video, Reels)</div>
+            <div>✔ Branding & Design</div>
+            <div>✔ Website Development</div>
+            <div>✔ Performance Marketing (Ads & Campaigns)</div>
+          </div>
+
+          <!-- DETAILED SERVICES -->
+          <div class="services-detail">
+            <div class="service-box">
+              <h4>SEO</h4>
+              <p>
+                Optimizing websites to rank higher on search engines and drive
+                organic traffic with long-term growth strategies.
+              </p>
+            </div>
+
+            <div class="service-box">
+              <h4>SMM</h4>
+              <p>
+                Managing and growing social media platforms through consistent
+                content, engagement, and audience targeting.
+              </p>
+            </div>
+
+            <div class="service-box">
+              <h4>Content Creation</h4>
+              <p>
+                Creating impactful visual and video content tailored for
+                campaigns, branding, and audience engagement.
+              </p>
+            </div>
+
+            <div class="service-box">
+              <h4>Branding & Design</h4>
+              <p>
+                Developing strong visual identity, logos, creatives, and
+                campaign designs that leave lasting impressions.
+              </p>
+            </div>
+
+            <div class="service-box">
+              <h4>Web Development</h4>
+              <p>
+                Building modern, responsive websites that enhance user
+                experience and business credibility.
+              </p>
+            </div>
+
+            <div class="service-box">
+              <h4>Performance Marketing</h4>
+              <p>
+                Running targeted ad campaigns to maximize reach, conversions,
+                and ROI across digital platforms.
+              </p>
+            </div>
+          </div>
+
+          <!-- IMAGES -->
+          <div class="portfolio-images">
+            <img src="case-1.jpg" alt="" />
+            <img src="case-2.jpg" alt="" />
+          </div>
+
+          <!-- FAQ -->
+          <div class="faq">
+            <div class="faq-item active">
+              <div class="faq-question">
+                What services does Plutuss Digital offer?
+                <span class="icon">+</span>
+              </div>
+              <div class="faq-answer">
+                We provide SEO, social media management, branding, content
+                creation, website development, and performance marketing
+                solutions.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Do you specialize in political campaigns?
+                <span class="icon">+</span>
+              </div>
+              <div class="faq-answer">
+                Yes, we specialize in managing digital campaigns, public
+                engagement, and online presence for political leaders and
+                organizations.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                Why are client names confidential?
+                <span class="icon">+</span>
+              </div>
+              <div class="faq-answer">
+                Due to privacy agreements and campaign sensitivity, we maintain
+                strict confidentiality for all clients.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                What results can clients expect?
+                <span class="icon">+</span>
+              </div>
+              <div class="faq-answer">
+                Strong digital presence, increased engagement, higher reach, and
+                measurable campaign growth.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      const faqItems = document.querySelectorAll(".faq-item");
+
+      faqItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          // Close others (optional – keeps it clean)
+          faqItems.forEach((i) => {
+            if (i !== item) i.classList.remove("active");
+          });
+
+          // Toggle current
+          item.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

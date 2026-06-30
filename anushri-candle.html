@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anushri's Candles</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="anushri-style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="hamburger" id="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <div class="logo-container">
+        <a href="anushri-candle.html"
+          ><img src="anushri-logo.png" alt="Anushri's Candles" class="logo"
+        /></a>
+      </div>
+
+      <nav id="navMenu">
+        <a href="#home">Home</a>
+
+        <div class="dropdown">
+          <a href="#">Collection <i class="fa-solid fa-chevron-down"></i></a>
+
+          <div class="dropdown-menu">
+            <a href="#">Tea Light Candles</a>
+            <a href="#">Pillar Candles</a>
+            <a href="#">Jar / Container Candles</a>
+            <a href="#">Floating Candles</a>
+            <a href="#">Celebration Candles</a>
+            <a href="#">Urli Candles</a>
+          </div>
+        </div>
+
+        <a href="#new">New Arrival</a>
+      </nav>
+
+      <div class="other-links">
+        <a href="favorites.html" class="fav-btn">
+          <i class="fa-solid fa-heart"></i>
+        </a>
+
+        <a href="cart.html" class="cart-btn">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </div>
+    </header>
+    <section class="hero">
+      <!-- TEXT SIDE -->
+
+      <div class="hero-text">
+        <div class="text-slide active">
+          <h1>
+            Light Up<br />
+            Your Moments
+          </h1>
+
+          <p class="hero-desc">
+            Beautifully handcrafted candles designed to bring warmth and calming
+            fragrance into your home.
+          </p>
+
+          <a href="#" class="btn">Shop Collection</a>
+        </div>
+
+        <div class="text-slide">
+          <h1>
+            Elegant Fragrance<br />
+            For Every Space
+          </h1>
+
+          <p class="hero-desc">
+            Discover luxury candles crafted to create a peaceful and inviting
+            atmosphere in every room.
+          </p>
+
+          <a href="#" class="btn">Explore Candles</a>
+        </div>
+
+        <div class="text-slide">
+          <h1>
+            Handmade Candles<br />
+            Crafted With Care
+          </h1>
+
+          <p class="hero-desc">
+            Each candle is carefully made to fill your home with warmth, comfort
+            and beautiful aroma.
+          </p>
+
+          <a href="#" class="btn">View Collection</a>
+        </div>
+      </div>
+
+      <!-- IMAGE SIDE -->
+
+      <div class="hero-images">
+        <img src="hero-img-1.png" class="image-slide active image-1" />
+        <img src="hero-img-2.png" class="image-slide image-2" />
+        <img src="hero-img-3.png" class="image-slide image-3" />
+      </div>
+    </section>
+    <section class="shop" id="shop">
+      <h2 class="section-title">Our Candles</h2>
+
+      <p class="section-subtitle">
+        Handcrafted candles made to bring warmth, fragrance and elegance into
+        your home.
+      </p>
+
+      <div class="product-grid">
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+          <a href="product.html?id=mithai">
+            <div class="product-image">
+              <span class="sale-badge">Sale</span>
+              <img src="product-img-1.webp" alt="Mithai Box Candle" />
+            </div>
+          </a>
+
+          <div class="product-info">
+            <a href="product.html?id=mithai" class="product-link">
+              <h3 class="product-title">Mithai Box (Scent : Sandalwood)</h3>
+            </a>
+
+            <div class="rating">★ ★ ★ ★ ★ <span>(22)</span></div>
+
+            <div class="price">
+              <span class="old-price">Rs. 1,390.00</span>
+              <span class="new-price">Rs. 450.00</span>
+            </div>
+
+            <button
+              class="add-cart"
+              data-name="Mithai Box (Scent : Sandalwood)"
+              data-price="450"
+              data-image="product-img-1.webp"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+          <a href="product.html?id=netflix">
+            <div class="product-image">
+              <span class="sale-badge">Sale</span>
+              <img src="product-img-2.webp" />
+            </div>
+          </a>
+
+          <div class="product-info">
+            <a href="product.html?id=netflix" class="product-link">
+              <h3 class="product-title">
+                Netflix & Chill Candle (Caramel Popcorn Scent)
+              </h3>
+            </a>
+
+            <div class="rating">★ ★ ★ ★ ★ <span>(3)</span></div>
+
+            <div class="price">
+              <span class="old-price">Rs. 1,390.00</span>
+              <span class="new-price">Rs. 690.00</span>
+            </div>
+
+            <button
+              class="add-cart"
+              data-name="Netflix & Chill Candle (Caramel Popcorn Scent)"
+              data-price="690"
+              data-image="product-img-2.webp"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product-card">
+          <a href="product.html?id=dessert">
+            <div class="product-image">
+              <span class="sale-badge">Sale</span>
+              <img src="product-img-3.webp" />
+            </div>
+          </a>
+
+          <div class="product-info">
+            <a href="product.html?id=dessert" class="product-link">
+              <h3 class="product-title">Dessert Candles</h3>
+            </a>
+
+            <div class="rating">★ ★ ★ ★ ★ <span>(8)</span></div>
+
+            <div class="price">
+              <span class="old-price">Rs. 1,790.00</span>
+              <span class="new-price">Rs. 850.00</span>
+            </div>
+
+            <button
+              class="add-cart"
+              data-name="Dessert Candles"
+              data-price="850"
+              data-image="product-img-3.webp"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="product-card">
+          <a href="product.html?id=cupcake">
+            <div class="product-image">
+              <span class="sale-badge">Sale</span>
+              <img src="product-img-4.webp" />
+            </div>
+          </a>
+
+          <div class="product-info">
+            <a href="product.html?id=cupcake" class="product-link">
+              <h3 class="product-title">
+                Pack of 4 Cup Cake Candle Vanilla and Strawberry Scent
+              </h3>
+            </a>
+
+            <div class="rating">★ ★ ★ ★ ★ <span>(16)</span></div>
+
+            <div class="price">
+              <span class="old-price">Rs. 1,790.00</span>
+              <span class="new-price">Rs. 850.00</span>
+            </div>
+
+            <button
+              class="add-cart"
+              data-name="Pack of 4 Cup Cake Candle Vanilla and Strawberry Scent"
+              data-price="850"
+              data-image="product-img-4.webp"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 5 -->
+        <div class="product-card">
+          <a href="product.html?id=teddy">
+            <div class="product-image">
+              <span class="sale-badge">Sale</span>
+              <img src="product-img-5.webp" />
+            </div>
+          </a>
+
+          <div class="product-info">
+            <a href="product.html?id=teddy" class="product-link">
+              <h3 class="product-title">
+                Teddy's Treat Tower – Dessert-Inspired Decorative Scented Candle
+                (Vanilla Ice Cream Scent)
+              </h3>
+            </a>
+
+            <div class="rating">★ ★ ★ ★ ☆ <span>(15)</span></div>
+
+            <div class="price">
+              <span class="old-price">Rs. 1,790.00</span>
+              <span class="new-price">Rs. 850.00</span>
+            </div>
+
+            <button
+              class="add-cart"
+              data-name="Teddy's Treat Tower – Dessert-Inspired Decorative Scented Candle (Vanilla Ice Cream Scent)"
+              data-price="850"
+              data-image="product-img-5.webp"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 6 -->
+        <div class="product-card">
+          <a href="product.html?id=rasmalai">
+            <div class="product-image">
+              <span class="sale-badge">Sale</span>
+              <img src="product-img-6.webp" />
+            </div>
+          </a>
+
+          <div class="product-info">
+            <a href="product.html?id=rasmalai" class="product-link">
+              <h3 class="product-title">
+                Rasmalai Dessert Candle – Rose Scented Handmade Soy Wax Candle |
+                Luxury Sweet Treat Candle
+              </h3>
+            </a>
+
+            <div class="rating">★ ★ ★ ★ ★ <span>(2)</span></div>
+
+            <div class="price">
+              <span class="old-price">Rs. 1,790.00</span>
+              <span class="new-price">Rs. 850.00</span>
+            </div>
+
+            <button
+              class="add-cart"
+              data-name="Rasmalai Dessert Candle – Rose Scented Handmade Soy Wax Candle"
+              data-price="850"
+              data-image="product-img-6.webp"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 7 -->
+        <div class="product-card">
+          <a href="product.html?id=blueberry">
+            <div class="product-image">
+              <span class="sale-badge">Sale</span>
+              <img src="product-img-7.webp" />
+            </div>
+          </a>
+
+          <div class="product-info">
+            <a href="product.html?id=blueberry" class="product-link">
+              <h3 class="product-title">
+                Blueberry Crumble – Dessert-Inspired Soy Wax Candle | 300g
+              </h3>
+            </a>
+
+            <div class="rating">★ ★ ★ ★ ☆ <span>(42)</span></div>
+
+            <div class="price">
+              <span class="old-price">Rs. 1,790.00</span>
+              <span class="new-price">Rs. 850.00</span>
+            </div>
+
+            <button
+              class="add-cart"
+              data-name="Blueberry Crumble – Dessert-Inspired Soy Wax Candle | 300g"
+              data-price="850"
+              data-image="product-img-7.webp"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+
+        <!-- PRODUCT 8 -->
+        <div class="product-card">
+          <a href="product.html?id=espresso">
+            <div class="product-image">
+              <span class="sale-badge">Sale</span>
+              <img src="product-img-8.webp" />
+            </div>
+          </a>
+
+          <div class="product-info">
+            <a href="product.html?id=espresso" class="product-link">
+              <h3 class="product-title">Espresso Martini Candle</h3>
+            </a>
+
+            <div class="rating">★ ★ ★ ★ ★ <span>(24)</span></div>
+
+            <div class="price">
+              <span class="old-price">Rs. 1,790.00</span>
+              <span class="new-price">Rs. 850.00</span>
+            </div>
+
+            <button
+              class="add-cart"
+              data-name="Espresso Martini Candle"
+              data-price="850"
+              data-image="product-img-8.webp"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="subscribe-section">
+      <h2>Subscribe to our emails</h2>
+
+      <div class="email-box">
+        <input type="email" placeholder="Email" />
+        <button class="arrow-btn">→</button>
+      </div>
+
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </section>
+    <!-- CART OVERLAY -->
+    <div id="cart-overlay"></div>
+
+    <!-- CART DRAWER -->
+    <div id="cart-drawer">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="cart-close">&times;</button>
+      </div>
+
+      <div id="cart-items"></div>
+
+      <div class="cart-footer">
+        <h3>Total: ₹<span id="cart-total">0</span></h3>
+        <a href="cart.html" class="checkout-btn">Checkout</a>
+      </div>
+    </div>
+    <script src="anushri-script.js"></script>
+    <script src="products.js"></script>
+  </body>
+</html>

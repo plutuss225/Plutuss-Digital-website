@@ -1,0 +1,54 @@
+td select {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  background-color: inherit; /* 🔥 FIX */
+  appearance: none; /* optional cleaner look */
+}
+
+/* Apply color to BOTH */
+.present,
+.present select {
+  background-color: #c8f7c5 !important;
+}
+
+.absent,
+.absent select {
+  background-color: #f7c5c5 !important;
+}
+
+.weekoff,
+.weekoff select {
+  background-color: #ffe5b4 !important;
+}
+
+.halfday,
+.halfday select {
+  background-color: #c5d8f7 !important;
+}
+.late,
+.late select {
+  background-color: #fdff93 !important;
+}
+
+.table-container {
+  width: 100%;
+  height: 600px; /* 👈 IMPORTANT */
+  overflow: auto; /* 👈 BOTH X + Y scroll */
+}
+
+/* Smooth scroll (optional but nice) */
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+table {
+  border-collapse: collapse;
+  background: white;
+  table-layout: fixed;
+  width: max-content; /* 👈 THIS is REQUIRED */
+}
+th,
+td {
+  width: 150px;
+  min-width: 150px;
+}

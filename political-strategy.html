@@ -1,0 +1,2271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <style>
+      /* ================= GLOBAL ================= */
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #ffffff;
+        color: #0a2540;
+      }
+
+      /* =================================================
+   HERO (Marathi Section)
+================================================= */ /* Parliament Image */
+      .parliament {
+        width: 100%;
+        max-width: 900px;
+        display: block;
+        margin: 120px auto 60px auto;
+        filter: drop-shadow(0 30px 60px rgba(54, 155, 255, 0.15));
+      }
+
+      /* Marquee Section (Now Static Clean Strip) */
+      .marquee-wrapper {
+        width: 100%;
+        padding: 40px 0;
+        background: linear-gradient(135deg, #ffffff 0%, #f4f9ff 100%);
+        border-top: 1px solid rgba(54, 155, 255, 0.15);
+        border-bottom: 1px solid rgba(54, 155, 255, 0.15);
+      }
+
+      .marquee-track {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 60px;
+      }
+
+      /* Text Styling */
+      .marquee-item {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: #0a2540;
+        position: relative;
+      }
+
+      /* Blue divider dot */
+      .marquee-item:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: -35px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background: var(--accentShade);
+        border-radius: 50%;
+      }
+
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 140px 8%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(54, 155, 255, 0.15),
+          transparent 70%
+        );
+        top: -150px;
+        right: -100px;
+        z-index: 0;
+      }
+
+      .hero-content {
+        max-width: 600px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-content h1 {
+        line-height: 1.8;
+        color: var(--baseShade1);
+        font-size: 58px;
+        font-weight: 800;
+        margin-bottom: 25px;
+      }
+
+      .hero-content p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #000000;
+        margin-bottom: 40px;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
+        gap: 3em;
+      }
+
+      .btn-primary {
+        padding: 18px 38px;
+        border-radius: 60px;
+        background: linear-gradient(135deg, #369bff, #1f7fe0);
+        color: #ffffff;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 20px 50px rgba(54, 155, 255, 0.35);
+        transition: 0.4s ease;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-6px);
+      }
+
+      .btn-secondary {
+        padding: 16px 36px;
+        border-radius: 60px;
+        color: #369bff;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s ease;
+      }
+
+      .btn-secondary:hover {
+        background: #369bff;
+        color: #ffffff;
+      }
+
+      .hero-visual img {
+        width: 600px;
+        filter: drop-shadow(0 40px 80px rgba(72, 72, 72, 0.25));
+      }
+
+      /* =================================================
+   QUICK STATS
+================================================= */
+
+      .quick-stats {
+        padding: 120px 8%;
+        background: #f7fbff;
+      }
+
+      .stats-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+      }
+
+      .stat-card {
+        background: #ffffff;
+        padding: 60px;
+        border-radius: 30px;
+        text-align: center;
+        box-shadow:
+          0 30px 70px rgba(0, 0, 0, 0.05),
+          0 80px 160px rgba(54, 155, 255, 0.08);
+        transition: 0.4s ease;
+      }
+
+      .stat-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .stat-card h2 {
+        font-size: 52px;
+        font-weight: 800;
+        color: #369bff;
+        margin-bottom: 15px;
+      }
+
+      .stat-card p {
+        font-size: 16px;
+        color: #475569;
+      }
+
+      /* =================================================
+   ABOUT SECTION
+================================================= */
+
+      /* ==========================================
+   ABOUT SECTION - PREMIUM POLITICAL UI
+========================================== */
+
+      .about-section {
+        padding: 140px 8%;
+        background: linear-gradient(135deg, #ffffff 0%, #f4f9ff 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Subtle glow accent */
+      .about-section::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(54, 155, 255, 0.12),
+          transparent 70%
+        );
+        top: -150px;
+        left: -150px;
+        z-index: 0;
+      }
+
+      .about-wrapper {
+        display: flex;
+        gap: 100px;
+        align-items: flex-start;
+        position: relative;
+        z-index: 1;
+      }
+
+      /* LEFT SIDE */
+
+      .about-left {
+        flex: 1;
+      }
+
+      .about-label {
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        color: var(--accentShade);
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      .about-left h2 {
+        font-size: 48px;
+        font-weight: 800;
+        color: var(--baseShade1);
+        margin: 0;
+        margin-bottom: 30px;
+        line-height: 1.4;
+      }
+
+      .about-left p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #475569;
+        margin-bottom: 20px;
+      }
+
+      .about-intro {
+        font-weight: 500;
+      }
+
+      /* RIGHT SIDE CARDS */
+
+      .about-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+
+      /* Card Base Style */
+
+      .about-card {
+        background: #ffffff;
+        padding: 50px;
+        border-radius: 30px;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        transition: 0.4s ease;
+      }
+
+      .about-card:hover {
+        transform: translateY(-10px);
+      }
+
+      /* Card Headings */
+
+      .about-card h3 {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--baseShade1);
+        margin-bottom: 20px;
+      }
+
+      /* Quote Style */
+
+      .quote {
+        font-size: 17px;
+        font-style: italic;
+        color: #0a2540;
+        margin-bottom: 20px;
+        position: relative;
+        padding-left: 20px;
+      }
+
+      .quote::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 6px;
+        height: 60%;
+        background: var(--accentShade);
+        border-radius: 4px;
+      }
+
+      /* Mission List */
+
+      .about-card ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .about-card li {
+        font-size: 17px;
+        line-height: 1.9;
+        color: #475569;
+        margin-bottom: 15px;
+        padding-left: 28px;
+        position: relative;
+      }
+
+      .about-card li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        background: var(--accentShade);
+        border-radius: 50%;
+      }
+
+      /* =================================================
+   LEADERSHIP
+================================================= */
+
+      .leadership-section {
+        padding: 140px 8%;
+        background: #f7fbff;
+      }
+
+      .leadership-header {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .leadership-header h2 {
+        font-size: 48px;
+        font-weight: 800;
+      }
+
+      .leadership-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+      }
+
+      .leader-card {
+        background: #ffffff;
+        padding: 60px;
+        border-radius: 30px;
+        display: flex;
+        gap: 50px;
+        box-shadow:
+          0 30px 70px rgba(0, 0, 0, 0.05),
+          0 80px 160px rgba(54, 155, 255, 0.08);
+        transition: 0.4s ease;
+      }
+
+      .leader-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .leader-image img {
+        width: 220px;
+        border-radius: 25px;
+      }
+
+      .leader-role {
+        color: var(--baseShade1);
+        font-weight: 600;
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      /* =================================================
+   EXPERIENCE
+================================================= */
+
+      .experience-section {
+        padding: 140px 8%;
+        background: #ffffff;
+      }
+
+      .experience-header {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .experience-header h2 {
+        font-size: 48px;
+        font-weight: 800;
+      }
+
+      .experience-wrapper {
+        display: flex;
+        gap: 80px;
+      }
+
+      .experience-right {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      .specialty-card {
+        background: #f7fbff;
+        padding: 40px;
+        border-radius: 25px;
+        box-shadow: 0 20px 50px rgba(54, 155, 255, 0.1);
+        transition: 0.3s ease;
+      }
+
+      .specialty-card:hover {
+        transform: translateY(-8px);
+      }
+
+      /* =================================================
+   SERVICES
+================================================= */
+
+      .services-section {
+        padding: 140px 8%;
+        background: #f7fbff;
+      }
+
+      .services-header {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .services-header h2 {
+        font-size: 48px;
+        font-weight: 800;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+      }
+
+      .service-card {
+        background: #ffffff;
+        padding: 50px;
+        border-radius: 30px;
+        box-shadow:
+          0 30px 70px rgba(0, 0, 0, 0.05),
+          0 80px 160px rgba(54, 155, 255, 0.08);
+        transition: 0.4s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .service-icon {
+        font-size: 30px;
+        color: #369bff;
+        margin: 25px 0;
+      }
+
+      .service-btn {
+        display: inline-block;
+        padding: 12px 30px;
+        color: #ffffff;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* =================================================
+   CONTACT
+================================================= */
+
+      .contact-section {
+        padding: 140px 8%;
+        background: #ffffff;
+      }
+
+      .contact-header {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .contact-wrapper {
+        display: flex;
+        gap: 60px;
+      }
+
+      .form-container {
+        flex: 1;
+        background: #f7fbff;
+        padding: 60px;
+        border-radius: 30px;
+        box-shadow: 0 30px 70px rgba(54, 155, 255, 0.1);
+      }
+
+      .form-container input,
+      .form-container textarea {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        border: 1px solid #dce3ea;
+      }
+
+      .form-container button {
+        width: 100%;
+        padding: 16px;
+        border: none;
+        border-radius: 50px;
+        background-color: var(--accentShade);
+        color: #ffffff;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .contact-info-box {
+        flex: 1;
+      }
+
+      .contact-social a {
+        font-size: 22px;
+        margin-right: 15px;
+        color: var(--accentShade);
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 250px;
+        border-radius: 25px;
+        margin-top: 25px;
+      }
+      .marquee-wrapper {
+        width: 100%;
+        overflow: hidden;
+        padding: 40px 0;
+        background: linear-gradient(135deg, #ffffff 0%, #f4f9ff 100%);
+        border-top: 1px solid rgba(54, 155, 255, 0.15);
+        border-bottom: 1px solid rgba(54, 155, 255, 0.15);
+        position: relative;
+      }
+
+      .marquee-track {
+        display: flex;
+        gap: 80px;
+        width: max-content;
+        animation: marqueeRight 25s linear infinite;
+      }
+
+      .marquee-item {
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: var(--baseShade1);
+        white-space: nowrap;
+        position: relative;
+      }
+
+      /* Blue divider dot */
+      .marquee-item::after {
+        content: "";
+        position: absolute;
+        right: -40px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        background: #369bff;
+        border-radius: 50%;
+      }
+
+      /* LEFT ➝ RIGHT animation */
+      @keyframes marqueeRight {
+        from {
+          transform: translateX(-50%);
+        }
+        to {
+          transform: translateX(0%);
+        }
+      }
+      /* ==========================================
+   EXPERIENCE SECTION - PREMIUM UI
+========================================== */
+
+      .experience-section {
+        padding: 140px 8%;
+        background: linear-gradient(to bottom, #ffffff, #f6fbff);
+      }
+
+      /* Header */
+
+      .experience-header {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .experience-header h2 {
+        font-size: 48px;
+        font-weight: 800;
+        color: var(--baseShade1);
+        margin-bottom: 20px;
+      }
+
+      .experience-tagline p {
+        font-size: 16px;
+        color: #475569;
+        max-width: 650px;
+        margin: 0 auto;
+        line-height: 1.9;
+      }
+
+      /* Layout */
+
+      .experience-wrapper {
+        display: flex;
+        gap: 100px;
+        align-items: flex-start;
+      }
+
+      /* Left Content */
+
+      .experience-left {
+        flex: 1;
+      }
+
+      .experience-left h3 {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--accentShade);
+        margin-bottom: 25px;
+      }
+
+      .experience-left p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #475569;
+        margin-bottom: 35px;
+      }
+
+      .experience-left h4 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: var(--baseShade1);
+      }
+
+      /* Election List */
+
+      .election-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .election-list li {
+        font-size: 17px;
+        line-height: 1.9;
+        color: #475569;
+        margin-bottom: 15px;
+        padding-left: 28px;
+        position: relative;
+      }
+
+      /* Blue bullet accent */
+
+      .election-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 10px;
+        height: 10px;
+        background: var(--accentShade);
+        border-radius: 50%;
+      }
+
+      /* Right Specialty Cards */
+
+      .experience-right {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+      }
+
+      /* Card Style */
+
+      .specialty-card {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 30px;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        transition: 0.4s ease;
+      }
+
+      .specialty-card:hover {
+        transform: translateY(-10px);
+      }
+
+      /* Card Typography */
+
+      .specialty-card h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--accentShade);
+        margin-bottom: 15px;
+      }
+
+      .specialty-card p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #475569;
+      }
+      /* ==========================================
+   SERVICES SECTION - PREMIUM POLITICAL UI
+========================================== */
+
+      .services-section {
+        padding: 140px 8%;
+        background: linear-gradient(to bottom, #f7fbff, #ffffff);
+        position: relative;
+      }
+
+      /* Header */
+
+      .services-header {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .services-header h2 {
+        font-size: 48px;
+        font-weight: 800;
+        color: #0a2540;
+        margin-bottom: 20px;
+      }
+
+      .services-header p {
+        font-size: 16px;
+        color: #475569;
+        max-width: 650px;
+        margin: 0 auto;
+        line-height: 1.9;
+      }
+
+      /* Grid */
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+      }
+
+      /* Card */
+
+      .service-card {
+        background: #ffffff;
+        padding: 50px;
+        border-radius: 30px;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        transition: 0.4s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      /* Heading */
+
+      .service-card h3 {
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--baseShade1);
+        margin-bottom: 15px;
+      }
+
+      /* Description */
+
+      .service-desc {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #475569;
+        margin-bottom: 20px;
+      }
+
+      /* Icon */
+
+      .service-icon {
+        font-size: 30px;
+        color: #369bff;
+        margin: 20px 0;
+      }
+
+      /* List */
+
+      .service-card ul {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 25px;
+      }
+
+      .service-card li {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #475569;
+        margin-bottom: 12px;
+        padding-left: 26px;
+        position: relative;
+      }
+
+      /* Blue bullet accent */
+
+      .service-card li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        background: var(--accentShade);
+        border-radius: 50%;
+      }
+
+      /* Button */
+
+      .service-btn {
+        align-self: flex-start;
+        padding: 12px 28px;
+        border-radius: 50px;
+        background-color: var(--accentShade);
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        transition: 0.3s ease;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+      }
+
+      /* ==========================================
+   CASE STUDY SECTION - PREMIUM POLITICAL UI
+========================================== */
+
+      .case-study-section {
+        padding: 140px 8%;
+        background: linear-gradient(to bottom, #ffffff, #f6fbff);
+        position: relative;
+      }
+
+      .case-study-wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      /* ================= HEADER ================= */
+
+      .case-study-header {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .case-label {
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        color: #369bff;
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      .case-study-header h2 {
+        font-size: 48px;
+        font-weight: 800;
+        color: #0a2540;
+        margin-bottom: 20px;
+      }
+
+      .party-badge {
+        font-size: 16px;
+        font-weight: 600;
+        color: #475569;
+      }
+
+      /* ================= CONTENT BLOCK ================= */
+
+      .case-block {
+        background: #ffffff;
+        padding: 60px;
+        border-radius: 30px;
+        margin-bottom: 50px;
+        box-shadow:
+          0 30px 70px rgba(0, 0, 0, 0.05),
+          0 80px 160px rgba(54, 155, 255, 0.08);
+        transition: 0.4s ease;
+      }
+
+      .case-block:hover {
+        transform: translateY(-8px);
+      }
+
+      .case-block h3 {
+        font-size: 26px;
+        font-weight: 700;
+        color: #369bff;
+        margin-bottom: 25px;
+      }
+
+      .case-block p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #475569;
+        margin-bottom: 20px;
+      }
+
+      /* ================= STRATEGY LIST ================= */
+
+      .strategy-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .strategy-list li {
+        margin-bottom: 40px;
+      }
+
+      .strategy-list h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #0a2540;
+        margin-bottom: 10px;
+      }
+
+      .strategy-list p {
+        font-size: 17px;
+        line-height: 1.9;
+        color: #475569;
+      }
+
+      /* ================= HIGHLIGHT BLOCK ================= */
+
+      .case-highlight {
+        background: linear-gradient(135deg, #ffffff 0%, #eef6ff 100%);
+        border-left: 6px solid #369bff;
+      }
+
+      .case-closing {
+        margin-top: 30px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #0a2540;
+        line-height: 1.6;
+      }
+      /* ==========================================
+   CASE STUDY 02 - CONFIDENTIAL POLITICAL DOSSIER
+========================================== */
+
+      .case-study-section {
+        padding: 140px 8%;
+        background: linear-gradient(to bottom, #ffffff, #f6fbff);
+      }
+
+      .case-study-wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      /* ================= HEADER ================= */
+
+      .case-study-header {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+
+      .case-label {
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        color: var(--accentShade);
+        display: block;
+        margin-bottom: 15px;
+      }
+
+      .case-study-header h2 {
+        font-size: 48px;
+        font-weight: 800;
+        color: var(--baseShade1);
+        margin-bottom: 20px;
+      }
+
+      .party-badge {
+        font-size: 16px;
+        font-weight: 600;
+        color: #475569;
+        margin-bottom: 8px;
+      }
+
+      .confidential-note {
+        font-size: 14px;
+        color: #999;
+        font-style: italic;
+      }
+
+      /* ================= CONTENT BLOCK ================= */
+
+      .case-block {
+        background: #ffffff;
+        padding: 60px;
+        border-radius: 30px;
+        margin-bottom: 50px;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        transition: 0.4s ease;
+      }
+
+      .case-block:hover {
+        transform: translateY(-8px);
+      }
+
+      .case-block h3 {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--accentShade);
+        margin-bottom: 30px;
+      }
+
+      .case-block p {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #475569;
+        margin-bottom: 20px;
+      }
+
+      /* ================= CHALLENGE ITEMS ================= */
+
+      .challenge-item {
+        margin-bottom: 40px;
+      }
+
+      .challenge-item h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #0a2540;
+        margin-bottom: 10px;
+      }
+
+      /* ================= STRATEGY LIST ================= */
+
+      .strategy-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .strategy-list > li {
+        margin-bottom: 45px;
+      }
+
+      .strategy-list h4 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #0a2540;
+        margin-bottom: 10px;
+      }
+
+      .strategy-list p {
+        font-size: 17px;
+        line-height: 1.9;
+        color: #475569;
+      }
+
+      /* Sub Bullet List */
+
+      .sub-list {
+        list-style: none;
+        padding: 0;
+        margin: 15px 0 15px 0;
+      }
+
+      .sub-list li {
+        font-size: 16px;
+        line-height: 1.9;
+        color: #475569;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        position: relative;
+      }
+
+      .sub-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 8px;
+        height: 8px;
+        background: #369bff;
+        border-radius: 50%;
+      }
+
+      /* ================= QUOTE BLOCK ================= */
+
+      .case-quote {
+        font-size: 22px;
+        font-weight: 700;
+        color: #0a2540;
+        margin-top: 25px;
+        padding: 25px 30px;
+        background: linear-gradient(135deg, #eef6ff, #ffffff);
+        border-left: 6px solid var(--accentShade);
+        border-radius: 15px;
+      }
+
+      /* ================= HIGHLIGHT BLOCK ================= */
+
+      .case-highlight {
+        background: linear-gradient(135deg, #ffffff 0%, #eef6ff 100%);
+        border-left: 6px solid var(--accentShade);
+      }
+
+      .case-closing {
+        margin-top: 30px;
+        font-size: 22px;
+        font-weight: 700;
+        color: #0a2540;
+        line-height: 1.6;
+      }
+      /* ==========================================
+   STRATEGY LIST WITH IMAGE - PREMIUM STYLE
+========================================== */
+
+      .strategy-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .strategy-list > li {
+        margin-bottom: 60px;
+      }
+
+      /* Main Card Layout */
+
+      .strategy-item {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        background: #ffffff;
+        padding: 50px;
+        border-radius: 30px;
+        box-shadow: 0 0 80px rgba(110, 65, 255, 0.2);
+        transition: 0.4s ease;
+      }
+
+      .strategy-item:hover {
+        transform: translateY(-10px);
+      }
+
+      /* Image Section */
+
+      .strategy-image {
+        flex-shrink: 0;
+      }
+
+      .strategy-image img {
+        width: 220px; /* Adjust size here */
+        height: auto; /* Maintains 1526x1024 ratio */
+        border-radius: 20px;
+        display: block;
+
+        transition: 0.3s ease;
+      }
+
+      .strategy-item:hover .strategy-image img {
+        transform: scale(1.03);
+      }
+
+      /* Content Section */
+
+      .strategy-content {
+        flex: 1;
+      }
+
+      .strategy-content h4 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #0a2540;
+        margin-bottom: 15px;
+      }
+
+      .strategy-content p {
+        font-size: 17px;
+        line-height: 1.9;
+        color: #475569;
+      }
+      .btn-primary,
+      .btn-secondary {
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+      }
+      /* ==========================================
+MOBILE RESPONSIVE (480px and below)
+========================================== */
+
+      @media (max-width: 480px) {
+        /* Global */
+        body {
+          font-size: 14px;
+        }
+
+        h1 {
+          font-size: 32px !important;
+          line-height: 1.3;
+        }
+
+        h2 {
+          text-align: center;
+          font-size: 28px !important;
+        }
+
+        h3 {
+          font-size: 20px !important;
+        }
+
+        section {
+          padding: 80px 6% !important;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+          flex-direction: column;
+          text-align: center;
+          padding: 100px 6%;
+          gap: 40px;
+        }
+
+        .hero-content {
+          max-width: 100%;
+        }
+
+        .hero-content p {
+          font-size: 16px;
+        }
+
+        .hero-buttons {
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .hero-visual img {
+          width: 100%;
+          max-width: 320px;
+        }
+
+        .parliament {
+          width: 90%;
+          margin: 80px auto 40px auto;
+        }
+
+        /* ================= MARQUEE ================= */
+
+        .marquee-track {
+          gap: 40px;
+        }
+
+        .marquee-item {
+          font-size: 16px;
+        }
+
+        /* ================= QUICK STATS ================= */
+
+        .stats-container {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .stat-card {
+          padding: 40px;
+        }
+
+        .stat-card h2 {
+          font-size: 36px;
+        }
+
+        /* ================= ABOUT ================= */
+
+        .about-wrapper {
+          flex-direction: column;
+          gap: 50px;
+        }
+
+        .about-left h2 {
+          font-size: 30px;
+        }
+
+        .about-card {
+          padding: 35px;
+        }
+
+        /* ================= LEADERSHIP ================= */
+
+        .leader-card {
+          flex-direction: column;
+          padding: 40px;
+          text-align: center;
+        }
+
+        .leader-image img {
+          width: 140px;
+          margin: auto;
+        }
+
+        /* ================= EXPERIENCE ================= */
+
+        .experience-wrapper {
+          flex-direction: column;
+          gap: 60px;
+        }
+
+        .experience-right {
+          grid-template-columns: 1fr;
+        }
+
+        /* ================= SERVICES ================= */
+
+        .services-grid {
+          grid-template-columns: 1fr;
+          gap: 35px;
+        }
+
+        .service-card {
+          padding: 40px;
+        }
+
+        /* ================= CASE STUDY ================= */
+
+        .strategy-item {
+          flex-direction: column;
+          text-align: center;
+          padding: 35px;
+        }
+
+        .strategy-image img {
+          width: 100%;
+          max-width: 250px;
+        }
+
+        /* ================= CONTACT ================= */
+
+        .contact-wrapper {
+          flex-direction: column;
+        }
+
+        .form-container {
+          padding: 0px;
+        }
+
+        .map-container iframe {
+          height: 200px;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .nav-links {
+          position: absolute;
+          top: 80px;
+          left: 0;
+          width: 100%;
+          background: #fff;
+          flex-direction: column;
+          align-items: center;
+          padding: 30px 0;
+          display: none;
+        }
+
+        .nav-links a {
+          padding: 10px 0;
+        }
+
+        .hamburger {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar-container">
+      <div class="upper-bar">
+        <div class="contact-container">
+          <div class="phone">
+            <a href="tel:+9173855 94572">
+              <i class="fa-solid fa-phone"></i>
+              <p>Call Us: +91 73855 94572</p>
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:info.plutuss@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email Us: info.plutuss@gmail.com</p>
+            </a>
+          </div>
+          <div class="location">
+            <a href="https://maps.app.goo.gl/PgFtHWD1CmeK6eT4A" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>212- City Avenue Commercial, Wakad, Pune-57</p>
+            </a>
+          </div>
+        </div>
+        <div class="social-container">
+          <a href="https://www.facebook.com/plutuss.digital" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/plutussdigital/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://x.com/PlutussD" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/plutussdigital"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.youtube.com/@PlutussDigital" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+
+      <header class="navbar">
+        <div class="container nav-container">
+          <a class="logo" href="index.html">
+            <img
+              src="Plutuss Logo Cropped.webp"
+              alt="Digital Marketing Agency"
+            />
+          </a>
+
+          <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <div class="nav-dropdown">
+              <a href="services-hub.html" class="services-link">
+                Services Hub
+              </a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+
+              <div class="dropdown-menu">
+                <a href="SEO-Page.html">SEO</a>
+                <a href="SMM-Page.html">Social Media Marketing</a>
+                <a href="Content-Creation-Page.html">Content Creation</a>
+                <a href="Branding-Page.html">Branding & Design</a>
+                <a href="Web-Development-Page.html">Web Development</a>
+                <a href="Performance-Marketting-Page.html"
+                  >Performance Marketing</a
+                >
+              </div>
+            </div>
+            <a href="political-strategy.html">Political</a>
+            <a href="blogs.html">Blogs</a>
+
+            <a href="contact-us.html">Contact Us</a>
+          </nav>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a href="contact-us.html" class="navbar-btn">Get A Quote</a>
+        </div>
+      </header>
+    </div>
+    <img src="parliament-01.png" class="parliament" />
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <div class="marquee-item">Empowering Political Leaders Digitally.</div>
+        <div class="marquee-item">
+          Strategic Campaigns. Strong Public Presence.
+        </div>
+        <div class="marquee-item">From Booth Level to National Influence.</div>
+
+        <!-- Duplicate for seamless loop -->
+        <div class="marquee-item">Empowering Political Leaders Digitally.</div>
+        <div class="marquee-item">
+          Strategic Campaigns. Strong Public Presence.
+        </div>
+        <div class="marquee-item">From Booth Level to National Influence.</div>
+      </div>
+    </div>
+    <section class="hero">
+      <div class="hero-content reveal-left">
+        <h1>राजकीय विजयासाठी स्मार्ट स्ट्रॅटेजी</h1>
+        <p>
+          लोकसभा, महापालिका ते जिल्हा परिषद – तुमच्या राजकीय विकासासाठी
+          विश्वासार्ह डिजिटल आणि स्ट्रॅटेजी भागीदार.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">सलाह सत्र बुक करा</a>
+          <a href="#contact" class="btn-secondary">संपर्क करा</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal-right">
+        <img src="political-hero.png" />
+      </div>
+    </section>
+
+    <section class="about-section">
+      <div class="about-wrapper">
+        <!-- Left Content -->
+        <div class="about-left reveal">
+          <span class="about-label">About PLUTUSS</span>
+          <h2>
+            रणनीती, तंत्रज्ञान आणि नेतृत्वाचा <br />
+            शक्तिशाली संगम
+          </h2>
+
+          <p class="about-intro">
+            PLUTUSS Digital ही भारतातील अग्रगण्य राजकीय डिजिटल आणि स्ट्रॅटेजी
+            एजन्सी आहे. आम्ही लोकसभा, महापालिका, जिल्हा परिषद तसेच इतर निवडणुका
+            यशस्वी करण्यासाठी आधुनिक डिजिटल साधने, क्रिएटिव्ह स्ट्रॅटेजी आणि
+            विश्लेषणात्मक अंतर्दृष्टी वापरतो.
+          </p>
+
+          <p>
+            आमची कथा राजकीय अनुभव, तंत्रज्ञान आणि सर्जनशीलतेच्या संगमाने तयार
+            झाली आहे, ज्यामुळे प्रत्येक उमेदवार आणि पक्षासाठी परिणामकारक अभियान
+            राबवता येते.
+          </p>
+        </div>
+
+        <!-- Right Cards -->
+        <div class="about-right">
+          <div class="about-card vision-card reveal-zoom">
+            <h3>व्हिजन (Our Vision)</h3>
+            <p class="quote">
+              “राजकीय नेतृत्वाला डिजिटल सामर्थ्य देणे आणि प्रत्येक उमेदवाराचा
+              संदेश जनतेपर्यंत प्रभावीपणे पोहोचवणे.”
+            </p>
+            <p>
+              स्मार्ट स्ट्रॅटेजी + क्रिएटिव्ह डिजिटल हे राजकीय यशाची गुरुकिल्ली
+              आहे.
+            </p>
+          </div>
+
+          <div class="about-card mission-card reveal-zoom">
+            <h3>मिशन (Our Mission)</h3>
+            <ul>
+              <li>
+                सर्जनशील रणनीती आणि डिजिटल माध्यमांचा प्रभावी वापर करून राजकीय
+                यश मिळवणे.
+              </li>
+              <li>डेटा-चालित आणि परिणामकारक अभियान राबवणे.</li>
+              <li>मतदारांशी थेट संवाद साधणे व विश्वास निर्माण करणे.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  <section class="leadership-section">
+      <div class="leadership-header">
+        <h2>Leadership Profiles</h2>
+        <p>नेतृत्व, रणनीती आणि अनुभवाचा संगम</p>
+      </div>
+
+      <div class="leadership-grid">
+        
+        <div class="leader-card reveal">
+          <div class="leader-image">
+            <img src="profile-img-1.jpeg" alt="Shubham Kather" />
+          </div>
+          <div class="leader-content">
+            <h3>शुभम काथेर</h3>
+            <span class="leader-role">Founder – Digital Strategy</span>
+
+            <p>
+              शुभम काथेर हे महासंसद रत्न श्रीरंग आप्पा बारणे यांचा सोशल मीडिया
+              आणि नियोजन तसेच स्थानिक नेत्यांसोबत दशकांहून अधिक काळ काम करत
+              आहेत. त्यांनी अनेक राजकीय उमेदवारांचे सोशल मीडिया खाते व्यवस्थापित
+              केले असून राजकीय संदेश जनतेपर्यंत प्रभावीपणे पोहोचवण्याची कला
+              उत्कृष्ट आहे.
+            </p>
+
+            <ul>
+              <li>
+                10+ वर्षांचा अनुभव डिजिटल स्ट्रॅटेजी आणि सोशल मीडिया मॅनेजमेंट
+              </li>
+              <li>तरुण, डायनॅमिक आणि दूरदृष्टी असलेले नेतृत्व</li>
+              <li>मजबूत राजकीय संपर्क आणि नेटवर्क</li>
+            </ul>
+          </div>
+        </div>
+        <div class="leader-card reveal">
+          <div class="leader-image">
+            <img src="profile-img-2.jpeg" alt="Amol Devale" />
+          </div>
+          <div class="leader-content">
+            <h3>अमोल देवाळे</h3>
+            <span class="leader-role">Head – Strategy & Creative</span>
+
+            <p>
+              अमोल देवळे हे २०+ वर्षांचा अनुभव मीडिया आणि राजकीय स्ट्रॅटेजी
+              क्षेत्रात आहे. त्यांनी अनेक भारतीय राजकीय एजन्सीज आणि नेत्यांसोबत
+              काम केले आहे. त्यांच्या नेतृत्वाखाली कॅम्पेन प्रभावी, डेटा-चालित
+              आणि क्रिएटिव्ह दृष्टिकोनातून चालतात.
+            </p>
+
+            <ul>
+              <li>20+ वर्षांचा अनुभव मीडिया आणि राजकीय स्ट्रॅटेजीमध्ये</li>
+              <li>क्रिएटिव्ह व स्ट्रॅटेजिक थिंकिंग</li>
+              <li>परिणामकारक नेतृत्व आणि मजबूत प्रकल्प व्यवस्थापन</li>
+            </ul>
+          </div>
+        </div>
+        <div class="leader-card reveal">
+          <div class="leader-image">
+            <img src="profile-img-3.png" alt="Anuja Patil" />
+          </div>
+          <div class="leader-content">
+            <h3>अनुजा पाटील</h3>
+            <span class="leader-role">Head – Digital Media</span>
+
+            <p>
+              अनुजा पाटील सोशल मीडिया स्ट्रॅटेजी आणि क्रिएटिव्ह कंटेंटमध्ये
+              तज्ज्ञ आहेत. त्यांच्या मार्गदर्शनाखाली उमेदवारांचा संदेश
+              प्रभावीपणे मतदारांपर्यंत पोहोचतो.
+            </p>
+
+            <ul>
+              <li>सोशल मीडिया स्ट्रॅटेजी</li>
+              <li>क्रिएटिव्ह कंटेंट</li>
+              <li>Paid Campaigns</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <section class="experience-section">
+      <div class="experience-header">
+        <h2>अनुभव आणि रणनीती</h2>
+        <!-- Tagline -->
+        <div class="experience-tagline">
+          <p>
+            अनुभव, क्रिएटिव्हिटी आणि स्ट्रॅटेजी – PLUTUSS सोबत तुमचे यश
+            सुनिश्चित!
+          </p>
+        </div>
+      </div>
+
+      <div class="experience-wrapper">
+        <!-- Left Content -->
+        <div class="experience-left reveal-left">
+          <h3>अनुभव</h3>
+          <p>
+            PLUTUSS Digital ला २०+ वर्षांचा मीडिया आणि राजकीय स्ट्रॅटेजी अनुभव
+            आहे. आमच्या टीमने लोकसभा, महापालिका, जिल्हा परिषद तसेच इतर अनेक
+            निवडणुकांमध्ये यशस्वी मोहिमा राबवल्या आहेत.
+          </p>
+
+          <h4>सर्व प्रकारच्या निवडणुकांमध्ये काम:</h4>
+          <ul class="election-list">
+            <li>लोकसभा निवडणूक</li>
+            <li>महापालिका / नगरसेवा निवडणूक</li>
+            <li>जिल्हा परिषद / पंचायत निवडणूक</li>
+            <li>बूथ-स्तरीय रणनीती आणि जनतेपर्यंत प्रभावी पोहोच</li>
+          </ul>
+        </div>
+
+        <!-- Right Specialties -->
+        <div class="experience-right reveal-right">
+          <div class="specialty-card">
+            <h4>डेटा-चालित रणनीती</h4>
+            <p>प्रत्येक निर्णय आणि मोहिमेला डेटा-आधारित दृष्टिकोन</p>
+          </div>
+
+          <div class="specialty-card reveal-zoom">
+            <h4>क्रिएटिव्ह डिजिटल कंटेंट</h4>
+            <p>व्हिडिओ, ग्राफिक्स, रील्स, सोशल मीडिया</p>
+          </div>
+
+          <div class="specialty-card reveal-zoom">
+            <h4>राजकीय नेटवर्क व संपर्क</h4>
+            <p>कार्यकर्ते, मतदार आणि नेत्यांशी मजबूत संबंध</p>
+          </div>
+
+          <div class="specialty-card reveal-zoom">
+            <h4>प्रभावी नेतृत्व व टीमवर्क</h4>
+            <p>अनुभवसंपन्न टीमकडून संपूर्ण कॅम्पेन अंमलबजावणी</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="services-section">
+      <div class="services-header">
+        <h2>आमच्या सेवा</h2>
+        <p>राजकीय यशासाठी संपूर्ण रणनीती आणि अंमलबजावणी</p>
+      </div>
+
+      <div class="services-grid">
+        
+        <div class="service-card reveal-zoom">
+          <h3>राजकीय स्ट्रॅटेजी & कन्सल्टिंग</h3>
+          <p class="service-desc">
+            निवडणुकीसाठी सखोल नियोजन आणि मतदार विश्लेषण आधारित रणनीती.
+          </p>
+
+          <div class="service-icon">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+
+          <ul>
+            <li>निवडणूक धोरण नियोजन</li>
+            <li>बूथ लेवल मायक्रो टार्गेटिंग</li>
+            <li>विरोधक विश्लेषण व मतदार अंतर्दृष्टी</li>
+          </ul>
+
+          <a href="#contact" class="service-btn">सल्ला घ्या</a>
+        </div>
+
+        <div class="service-card reveal-zoom">
+          <h3>डिजिटल मीडिया & कॅम्पेन</h3>
+          <p class="service-desc">
+            डिजिटल प्लॅटफॉर्मवर प्रभावी प्रचार आणि ब्रँड निर्माण.
+          </p>
+
+          <div class="service-icon">
+            <i class="fa-solid fa-bullhorn"></i>
+          </div>
+
+          <ul>
+            <li>सोशल मीडिया व्यवस्थापन</li>
+            <li>व्हिडिओ, रील्स, ग्राफिक्स</li>
+            <li>पेड कॅम्पेन व अ‍ॅनालिटिक्स</li>
+            <li>इन्फ्लुएंसर एंडोर्समेंट</li>
+          </ul>
+
+          <a href="#contact" class="service-btn">रणनीती चर्चा</a>
+        </div>
+
+        <div class="service-card reveal-zoom">
+          <h3>ब्रँडिंग & कम्युनिकेशन</h3>
+          <p class="service-desc">
+            उमेदवाराची प्रभावी प्रतिमा आणि जनसंपर्क व्यवस्थापन.
+          </p>
+
+          <div class="service-icon">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+
+          <ul>
+            <li>Candidate Persona & Branding</li>
+            <li>प्रेस रिलिज व मीडिया स्ट्रॅटेजी</li>
+            <li>रेप्युटेशन मॅनेजमेंट</li>
+          </ul>
+
+          <a href="#contact" class="service-btn">संपर्क करा</a>
+        </div>
+
+        <div class="service-card reveal-zoom">
+          <h3>इव्हेंट & ग्राउंड अ‍ॅक्टिव्हेशन</h3>
+          <p class="service-desc">ग्राउंड लेवल मोहिमा आणि जनतेशी थेट संपर्क.</p>
+
+          <div class="service-icon">
+            <i class="fa-solid fa-flag"></i>
+          </div>
+
+          <ul>
+            <li>रोडशो, रॅली</li>
+            <li>बूथ-लेवल अ‍ॅक्टिव्हेशन</li>
+            <li>नागरिक सहभागिता मोहिमा</li>
+          </ul>
+
+          <a href="#contact" class="service-btn">मोहीम सुरू करा</a>
+        </div>
+
+        <div class="service-card reveal-zoom">
+          <h3>अ‍ॅनालिटिक्स & रिपोर्टिंग</h3>
+          <p class="service-desc">
+            डेटा-आधारित विश्लेषण आणि परफॉर्मन्स ट्रॅकिंग.
+          </p>
+
+          <div class="service-icon">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+
+          <ul>
+            <li>परफॉर्मन्स ट्रॅकिंग डॅशबोर्ड</li>
+            <li>मतदार सहभागिता अंतर्दृष्टी</li>
+            <li>पोस्ट-इलेक्शन रिपोर्ट</li>
+          </ul>
+
+          <a href="#contact" class="service-btn">डेटा विश्लेषण</a>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="case-study-section">
+      <div class="case-study-wrapper">
+        <!-- Header -->
+        <div class="case-study-header">
+          <span class="case-label">Case Study 01</span>
+          <h2>प्रभाग क्रमांक २० | महानगरपालिका निवडणूक</h2>
+          <p class="party-badge">पक्ष : राष्ट्रवादी काँग्रेस पक्ष (NCP)</p>
+        </div>
+
+        <!-- Challenge Section -->
+        <div class="case-block reveal">
+          <h3>आव्हानांचे विश्लेषण – आमची भूमिका</h3>
+
+          <p>
+            प्रभाग क्रमांक २० मधील निवडणूक ही अत्यंत तुल्यबळ आणि चुरशीची आहे,
+            याची आम्ही सुरुवातीपासूनच नोंद घेतली. विरोधी उमेदवारांकडून सक्षम आणि
+            संघटित प्रचार सुरू असल्याचे आम्ही लक्षात घेतले असून त्यांच्या
+            रणनीतीचा सखोल अभ्यास केला.
+          </p>
+
+          <p>
+            प्रभागातील स्थानिक प्रश्न, सामाजिक रचना, मतदारांच्या अपेक्षा आणि
+            विरोधी प्रचारातील मुद्दे यांचे आम्ही बारकाईने विश्लेषण केले.
+            प्रत्येक घटक, प्रत्येक बूथ आणि प्रत्येक वॉर्डनिहाय परिस्थितीचा
+            स्वतंत्र आढावा घेतला.
+          </p>
+        </div>
+
+        <!-- Strategy Section -->
+        <div class="case-block reveal">
+          <h3>आमची रणनिती</h3>
+
+          <ul class="strategy-list">
+            <!-- 1 -->
+            <li>
+              <div class="strategy-item">
+                <div class="strategy-content">
+                  <h4>१. तुल्यबळ लढतीसाठी सक्षम तयारी</h4>
+                  <p>
+                    बूथ-स्तरावर मजबूत संघटन उभारून कार्यकर्त्यांची जबाबदारी
+                    निश्चित केली. घरभेट, लघु सभा आणि संवाद उपक्रम राबवले.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- 2 -->
+            <li>
+              <div class="strategy-item">
+                <div class="strategy-content">
+                  <h4>२. विरोधी प्रोफाइल अभ्यास</h4>
+                  <p>
+                    विरोधी उमेदवारांचे बलस्थान, कमकुवत बाजू आणि प्रचार पद्धतींचा
+                    अभ्यास करून सकारात्मक व प्रभावी प्रत्युत्तराची रणनीती आखली.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- 3 -->
+            <li>
+              <div class="strategy-item">
+                <div class="strategy-content">
+                  <h4>३. विकासाधारित संवाद मोहीम</h4>
+                  <p>
+                    “कामावर आधारित विश्वास” या तत्त्वावर प्रचार केंद्रित केला.
+                    पूर्ण केलेली कामे, सुरू असलेले प्रकल्प आणि आगामी विकास
+                    आराखडा स्पष्टपणे मांडला.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- 4 -->
+            <li>
+              <div class="strategy-item">
+                <div class="strategy-content">
+                  <h4>४. डिजिटल + ग्राउंड समन्वय</h4>
+                  <p>
+                    सोशल मीडिया, व्हॉट्सअ‍ॅप नेटवर्क, व्हिडिओ संदेश आणि
+                    प्रत्यक्ष भेटी यांचा समन्वित वापर करून सातत्यपूर्ण आणि
+                    प्रभावी संवाद साधला.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <!-- 5 -->
+            <li>
+              <div class="strategy-item">
+                <div class="strategy-content">
+                  <h4>५. तात्काळ समस्या निराकरण</h4>
+                  <p>
+                    प्रभागातील तक्रारींवर तत्परतेने कार्यवाही करून आश्वासनाऐवजी
+                    कृतीतून विश्वास निर्माण केला.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Result / Determination -->
+        <div class="case-block reveal-zoom case-highlight">
+          <h3>आमचा निर्धार</h3>
+
+          <p>
+            तुल्यबळ लढतीतही नियोजनबद्ध, अभ्यासपूर्ण आणि विकासाभिमुख रणनितीच्या
+            जोरावर आम्ही प्रभाग क्रमांक २० मध्ये विश्वासाचे नेतृत्व उभे केले
+            आहे.
+          </p>
+
+          <div class="case-closing">
+            <strong>
+              प्राधान्य जनसेवेला… <br />
+              प्रभागाच्या सर्वांगीण विकासाला!
+            </strong>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="case-study-section">
+      <div class="case-study-wrapper">
+        <!-- Header -->
+        <div class="case-study-header">
+          <span class="case-label">Case Study 02</span>
+          <h2>पश्चिम महाराष्ट्र | युवा नेतृत्व प्रतिमा पुनर्स्थापना मोहीम</h2>
+          <p class="party-badge">पक्ष : शिवसेना</p>
+          <p class="confidential-note">
+            * उमेदवाराची ओळख गोपनीय ठेवण्यात आलेली आहे.
+          </p>
+        </div>
+
+        <!-- Challenge Section -->
+        <div class="case-block reveal-zoom">
+          <h3>आव्हानांचे स्वरूप</h3>
+
+          <div class="challenge-item">
+            <h4>१. “वंशपरंपरागत राजकारण” अशी प्रतिमा</h4>
+            <p>
+              विरोधकांकडून उमेदवारावर “वंशपरंपरागत राजकारण” असा शिक्का
+              उमटवण्याचा सातत्याने प्रयत्न केला जात होता. नेतृत्व केवळ कुटुंबीय
+              पार्श्वभूमीशी जोडून दाखवले जात होते.
+            </p>
+            <p>
+              प्रत्यक्षात उमेदवाराने स्वतःच्या ग्राउंडवर्क, युवक उपक्रम आणि
+              स्थानिक कामांच्या आधारे स्वतंत्र ओळख निर्माण केली होती. ही
+              वस्तुस्थिती प्रभावीपणे जनतेसमोर मांडणे हे आमच्यासमोरील मुख्य
+              आव्हान होते.
+            </p>
+          </div>
+
+          <div class="challenge-item">
+            <h4>२. संसाधनसमृद्ध आणि संघटित स्पर्धा</h4>
+            <p>
+              विरोधी पक्षांकडून आक्रमक आणि साधनसंपन्न प्रचार सुरू होता. स्थानिक
+              नेटवर्क आणि संघटनात्मक ताकदीमुळे निवडणूक अत्यंत तुल्यबळ होती.
+            </p>
+          </div>
+
+          <div class="challenge-item">
+            <h4>३. युवा नेतृत्वाची प्रतिमा दृढ करणे</h4>
+            <p>
+              कार्यरत युवा नेता म्हणून ओळख असली तरी ती व्यापक जनसमर्थनात
+              रूपांतरित करणे आवश्यक होते. “राजकारण्याचा मुलगा” या ओळखीपलीकडे
+              जाऊन “स्वतःच्या कार्यावर उभा असलेला तरुण नेता” अशी प्रतिमा निर्माण
+              करणे हे आमचे उद्दिष्ट होते.
+            </p>
+          </div>
+        </div>
+
+        <!-- Strategic Approach -->
+        <div class="case-block reveal-zoom">
+          <h3>आमचा दृष्टिकोन</h3>
+
+          <p>
+            संवाद, प्रतिमा व्यवस्थापन आणि ग्राउंड कनेक्ट या तीन स्तरांवर
+            नियोजनबद्ध रणनीती आखण्यात आली.
+          </p>
+
+          <div class="case-quote">“वंश नव्हे, कार्य हीच ओळख.”</div>
+        </div>
+
+        <!-- Strategy Section -->
+        <div class="case-block reveal-zoom">
+          <h3>आमची रणनीती (Strategic Approach)</h3>
+
+          <ul class="strategy-list">
+            <li>
+              <h4>१. “नेपोटिझम नव्हे, ग्राउंडवर्क” — मुख्य संदेश</h4>
+              <p>
+                प्रतिमा “कौटुंबिक ओळख” या चौकटीतून बाहेर काढून “स्वतःच्या कामावर
+                उभा असलेला तरुण नेता” अशी पुनर्स्थापित करण्यात आली.
+              </p>
+              <p>
+                स्थानिक कामे, युवक उपक्रम, सामाजिक सहभाग आणि संकटकाळातील
+                मदतकार्य यावर विशेष भर देण्यात आला.
+              </p>
+            </li>
+
+            <li>
+              <h4>२. डिजिटल डॉक्युमेंटरी कॅम्पेन</h4>
+              <p>
+                <strong>उद्दिष्ट:</strong> प्रत्यक्ष काम आणि लोकांचा विश्वास
+                दृश्य माध्यमातून सिद्ध करणे.
+              </p>
+              <p>
+                ८–१२ मिनिटांची मुख्य डॉक्युमेंटरी फिल्म, सोशल मीडिया कट्स, रील्स
+                आणि शॉर्ट्स मालिका तयार करण्यात आली.
+              </p>
+              <p>
+                ग्राउंड व्हिज्युअल्स, नागरिकांच्या मुलाखती, आणि “Before–After”
+                स्वरूपातील बदल यांचा समावेश करण्यात आला.
+              </p>
+              <p>
+                मोहीम प्रचारात्मक नसून माहितीपट शैलीत सादर करण्यात आली —
+                विश्वासार्हता हेच केंद्रबिंदू ठेवून.
+              </p>
+            </li>
+
+            <li>
+              <h4>३. लोकांच्या आवाजातून प्रतिमा उभारणी</h4>
+              <p>
+                कृत्रिम प्रचाराऐवजी नैसर्गिक संवादावर भर देण्यात आला. स्थानिक
+                नागरिक, कुटुंबे आणि लाभार्थी यांच्या अनुभवांमधून विश्वास निर्माण
+                करण्यात आला.
+              </p>
+            </li>
+
+            <li>
+              <h4>४. तुलनात्मक संदेश (Subtle Contrast Strategy)</h4>
+              <p>विरोधकांवर थेट टीका न करता सूचक तुलना मांडण्यात आली:</p>
+              <ul class="sub-list">
+                <li>काम विरुद्ध केवळ आश्वासन</li>
+                <li>प्रत्यक्ष उपस्थिती विरुद्ध राजकीय ओळख</li>
+                <li>युवक नेतृत्व विरुद्ध पारंपरिक राजकारण</li>
+              </ul>
+              <p>संदेश सकारात्मक, अभ्यासपूर्ण आणि विकासाधारित ठेवण्यात आला.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Positioning -->
+        <div class="case-block reveal-zoom case-highlight">
+          <h3>मुख्य पोझिशनिंग</h3>
+
+          <div class="case-closing">
+            <strong>
+              “वंश नव्हे, कार्य ही ओळख.” <br />
+              उपलब्ध, जबाबदार आणि कार्यावर उभे असलेले युवा नेतृत्व.
+            </strong>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section" id="contact">
+      <div class="contact-header">
+        <h2>संपर्क करा</h2>
+        <p>तुमच्या पुढील विजयासाठी आजच संपर्क साधा</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <!-- CONTACT FORM -->
+        <div class="form-container reveal-left">
+          <h2>Contact Us</h2>
+
+          <form
+            id="contactForm"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="1cb6c821-be49-4cea-bf07-aeb4863aa8a4"
+            />
+            <input
+              type="hidden"
+              name="subject"
+              value="New Contact Form Submission - PLUTUSS Website"
+            />
+            <input type="checkbox" name="botcheck" style="display: none" />
+
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="Your Message"
+              required
+            ></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <!-- OFFICE DETAILS -->
+        <div class="contact-info-box reveal-right">
+          <h3>कार्यालय पत्ता</h3>
+          <p>
+            PLUTUSS Digital Strategy Office<br />
+            पुणे, महाराष्ट्र, भारत
+          </p>
+
+          <div class="contact-social">
+            <a href="https://www.facebook.com/plutuss.digital"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/plutussdigital/"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.youtube.com/@PlutussDigital"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+          </div>
+
+          <div class="map-container">
+            <iframe
+              src="https://maps.google.com/maps?q=Plutuss%20Digital%20Wakad%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              allowfullscreen
+              loading="lazy"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Company Info -->
+        <div class="footer-about">
+          <div class="logo-container">
+            <img
+              src="Plutuss Logo Cropped.webp"
+              alt="Plutuss Digital Logo"
+              class="footer-logo"
+            />
+          </div>
+          <p>
+            Plutuss Digital is a result-driven digital marketing agency helping
+            businesses grow online through SEO, social media, content, and
+            design solutions. We craft strategies that boost visibility, build
+            trust, and drive measurable results.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li>
+              <a href="services-hub.html">Services Hub</a>
+            </li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-services">
+          <h3>Our Services</h3>
+          <a href="SEO-Page.html">SEO</a>
+          <a href="SMM-Page.html">Social Media Marketing</a>
+          <a href="Content-Creation-Page.html">Content Creation</a>
+          <a href="Branding-Page.html">Branding & Design</a>
+          <a href="web design and development.html">Website Development</a>
+          <a href="Performance-Marketting-Page.html">Performance Marketing</a>
+        </div>
+
+        <!-- Social Media -->
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <ul>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/plutussdigital/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/plutussdigital/"
+                target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://www.facebook.com/plutuss.digital" target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.youtube.com/@PlutussDigital" target="_blank"
+                >YouTube</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom -->
+      <div class="footer-bottom">
+        <p>© 2025 Plutuss Digital. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      function revealOnScroll() {
+        const elements = document.querySelectorAll(
+          ".reveal, .reveal-zoom, .reveal-left, .reveal-right",
+        );
+
+        const windowHeight = window.innerHeight;
+
+        elements.forEach((el) => {
+          const elementTop = el.getBoundingClientRect().top;
+
+          if (elementTop < windowHeight - 120) {
+            el.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", revealOnScroll);
+
+      revealOnScroll();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

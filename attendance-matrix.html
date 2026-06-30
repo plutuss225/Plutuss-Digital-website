@@ -1,0 +1,509 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Attendance Matrix</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f5f7fa;
+      }
+
+      table {
+        border-collapse: collapse;
+        background: white;
+        width: max-content;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 5px;
+        text-align: center;
+        min-width: 120px;
+      }
+
+      th {
+        background: #1f9c8a;
+        color: white;
+      }
+
+      .table-container {
+        overflow: auto;
+      }
+
+      select,
+      input {
+        width: 100%;
+        border: none;
+        padding: 5px;
+      }
+
+      input[type="time"] {
+        display: none;
+      }
+      .late-cell {
+        background-color: #f7c5c5 !important;
+      }
+      .table-container {
+        width: 100%;
+        height: 80vh; /* 🔥 THIS IS THE KEY */
+        overflow: auto;
+      }
+      /* Freeze first column (Date) */
+      /* ================= FREEZE HEADER ROWS ================= */
+
+      /* FIRST HEADER ROW (Names) */
+      #attendanceTable thead tr:first-child th {
+        position: sticky;
+        top: 0;
+        z-index: 4;
+        background: #1f9c8a;
+      }
+
+      /* SECOND HEADER ROW (Login/Logout) */
+      #attendanceTable thead tr:nth-child(2) th {
+        position: sticky;
+        top: 42px; /* adjust if needed */
+        z-index: 4;
+        background: #1f9c8a;
+      }
+
+      /* ================= FIX FOR ROWSPAN DATE CELL ================= */
+
+      /* Freeze header rows */
+      #attendanceTable thead tr:first-child th {
+        position: sticky;
+        top: 0;
+        z-index: 4;
+        background: #1f9c8a;
+      }
+
+      #attendanceTable thead tr:nth-child(2) th {
+        position: sticky;
+        top: 30px;
+        z-index: 4;
+        background: #1f9c8a;
+      }
+      #attendanceTable th:first-child,
+      #attendanceTable td:first-child {
+        position: sticky;
+        left: 0;
+        background: white;
+        z-index: 3;
+      }
+
+      #attendanceTable thead th:first-child {
+        z-index: 5;
+        background: #1f9c8a;
+      }
+      #attendanceTable thead tr:nth-child(2) th:first-child {
+        padding: 0;
+        border: none;
+        background: #1f9c8a;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Attendance Matrix</h2>
+    <button onclick="exportToExcel()">Export Excel</button>
+    <input type="month" id="monthPicker" />
+
+    <div class="table-container">
+      <table id="attendanceTable"></table>
+    </div>
+    <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="attendance-firebase.js"></script>
+
+    <script>
+      let employees = [];
+      let attendanceData = {};
+      let selectedMonth = "";
+
+      const table = document.getElementById("attendanceTable");
+
+      window.onload = async () => {
+        const now = new Date();
+        const month = String(now.getMonth() + 1).padStart(2, "0");
+        selectedMonth = `${now.getFullYear()}-${month}`;
+
+        document.getElementById("monthPicker").value = selectedMonth;
+
+        await loadEmployees();
+      };
+
+      document
+        .getElementById("monthPicker")
+        .addEventListener("change", function () {
+          selectedMonth = this.value;
+          loadEmployees();
+        });
+
+      // ================= LOAD EMPLOYEES =================
+      async function loadEmployees() {
+        const doc = await db.collection("employees").doc("list").get();
+        employees = doc.data()?.names || [];
+        loadData();
+      }
+
+      // ================= LOAD DATA =================
+      function loadData() {
+        db.collection("attendance")
+          .doc(selectedMonth)
+          .get()
+          .then((doc) => {
+            attendanceData = doc.data()?.attendance || {};
+            renderTable();
+          });
+      }
+
+      // ================= GET DATES =================
+      function getDates(year, month) {
+        const days = new Date(year, month + 1, 0).getDate();
+        let arr = [];
+
+        for (let i = 1; i <= days; i++) {
+          arr.push(
+            `${year}-${String(month + 1).padStart(2, "0")}-${String(i).padStart(2, "0")}`,
+          );
+        }
+
+        return arr;
+      }
+
+      // ================= RENDER TABLE =================
+      function renderTable() {
+        table.innerHTML = "";
+
+        // ================= HEADER =================
+        let header1 = "<tr><th>Date</th>";
+        let header2 =
+          "<tr><th style='padding:0;border:none;background:#1f9c8a'></th>";
+
+        employees.forEach((emp) => {
+          header1 += `<th colspan="2">${emp}</th>`;
+          header2 += `<th>Login</th><th>Logout</th>`;
+        });
+
+        header1 += "</tr>";
+        header2 += "</tr>";
+
+        table.innerHTML =
+          "<thead>" +
+          header1 +
+          header2 +
+          "</thead><tbody id='tableBody'></tbody>";
+
+        const tbody = document.getElementById("tableBody");
+
+        // ================= DATES =================
+        const [year, month] = selectedMonth.split("-");
+        const dates = getDates(parseInt(year), parseInt(month) - 1);
+
+        // ================= BODY =================
+        dates.forEach((date) => {
+          let row = `<tr><td>${date}</td>`;
+
+          employees.forEach((emp) => {
+            const data = attendanceData[date]?.[emp] || {};
+
+            row += createCell(date, emp, "login", data.login);
+            row += createCell(date, emp, "logout", data.logout);
+          });
+
+          row += "</tr>";
+          tbody.innerHTML += row;
+        });
+
+        // ================= APPLY LATE LOGIC =================
+        setTimeout(() => {
+          Object.keys(attendanceData).forEach((date) => {
+            Object.keys(attendanceData[date]).forEach((emp) => {
+              applyLateLogic(date, emp);
+            });
+          });
+        }, 100);
+
+        // ================= TOTAL ROW =================
+        renderTotalsRow();
+      }
+
+      // ================= CELL =================
+      function createCell(date, emp, type, value) {
+        const isTime = value && value.includes(":");
+
+        return `
+    <td data-date="${date}" data-emp="${emp}" data-type="${type}">
+      
+      <select onchange="handleDropdown(this)">
+        <option value="">--</option>
+        <option value="leave" ${value === "leave" ? "selected" : ""}>Leave</option>
+        <option value="weekoff" ${value === "weekoff" ? "selected" : ""}>Week Off</option>
+        <option value="time" ${isTime ? "selected" : ""}>Time Input</option>
+      </select>
+
+      <input type="time"
+        value="${isTime ? value : ""}"
+        style="display:${isTime ? "block" : "none"}"
+        onchange="handleTimeChange(this)">
+    </td>
+  `;
+      }
+
+      // ================= DROPDOWN =================
+      function handleDropdown(select) {
+        const cell = select.closest("td");
+        const input = cell.querySelector("input");
+
+        const date = cell.dataset.date;
+        const emp = cell.dataset.emp;
+        const type = cell.dataset.type;
+
+        if (select.value === "time") {
+          input.style.display = "block";
+        } else {
+          input.style.display = "none";
+          input.value = "";
+
+          saveData(date, emp, type, select.value);
+          applyLateLogic(date, emp);
+        }
+      }
+
+      // ================= HELPERS =================
+      function getDate(cell) {
+        return cell.parentElement.children[0].innerText;
+      }
+
+      function getEmployee(cell) {
+        const index = cell.cellIndex;
+        return employees[Math.floor((index - 1) / 2)];
+      }
+
+      function getType(cell) {
+        return cell.cellIndex % 2 === 1 ? "login" : "logout";
+      }
+
+      // ================= SAVE =================
+      function saveData(date, emp, type, value) {
+        if (!attendanceData[date]) attendanceData[date] = {};
+        if (!attendanceData[date][emp]) attendanceData[date][emp] = {};
+
+        attendanceData[date][emp][type] = value;
+
+        db.collection("attendance").doc(selectedMonth).set(
+          {
+            attendance: attendanceData,
+          },
+          { merge: true },
+        );
+
+        // 🔥 NEW: apply late logic
+        applyLateColor(date, emp);
+      }
+      function applyLateColor(date, emp) {
+        const rows = document.querySelectorAll("#attendanceTable tbody tr");
+
+        rows.forEach((row) => {
+          if (row.children[0].innerText !== date) return;
+
+          const cells = row.querySelectorAll("td");
+
+          cells.forEach((cell, index) => {
+            const employeeIndex = Math.floor((index - 1) / 2);
+
+            if (employees[employeeIndex] !== emp) return;
+
+            const loginCell = cells[index - (index % 2 === 0 ? 1 : 0)];
+            const logoutCell = cells[index - (index % 2 === 0 ? 0 : -1)];
+
+            const loginInput = loginCell.querySelector("input");
+            if (!loginInput) return;
+
+            const loginTime = loginInput.value;
+
+            // 🔥 CHECK TIME
+            if (loginTime && loginTime > "10:00") {
+              loginCell.classList.add("late-cell");
+              logoutCell.classList.add("late-cell");
+            } else {
+              loginCell.classList.remove("late-cell");
+              logoutCell.classList.remove("late-cell");
+            }
+          });
+        });
+      }
+      function handleTimeChange(input) {
+        const cell = input.closest("td");
+
+        const date = cell.dataset.date;
+        const emp = cell.dataset.emp;
+        const type = cell.dataset.type;
+
+        saveData(date, emp, type, input.value);
+
+        // 🔥 APPLY LATE LOGIC IMMEDIATELY
+        applyLateLogic(date, emp);
+      }
+      function applyLateLogic(date, emp) {
+        const cells = document.querySelectorAll(
+          `td[data-date="${date}"][data-emp="${emp}"]`,
+        );
+
+        let loginCell, logoutCell;
+
+        cells.forEach((cell) => {
+          if (cell.dataset.type === "login") loginCell = cell;
+          if (cell.dataset.type === "logout") logoutCell = cell;
+        });
+
+        if (!loginCell || !logoutCell) return;
+
+        const loginInput = loginCell.querySelector("input");
+        const loginTime = loginInput?.value;
+
+        // Remove first (reset)
+        loginCell.classList.remove("late-cell");
+        logoutCell.classList.remove("late-cell");
+
+        if (!loginTime) return;
+
+        const [h, m] = loginTime.split(":").map(Number);
+
+        if (h > 10 || (h === 10 && m > 0)) {
+          loginCell.classList.add("late-cell");
+          logoutCell.classList.add("late-cell");
+        }
+      }
+      function calculateMonthlyHours(emp) {
+        let totalMinutes = 0;
+
+        Object.keys(attendanceData).forEach((date) => {
+          const data = attendanceData[date]?.[emp];
+
+          if (!data) return;
+
+          const login = data.login;
+          const logout = data.logout;
+
+          // Only calculate if valid time
+          if (!login || !logout) return;
+          if (!login.includes(":") || !logout.includes(":")) return;
+
+          const [h1, m1] = login.split(":").map(Number);
+          const [h2, m2] = logout.split(":").map(Number);
+
+          let start = h1 * 60 + m1;
+          let end = h2 * 60 + m2;
+
+          let diff = end - start;
+
+          if (diff < 0) diff += 24 * 60; // overnight support
+
+          totalMinutes += diff;
+        });
+
+        const hours = Math.floor(totalMinutes / 60);
+        const mins = totalMinutes % 60;
+
+        return `${hours}h ${mins}m`;
+      }
+      function renderTotalsRow() {
+        const tbody = document.getElementById("tableBody"); // ✅ FIXED
+
+        const tr = document.createElement("tr");
+        tr.style.background = "#1f9c8a";
+        tr.style.color = "white";
+        tr.style.fontWeight = "bold";
+
+        const firstCell = document.createElement("td");
+        firstCell.innerText = "TOTAL HOURS";
+        tr.appendChild(firstCell);
+
+        employees.forEach((emp) => {
+          const td = document.createElement("td");
+          td.colSpan = 2;
+          td.innerText = calculateMonthlyHours(emp);
+          tr.appendChild(td);
+        });
+
+        tbody.appendChild(tr); // ✅ WILL ALWAYS GO LAST
+      }
+      function exportToExcel() {
+        const wb = XLSX.utils.book_new();
+        let data = [];
+
+        // ================= HEADER =================
+        let header = ["Date"];
+
+        employees.forEach((emp) => {
+          header.push(`${emp} Login`);
+          header.push(`${emp} Logout`);
+        });
+
+        data.push(header);
+
+        // ================= BODY =================
+        Object.keys(attendanceData)
+          .sort((a, b) => new Date(a) - new Date(b))
+          .forEach((date) => {
+            let row = [date];
+
+            employees.forEach((emp) => {
+              const record = attendanceData[date]?.[emp] || {};
+
+              row.push(record.login || "");
+              row.push(record.logout || "");
+            });
+
+            data.push(row);
+          });
+
+        // ================= TOTAL ROW =================
+        let totalRow = ["TOTAL HOURS"];
+
+        employees.forEach((emp) => {
+          totalRow.push(calculateMonthlyHours(emp)); // Login column
+          totalRow.push(""); // Empty logout column
+        });
+
+        data.push(totalRow);
+
+        // ================= CREATE SHEET =================
+        const ws = XLSX.utils.aoa_to_sheet(data);
+
+        // ================= STYLING =================
+        const range = XLSX.utils.decode_range(ws["!ref"]);
+
+        // Bold header
+        for (let C = range.s.c; C <= range.e.c; ++C) {
+          const cell = ws[XLSX.utils.encode_cell({ r: 0, c: C })];
+          if (cell) {
+            cell.s = { font: { bold: true } };
+          }
+        }
+
+        // Bold total row
+        const totalRowIndex = data.length - 1;
+        for (let C = range.s.c; C <= range.e.c; ++C) {
+          const cell = ws[XLSX.utils.encode_cell({ r: totalRowIndex, c: C })];
+          if (cell) {
+            cell.s = { font: { bold: true } };
+          }
+        }
+
+        // Auto column width
+        ws["!cols"] = data[0].map(() => ({ wch: 18 }));
+
+        // ================= EXPORT =================
+        XLSX.utils.book_append_sheet(wb, ws, "Attendance");
+
+        XLSX.writeFile(wb, `attendance-${selectedMonth}.xlsx`);
+      }
+    </script>
+  </body>
+</html>

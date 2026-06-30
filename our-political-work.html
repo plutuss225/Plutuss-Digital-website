@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Political Clients | Plutuss Digital</title>
+
+    <style>
+      /* GOOGLE FONT */
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+      :root {
+        --primary: #369bff;
+        --primary-soft: #eaf4ff;
+        --dark: #0f172a;
+        --text: #475569;
+        --white: #ffffff;
+        --shadow: 0 10px 30px rgba(54, 155, 255, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(to bottom, #f8fbff, #eef5ff);
+        padding: 60px 20px;
+        color: var(--dark);
+      }
+
+      /* HERO */
+      h1 {
+        text-align: center;
+        font-size: 42px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        color: var(--dark);
+        position: relative;
+      }
+
+      h1::after {
+        content: "";
+        width: 80px;
+        height: 4px;
+        background: var(--primary);
+        display: block;
+        margin: 15px auto 0;
+        border-radius: 10px;
+      }
+
+      /* LOGO SECTION */
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-bottom: 60px;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        width: 200px;
+        height: 200px;
+        perspective: 1000px;
+        cursor: pointer;
+      }
+
+      .logo-inner {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: transform 0.7s ease;
+        transform-style: preserve-3d;
+      }
+
+      .logo.flipped .logo-inner {
+        transform: rotateY(180deg);
+      }
+
+      .logo-front,
+      .logo-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backface-visibility: hidden;
+        background: var(--white);
+        box-shadow: var(--shadow);
+        border: 2px solid var(--primary-soft);
+        transition: 0.3s ease;
+      }
+
+      .logo-front:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(54, 155, 255, 0.25);
+      }
+
+      .logo-front img {
+        width: 75%;
+      }
+
+      .logo-back {
+        background: var(--primary);
+        color: white;
+        transform: rotateY(180deg);
+        font-weight: 600;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+      }
+
+      /* CARDS */
+      .cards {
+        display: none;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        animation: fadeIn 0.5s ease forwards;
+      }
+
+      .cards.active {
+        display: flex;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(15px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .card {
+        width: 850px;
+        background: var(--white);
+        border-radius: 20px;
+        padding: 30px;
+        box-shadow: var(--shadow);
+        transition: 0.3s ease;
+        border: 1px solid var(--primary-soft);
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 45px rgba(54, 155, 255, 0.25);
+      }
+
+      .card h3 {
+        font-size: 24px;
+        margin-bottom: 5px;
+        color: var(--primary);
+      }
+
+      .designation {
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--dark);
+      }
+
+      .intro {
+        font-size: 15px;
+        color: var(--text);
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      /* WORK SECTION */
+      .card .work {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .sample {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .card .work img,
+      .card .work video {
+        width: 220px;
+        aspect-ratio: 9/16;
+        object-fit: cover;
+        border-radius: 14px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+      }
+
+      .card .work img:hover,
+      .card .work video:hover {
+        transform: scale(1.05);
+      }
+
+      /* VIEW BUTTON */
+      .sample a {
+        text-decoration: none;
+        background: var(--primary);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 30px;
+        font-size: 13px;
+        text-align: center;
+        transition: 0.3s ease;
+      }
+
+      .sample a:hover {
+        background: #1e82e6;
+        transform: translateY(-2px);
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 900px) {
+        .card {
+          width: 95%;
+        }
+
+        .card .work {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Our Political Clients</h1>
+
+    <!-- PARTY LOGOS -->
+    <div class="logo-container">
+      <div class="logo" onclick="showParty('ncp', this)">
+        <div class="logo-inner">
+          <div class="logo-front">
+            <img src="ncp-logo.png" alt="NCP" />
+          </div>
+          <div class="logo-back">Nationalist Congress Party</div>
+        </div>
+      </div>
+
+      <div class="logo" onclick="showParty('shivsena', this)">
+        <div class="logo-inner">
+          <div class="logo-front">
+            <img src="shive-sena-logo.png" alt="Shiv Sena" />
+          </div>
+          <div class="logo-back">Shiv Sena</div>
+        </div>
+      </div>
+
+      <div class="logo" onclick="showParty('bjp', this)">
+        <div class="logo-inner">
+          <div class="logo-front">
+            <img src="bjp-logo.png" alt="BJP" />
+          </div>
+          <div class="logo-back">Bharatiya Janata Party</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NCP -->
+    <div id="ncp" class="cards">
+      <div class="card">
+        <h3>Jitendra Nanaware</h3>
+        <div class="designation">Corporator</div>
+        <div class="intro">
+          Dedicated public representative actively working at the grassroots
+          level.
+        </div>
+        <div class="work">
+          <div class="sample">
+            <img src="Example Work/jitendra-post-1.jpg" />
+            <a
+              href="https://www.instagram.com/p/DUr2IWQjE-I/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <img src="Example Work/jitendra-post-2.webp" />
+            <a
+              href="https://www.instagram.com/p/DUhmuWZDLsj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <video src="Example Work/jitendra-post-3.mp4"></video>
+            <a
+              href="https://www.instagram.com/reel/DUp4IklDL3H/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Adv Nilesh Nikam</h3>
+        <div class="designation">Corporator</div>
+        <div class="intro">
+          Focused on civic development and community-driven initiatives.
+        </div>
+        <div class="work">
+          <div class="sample">
+            <img src="Example Work/nilesh-nikam-ex-1.webp" />
+            <a
+              href="https://www.instagram.com/p/DUmxY9hjLZX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <img src="Example Work/nilesh-nikam-ex-2.jpg" />
+            <a
+              href="https://www.instagram.com/p/DUpVl5ukQxV/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <video src="Example Work/nilesh-nikam-ex-3.mp4"></video>
+            <a
+              href="https://www.instagram.com/reel/DUs7W3YCJBq/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Atul Shitole</h3>
+        <div class="designation">Social Worker</div>
+        <div class="intro">
+          Actively involved in welfare programs and public service activities.
+        </div>
+        <div class="work">
+          <div class="sample">
+            <img src="Example Work/atul-ex-1.webp" />
+            <a
+              href="https://www.instagram.com/p/DT9ZpZ8gjAF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <img src="Example Work/atul-ex-2.jpg" />
+            <a
+              href="https://www.instagram.com/p/DT1m55dDD4s/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <video src="Example Work/atul-ex-3.mp4"></video>
+            <a
+              href="https://www.instagram.com/reel/DTcIyTzjKJd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Pramod Kute</h3>
+        <div class="designation">Corporator</div>
+        <div class="intro">
+          Engaged in development-driven leadership at the ward level.
+        </div>
+        <div class="work">
+          <div class="sample">
+            <img src="Example Work/pramod-kute-ex-1.jpg" />
+            <a
+              href="https://www.instagram.com/p/DUM_RcVkooD/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <img src="Example Work/pramod-kute-ex-2.webp" />
+            <a
+              href="https://www.instagram.com/p/DUNbhYLioHy/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <video src="Example Work/pramod-kute-ex-3.mp4"></video>
+            <a
+              href="https://www.instagram.com/reel/DTaT6SlAfFu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SHIV SENA -->
+    <div id="shivsena" class="cards">
+      <div class="card">
+        <h3>Vishwajit Barne</h3>
+        <div class="designation">Corporator</div>
+        <div class="intro">
+          Represents local governance with strong leadership focus.
+        </div>
+        <div class="work">
+          <div class="sample">
+            <img src="Example Work/vishwajit-ex-1.webp" />
+            <a
+              href="https://www.instagram.com/p/DTpIey-DMn5/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <img src="Example Work/vishwajit-ex-2.webp" />
+            <a
+              href="https://www.instagram.com/p/DUhghpCgu6z/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <video src="Example Work/vishwajit-ex-3.mp4"></video>
+            <a
+              href="https://www.instagram.com/reel/DTcagW3DbL1/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Nilesh Taras</h3>
+        <div class="designation">Corporator</div>
+        <div class="intro">Working actively for municipal improvements.</div>
+        <div class="work">
+          <div class="sample">
+            <img src="Example Work/nilesh-taras-ex-1.jpg" />
+            <a
+              href="https://www.instagram.com/p/DUFcTfujlny/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <img src="Example Work/nilesh-taras-ex-2.webp" />
+            <a
+              href="https://www.instagram.com/p/DTzNfCujEsm/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <video src="Example Work/nilesh-taras-ex-3.mp4"></video>
+            <a
+              href="https://www.instagram.com/reel/DTsFCCKE358/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Shrirang Appa Barne</h3>
+        <div class="designation">Member of Parliament</div>
+        <div class="intro">
+          Three-time MP representing Maval constituency with experienced
+          leadership.
+        </div>
+        <div class="work">
+          <div class="sample">
+            <img src="Example Work/appa-ex-1.jpg" />
+            <a
+              href="https://www.instagram.com/p/DUuXdr8gGKc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <img src="Example Work/appa-ex-2.jpg" />
+            <a
+              href="https://www.instagram.com/p/DUsENY6COOZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <video src="Example Work/appa-ex-3.mp4"></video>
+            <a
+              href="https://www.instagram.com/reel/DT9TgxICLcQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BJP -->
+    <div id="bjp" class="cards">
+      <div class="card">
+        <h3>Navnath Harpude</h3>
+        <div class="designation">Social Worker</div>
+        <div class="intro">
+          Actively contributing to community welfare initiatives.
+        </div>
+        <div class="work">
+          <div class="sample">
+            <img src="Example Work/navnath-ex-1.jpg" />
+            <a
+              href="https://www.instagram.com/p/DUH3pTHipov/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <img src="Example Work/navnath-ex-2.jpg" />
+            <a
+              href="https://www.instagram.com/p/DUM9MhZisKQ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <video src="Example Work/navnath-ex-3.mp4"></video>
+            <a
+              href="https://www.instagram.com/reel/DUI32s-DsHY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Vaijyantimala Suryavanshi</h3>
+        <div class="designation">Social Worker</div>
+        <div class="intro">
+          Dedicated to public service and regional development activities.
+        </div>
+        <div class="work">
+          <div class="sample">
+            <img src="Example Work/Vai-ex-1.jpg" />
+            <a
+              href="https://www.instagram.com/p/DUSHQapiD4i/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <img src="Example Work/Vai-ex-2.jpg" />
+            <a
+              href="https://www.instagram.com/p/DUUqrnAiEtg/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+          <div class="sample">
+            <video src="Example Work/Vai-ex-3.mp4"></video>
+            <a
+              href="https://www.instagram.com/reel/DUXV4O8AT3P/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+              >View</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showParty(partyId, element) {
+        // remove flip from all logos
+        document
+          .querySelectorAll(".logo")
+          .forEach((logo) => logo.classList.remove("flipped"));
+
+        element.classList.add("flipped");
+
+        // hide all card sections
+        document
+          .querySelectorAll(".cards")
+          .forEach((section) => section.classList.remove("active"));
+
+        // show selected
+        document.getElementById(partyId).classList.add("active");
+      }
+    </script>
+  </body>
+</html>

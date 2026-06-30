@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SEO Services | Plutuss Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <meta
+      name="description"
+      content="Professional SEO services by Plutuss Digital to rank higher on Google, increase website traffic and generate leads."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f7f7f7;
+        color: #222;
+        line-height: 1.6;
+      }
+
+      /* HERO */
+      .hero {
+        background: linear-gradient(135deg, #1f9c8a, #0d5147);
+        color: #fff;
+        text-align: center;
+        padding: 110px 8%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+      }
+
+      .hero p {
+        max-width: 700px;
+        margin: auto;
+        font-size: 1.1rem;
+      }
+
+      .hero a {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 15px 38px;
+        background: #fff;
+        color: #1f9c8a;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+        width: 250px;
+        margin: 3em auto 0 auto;
+      }
+
+      /* SECTION */
+      .section {
+        padding: 80px 8%;
+      }
+
+      .title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .title h2 {
+        color: #1f9c8a;
+        font-size: 2.2rem;
+      }
+
+      /* GRID */
+      .grid,
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3em;
+      }
+
+      .card {
+        background: #fff;
+        padding: 35px 30px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+        text-align: center;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+      }
+
+      .card h3 {
+        color: #1f9c8a;
+        margin-bottom: 10px;
+      }
+
+      .icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+
+      /* STATS */
+      .stats {
+        background: #fff;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+        padding: 70px 8%;
+        text-align: center;
+      }
+
+      .stat h3 {
+        font-size: 2.5rem;
+        color: #1f9c8a;
+      }
+
+      /* PROCESS */
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+      }
+
+      .process-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 35px 25px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      }
+
+      .step-circle {
+        width: 55px;
+        height: 55px;
+        background: #1f9c8a;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        margin: 0 auto 15px;
+      }
+
+      /* CTA */
+      .cta {
+        background: #1f9c8a;
+        color: #fff;
+        text-align: center;
+        padding: 90px 8%;
+      }
+
+      .cta h2 {
+        font-size: 2.3rem;
+        margin-bottom: 15px;
+      }
+
+      .cta a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px 40px;
+        background: #fff;
+        color: #1f9c8a;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      /* WHY SEO */
+      .why-seo {
+        background: #fff;
+      }
+
+      /* WHY SPLIT LAYOUT */
+      .why-split {
+        background: #fff;
+      }
+
+      .why-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        align-items: center;
+      }
+
+      .why-left h2 {
+        font-size: 2.4rem;
+        color: #1f9c8a;
+        margin-bottom: 15px;
+      }
+
+      .why-left p {
+        margin-bottom: 15px;
+        font-size: 1rem;
+        color: #444;
+      }
+
+      .why-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 14px 36px;
+        background: #1f9c8a;
+        color: #fff;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .why-right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .why-item {
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+        background: #f9f9f9;
+        padding: 18px 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .why-icon {
+        font-size: 1.8rem;
+      }
+
+      /* MOBILE */
+      @media (max-width: 900px) {
+        .why-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .benefit-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 18px;
+        text-align: center;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+        transition: 0.3s ease;
+      }
+
+      .benefit-card:hover {
+        transform: translateY(-6px);
+      }
+
+      .benefit-icon {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+      }
+
+      .benefit-card h3 {
+        color: #1f9c8a;
+        margin-bottom: 8px;
+      }
+      .seo-benefits {
+        gap: 3em;
+      }
+      /* MOBILE */
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        .seo-benefits {
+          flex-direction: column;
+        }
+        .benefits-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta {
+          flex-direction: column;
+        }
+        .why-btn {
+          margin: 1em auto;
+          display: block;
+          text-align: center;
+        }
+        .why-left h2 {
+          text-align: center;
+        }
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="navbar-container">
+      <div class="upper-bar">
+        <div class="contact-container">
+          <div class="phone">
+            <a href="tel:+917385594572">
+              <i class="fa-solid fa-phone"></i>
+              <p>Call Us: +91 73855 94572</p>
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:info.plutuss@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email Us: info.plutuss@gmail.com</p>
+            </a>
+          </div>
+          <div class="location">
+            <a href="https://maps.app.goo.gl/PgFtHWD1CmeK6eT4A" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>212- City Avenue Commercial, Wakad, Pune-57</p>
+            </a>
+          </div>
+        </div>
+        <div class="social-container">
+          <a href="https://www.facebook.com/plutuss.digital" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/plutussdigital/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://x.com/PlutussD" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/plutussdigital"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.youtube.com/@PlutussDigital" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+
+      <header class="navbar">
+        <div class="container nav-container">
+          <a class="logo" href="index.html">
+            <img
+              src="Plutuss Logo Cropped.webp"
+              alt="Digital Marketing Agency"
+            />
+          </a>
+          <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <div class="nav-dropdown">
+              <span class="nav-link">
+                Services <i class="fa-solid fa-chevron-down"></i>
+              </span>
+
+              <div class="dropdown-menu">
+                <a href="seo-new.html">SEO</a>
+                <a href="smm-new.html">Social Media Marketing</a>
+                <a href="content-new.html">Content Creation</a>
+                <a href="branding-new.html">Branding & Design</a>
+                <a href="web-dev-new.html">Website Development</a>
+                <a href="performance-marketing.html">Performance Marketing</a>
+              </div>
+            </div>
+            <a href="case-study.html">Case Study</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact-us.html">Contact Us</a>
+          </nav>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a href="#get-a-quote" class="navbar-btn">Get A Quote</a>
+        </div>
+      </header>
+    </div>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>SEO Services</h1>
+      <p>
+        Rank higher on Google, attract more visitors and generate quality leads
+        with Plutuss Digital.
+      </p>
+      <a href="contact.html">Get Free SEO Audit</a>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section section-solutions">
+      <div class="title">
+        <h2>Our SEO Solutions</h2>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <div class="icon">🔍</div>
+          <h3>SEO Audit</h3>
+          <p>
+            Technical and content analysis to identify ranking opportunities.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📝</div>
+          <h3>On-Page SEO</h3>
+          <p>Optimizing content, meta tags, images and internal structure.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">⚙️</div>
+          <h3>Technical SEO</h3>
+          <p>Speed optimization, mobile SEO and indexing improvements.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📍</div>
+          <h3>Local SEO</h3>
+          <p>Google Maps ranking and local visibility growth.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔗</div>
+          <h3>Link Building</h3>
+          <p>Authority backlinks to improve trust and rankings.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📊</div>
+          <h3>Reporting</h3>
+          <p>Monthly performance insights and ranking tracking.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section">
+      <div class="title">
+        <h2>Our SEO Process</h2>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="step-circle">1</div>
+          <h3>Audit</h3>
+          <p>Website and competitor analysis.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-circle">2</div>
+          <h3>Keyword Research</h3>
+          <p>High intent keyword selection.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-circle">3</div>
+          <h3>Optimization</h3>
+          <p>Content and technical improvements.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-circle">4</div>
+          <h3>Authority Building</h3>
+          <p>Backlinks and citations.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-circle">5</div>
+          <h3>Tracking</h3>
+          <p>Reports and continuous optimization.</p>
+        </div>
+      </div>
+    </section>
+    <!-- WHY CHOOSE US -->
+    <section class="section why-split">
+      <div class="why-container">
+        <!-- LEFT CONTENT -->
+        <div class="why-left">
+          <h2>Why Choose Plutuss Digital?</h2>
+          <p>
+            We combine strategic thinking, creative execution and data-driven
+            marketing to deliver consistent digital growth for businesses,
+            political leaders and brands.
+          </p>
+
+          <p>
+            Our local expertise, transparent reporting and personalized support
+            make us a trusted digital partner for long-term success.
+          </p>
+
+          <a href="contact.html" class="why-btn">Get Free Consultation</a>
+        </div>
+
+        <!-- RIGHT ICON LIST -->
+        <div class="why-right">
+          <div class="why-item">
+            <div class="why-icon">🏆</div>
+            <div>
+              <h4>Proven Experience</h4>
+              <p>
+                Handled high-visibility brands and public profiles successfully.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="why-icon">📍</div>
+            <div>
+              <h4>Local Market Expertise</h4>
+              <p>
+                Strong understanding of Pune, PCMC and Maharashtra audiences.
+              </p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="why-icon">📊</div>
+            <div>
+              <h4>Transparent Reporting</h4>
+              <p>Clear monthly insights with measurable growth tracking.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="why-icon">⚡</div>
+            <div>
+              <h4>Fast Execution</h4>
+              <p>Quick turnaround time and agile campaign execution.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="why-icon">🛡️</div>
+            <div>
+              <h4>Ethical Marketing</h4>
+              <p>Safe, compliant strategies for long-term brand stability.</p>
+            </div>
+          </div>
+
+          <div class="why-item">
+            <div class="why-icon">🤝</div>
+            <div>
+              <h4>Dedicated Support</h4>
+              <p>Personal communication and responsive support team.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SEO BENEFITS -->
+    <section class="section seo-benefits">
+      <div class="title">
+        <h2>Benefits of SEO for Your Business</h2>
+        <p>Long-term growth that drives consistent revenue</p>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🚀</div>
+          <h3>Higher Google Rankings</h3>
+          <p>Appear on the first page and attract more customers.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">📈</div>
+          <h3>Increased Website Traffic</h3>
+          <p>Consistent organic traffic without ad dependency.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">🎯</div>
+          <h3>Quality Lead Generation</h3>
+          <p>Users searching for your services convert better.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">📍</div>
+          <h3>Strong Local Visibility</h3>
+          <p>Dominate Google Maps and nearby searches.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">💰</div>
+          <h3>High ROI Marketing</h3>
+          <p>Lower cost compared to paid advertising.</p>
+        </div>
+
+        <div class="benefit-card">
+          <div class="benefit-icon">🏆</div>
+          <h3>Brand Authority</h3>
+          <p>Build trust and credibility online.</p>
+        </div>
+      </div>
+    </section>
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Want More Website Traffic?</h2>
+      <p>Let our SEO experts grow your online visibility.</p>
+      <a href="contact.html">Start SEO Today</a>
+    </section>
+  </body>
+</html>

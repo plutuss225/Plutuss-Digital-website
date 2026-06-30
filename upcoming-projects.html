@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Past Projects</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="KM-style.css" />
+  </head>
+
+  <body>
+    <section class="hero">
+      <!-- VIDEO -->
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="past-projects.mp4" type="video/mp4" />
+      </video>
+
+      <div class="overlay"></div>
+
+      <!-- NAVBAR -->
+      <header class="navbar">
+        <a href="KM-index.html" class="logo">KALAMANDIR BUILDCON LLP</a>
+
+        <nav class="nav-menu">
+          <a href="KM-index.html">Home</a>
+          <a href="KM-about-us.html">About us</a>
+
+          <!-- DROPDOWN -->
+          <div class="dropdown">
+            <span class="dropdown-toggle">
+              Projects <i class="fa-solid fa-chevron-down"></i>
+            </span>
+
+            <div class="dropdown-menu">
+              <a href="past-projects.html">Past Projects</a>
+              <a href="ongoing-projects.html">Ongoing Projects</a>
+              <a href="upcoming-projects.html">Upcoming Projects</a>
+            </div>
+          </div>
+          <a href="KM-Services.html">Services</a>
+          <a href="KM-our-team.html">Our Team</a>
+          <a href="KM-contact.html">Contact us</a>
+        </nav>
+
+        <a href="KM-contact.html" class="btn-primary gradient-btn"
+          >Get Started</a
+        >
+      </header>
+      <div class="project-content">
+        <p class="about-tag">LUXURY REAL-ESTATE</p>
+        <h1>Upcoming Projects</h1>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects-section">
+      <!-- FILTERS -->
+      <div class="filters">
+        <select id="typeFilter">
+          <option value="all">Project Type</option>
+          <option value="villa">Villa</option>
+          <option value="apartment">Apartment</option>
+          <option value="commercial">Commercial</option>
+        </select>
+
+        <select id="locationFilter">
+          <option value="all">Project Location</option>
+          <option value="usa">USA</option>
+          <option value="california">California</option>
+          <option value="florida">Florida</option>
+        </select>
+
+        <select id="budgetFilter">
+          <option value="all">Project Budget</option>
+          <option value="10000000">Below ₹1 Cr</option>
+          <option value="30000000">Below ₹3 Cr</option>
+          <option value="50000000">Below ₹5 Cr</option>
+          <option value="999999999">Above ₹5 Cr</option>
+        </select>
+
+        <button id="searchBtn">
+          <i class="fa-solid fa-magnifying-glass"></i> Search
+        </button>
+      </div>
+
+      <!-- GRID -->
+      <div class="projects-grid">
+        <!-- CARD 1 -->
+        <div
+          class="project-card"
+          data-title="Skyline Heights"
+          data-img="project_6.jpg"
+          data-type="villa"
+          data-area="1300 Sqft"
+          data-date="Completed 2019"
+          data-price="25000000"
+          data-beds="4"
+          data-baths="3"
+          data-parking="2"
+          data-sqft="1300"
+          data-location="usa"
+          data-description="A completed luxury villa project offering elegant living spaces and premium amenities."
+        >
+          <div class="card-image">
+            <img src="project_6.jpg" alt="" />
+          </div>
+
+          <div class="card-overlay">
+            <h3>Skyline Heights</h3>
+            <div class="arrow-btn">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div
+          class="project-card"
+          data-title="Ocean Breeze Residences"
+          data-img="project_7.jpg"
+          data-type="apartment"
+          data-area="900 Sqft"
+          data-date="Completed 2020"
+          data-price="12000000"
+          data-beds="2"
+          data-baths="2"
+          data-parking="1"
+          data-sqft="900"
+          data-location="florida"
+          data-description="Beautiful seaside apartments with modern interiors and breathtaking ocean views."
+        >
+          <div class="card-image">
+            <img src="project_7.jpg" alt="" />
+          </div>
+
+          <div class="card-overlay">
+            <h3>Ocean Breeze Residences</h3>
+            <div class="arrow-btn">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div
+          class="project-card"
+          data-title="Golden Square Mall"
+          data-img="project_8.jpg"
+          data-type="commercial"
+          data-area="6000 Sqft"
+          data-date="Completed 2018"
+          data-price="70000000"
+          data-beds="0"
+          data-baths="0"
+          data-parking="50"
+          data-sqft="6000"
+          data-location="usa"
+          data-description="A premium commercial mall developed in a prime business hub with high footfall."
+        >
+          <div class="card-image">
+            <img src="project_8.jpg" alt="" />
+          </div>
+
+          <div class="card-overlay">
+            <h3>Golden Square Mall</h3>
+            <div class="arrow-btn">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div
+          class="project-card"
+          data-title="Palm Grove Villas"
+          data-img="project_9.jpg"
+          data-type="villa"
+          data-area="1500 Sqft"
+          data-date="Completed 2021"
+          data-price="38000000"
+          data-beds="5"
+          data-baths="4"
+          data-parking="2"
+          data-sqft="1500"
+          data-location="california"
+          data-description="A premium villa community surrounded by lush greenery and world-class amenities."
+        >
+          <div class="card-image">
+            <img src="project_9.jpg" alt="" />
+          </div>
+
+          <div class="card-overlay">
+            <h3>Palm Grove Villas</h3>
+            <div class="arrow-btn">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div
+          class="project-card"
+          data-title="Urban Nest Apartments"
+          data-img="project_15.jpg"
+          data-type="apartment"
+          data-area="850 Sqft"
+          data-date="Completed 2022"
+          data-price="9000000"
+          data-beds="2"
+          data-baths="2"
+          data-parking="1"
+          data-sqft="850"
+          data-location="usa"
+          data-description="Affordable urban apartments designed for modern city living with essential amenities."
+        >
+          <div class="card-image">
+            <img src="project_15.jpg" alt="" />
+          </div>
+
+          <div class="card-overlay">
+            <h3>Urban Nest Apartments</h3>
+            <div class="arrow-btn">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div
+          class="project-card"
+          data-title="Corporate Hub Tower"
+          data-img="project_10.jpg"
+          data-type="commercial"
+          data-area="9000 Sqft"
+          data-date="Completed 2023"
+          data-price="120000000"
+          data-beds="0"
+          data-baths="0"
+          data-parking="80"
+          data-sqft="9000"
+          data-location="usa"
+          data-description="A state-of-the-art corporate tower designed for modern enterprises and startups."
+        >
+          <div class="card-image">
+            <img src="project_10.jpg" alt="" />
+          </div>
+
+          <div class="card-overlay">
+            <h3>Corporate Hub Tower</h3>
+            <div class="arrow-btn">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer-section">
+      <!-- MARQUEE TEXT -->
+      <div class="marquee-1">
+        <div class="marquee-track-1">
+          <span>Luxury Living Redefined ✱</span>
+          <span>Exclusive Residences Worldwide ✱</span>
+          <span>Invest in Timeless Real Estate ✱</span>
+          <span>Architectural Excellence ✱</span>
+          <span>Prime Locations. Premium Lifestyle ✱</span>
+        </div>
+      </div>
+
+      <!-- FOOTER BOX -->
+      <div class="footer-container">
+        <!-- LEFT -->
+        <div class="footer-left">
+          <h2 class="logo">Luxury Builders</h2>
+
+          <p class="follow">Follow Us:</p>
+
+          <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+
+          <p class="copyright">
+            Copyright © 2026 Luxury Builders. All rights reserved
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <div class="footer-links">
+          <div class="col">
+            <h4>Quick Links</h4>
+            <a href="#">Overview</a>
+            <a href="#">Features</a>
+            <a href="#">Solutions</a>
+            <a href="#">Tutorials</a>
+            <a href="#">Pricing</a>
+          </div>
+
+          <div class="col">
+            <h4>Company</h4>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">News</a>
+            <a href="#">Media Kit</a>
+            <a href="#">Contact</a>
+          </div>
+
+          <div class="col">
+            <h4>Resources</h4>
+            <a href="#">Blog</a>
+            <a href="#">Help Center</a>
+            <a href="#">Tutorials</a>
+            <a href="#">Support</a>
+            <a href="#">Services</a>
+          </div>
+
+          <div class="col">
+            <h4>Collaborate</h4>
+            <a href="#">Partners</a>
+            <a href="#">Partners Program</a>
+            <a href="#">Affiliate Program</a>
+            <a href="#">Community</a>
+            <a href="#">HR Partner Program</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="KM-script.js"></script>
+  </body>
+</html>

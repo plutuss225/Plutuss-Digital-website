@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Property Details</title>
+
+    <!-- FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="KM-style.css" />
+  </head>
+
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <a href="KM-index.html" class="logo">KALAMANDIR BUILDCON LLP</a>
+
+      <nav class="nav-menu">
+        <a href="KM-index.html">Home</a>
+        <a href="KM-about-us.html">About us</a>
+
+        <!-- DROPDOWN -->
+        <div class="dropdown">
+          <span class="dropdown-toggle">
+            Projects <i class="fa-solid fa-chevron-down"></i>
+          </span>
+
+          <div class="dropdown-menu">
+            <a href="past-projects.html">Past Projects</a>
+            <a href="ongoing-projects.html">Ongoing Projects</a>
+            <a href="upcoming-projects.html">Upcoming Projects</a>
+          </div>
+        </div>
+        <a href="KM-Services.html">Services</a>
+        <a href="KM-our-team.html">Our Team</a>
+        <a href="KM-contact.html">Contact us</a>
+      </nav>
+
+      <a href="KM-contact.html" class="btn-primary gradient-btn">Get Started</a>
+    </header>
+
+    <!-- ================= PROPERTY SECTION ================= -->
+    <section class="property-page">
+      <div class="container">
+        <!-- TITLE -->
+        <h1 id="projectTitle" class="property-title"></h1>
+
+        <!-- IMAGE -->
+        <div class="property-hero">
+          <img id="projectImage" src="" />
+        </div>
+
+        <!-- INFO STRIP -->
+        <div class="property-meta">
+          <div class="meta-box">
+            <i class="fa-solid fa-house"></i>
+            <div>
+              <span>Project Type</span>
+              <p id="projectType"></p>
+            </div>
+          </div>
+
+          <div class="meta-box">
+            <i class="fa-solid fa-ruler-combined"></i>
+            <div>
+              <span>Project Area</span>
+              <p id="projectArea"></p>
+            </div>
+          </div>
+
+          <div class="meta-box">
+            <i class="fa-solid fa-calendar"></i>
+            <div>
+              <span>Start date</span>
+              <p id="projectDate"></p>
+            </div>
+          </div>
+
+          <div class="meta-box">
+            <i class="fa-solid fa-money-bill"></i>
+            <div>
+              <span>Price Range</span>
+              <p id="projectPrice"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="property-body">
+          <!-- LEFT CONTENT -->
+          <div class="property-left">
+            <h2>About this property</h2>
+            <p id="projectDesc">
+              <!-- Dynamic description -->
+            </p>
+
+            <h3>Spaces That Bring People Closer</h3>
+            <p>
+              Designed with both comfort and function in mind, the family house
+              provides inviting living areas, cozy bedrooms, and a welcoming
+              kitchen.
+            </p>
+
+            <h3>A Retreat of Comfort</h3>
+            <p>
+              Lavish furnishings, soft textures, and warm lighting create an
+              atmosphere that soothes the senses.
+            </p>
+
+            <ul class="features-list">
+              <li>
+                Concept Design: Fits perfectly into any room or workspace.
+              </li>
+              <li>Smart Sensing: Automatically adjusts settings.</li>
+              <li>Child Safe: Secure locking mechanism.</li>
+              <li>Eco Mode: Conserves energy efficiently.</li>
+            </ul>
+
+            <h3>Legacy of Love Across Generations</h3>
+            <p>
+              Beyond walls and rooms, a family house carries the spirit of those
+              who live within it.
+            </p>
+          </div>
+
+          <!-- RIGHT SIDEBAR -->
+          <div class="property-right">
+            <!-- KEY FEATURES -->
+            <div class="key-features">
+              <h3>Key Property Features</h3>
+
+              <div class="feature-row">
+                <span>Beds</span>
+                <p id="beds"></p>
+              </div>
+
+              <div class="feature-row">
+                <span>Baths</span>
+                <p id="baths"></p>
+              </div>
+
+              <div class="feature-row">
+                <span>Parking</span>
+                <p id="parking"></p>
+              </div>
+
+              <div class="feature-row">
+                <span>SQFT</span>
+                <p id="sqft"></p>
+              </div>
+            </div>
+
+            <!-- AGENT CARD -->
+            <div class="agent-card">
+              <div class="overlay"></div>
+
+              <div class="agent-content">
+                <h4>Connect Directly With<br />The Responsible Agent</h4>
+
+                <p>24/7 Support</p>
+                <h3>+1 890 123 456</h3>
+
+                <p>Email Us</p>
+                <span>support@example.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SCRIPT ================= -->
+    <script>
+      const data = JSON.parse(localStorage.getItem("selectedProject"));
+
+      console.log("DATA:", data); // ✅ now works
+
+      if (data) {
+        document.getElementById("projectTitle").innerText = data.title;
+        document.getElementById("projectImage").src = data.img;
+
+        document.getElementById("projectType").innerText = data.type;
+        document.getElementById("projectArea").innerText = data.area;
+        document.getElementById("projectDate").innerText = data.date;
+        document.getElementById("projectPrice").innerText = data.price;
+
+        document.getElementById("projectDesc").innerText =
+          data.description || "No description available";
+
+        document.getElementById("beds").innerText = data.beds;
+        document.getElementById("baths").innerText = data.baths;
+        document.getElementById("parking").innerText = data.parking;
+        document.getElementById("sqft").innerText = data.sqft;
+      }
+    </script>
+  </body>
+</html>

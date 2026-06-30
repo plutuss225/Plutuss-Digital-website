@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prosumer Solar Portfolio</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      /* ================= HERO ================= */
+      .hero-solar {
+        background: linear-gradient(135deg, #0f2f2d, #1f9c8a);
+        color: #fff;
+        text-align: center;
+        padding: 80px 20px;
+      }
+
+      .hero-solar h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+      }
+
+      .hero-solar p {
+        max-width: 600px;
+        margin: auto;
+        opacity: 0.9;
+      }
+
+      /* ================= LAYOUT ================= */
+      .portfolio-container {
+        max-width: 1200px;
+        margin: -60px auto 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 30px;
+        padding: 0 20px;
+      }
+
+      /* ================= LEFT ================= */
+      .info-card {
+        background: #fff;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      .info-card h3 {
+        color: #1f9c8a;
+      }
+
+      /* ================= RIGHT ================= */
+      .portfolio-right {
+        background: #fff;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      }
+
+      /* ================= SERVICES LIST ================= */
+      .services-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin: 20px 0;
+      }
+
+      .services-list div {
+        background: #f9f9f9;
+        padding: 12px;
+        border-radius: 10px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .services-list i {
+        color: #1f9c8a;
+      }
+
+      /* ================= SERVICE BOX ================= */
+      .services-detail {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .service-box {
+        background: #fff;
+        padding: 18px;
+        border-radius: 14px;
+        border-left: 4px solid #1f9c8a;
+        transition: 0.3s;
+      }
+
+      .service-box:hover {
+        transform: translateY(-6px);
+        background: linear-gradient(135deg, #1f9c8a, #0f2f2d);
+        color: #fff;
+      }
+
+      .service-box:hover h4,
+      .service-box:hover p {
+        color: #fff;
+      }
+
+      /* ================= IMAGES ================= */
+      .portfolio-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin: 25px 0;
+      }
+
+      .portfolio-images img {
+        width: 100%;
+        border-radius: 12px;
+        transition: 0.3s;
+      }
+
+      .portfolio-images img:hover {
+        transform: scale(1.05);
+      }
+
+      /* ================= STATS ================= */
+      .stats {
+        display: flex;
+        justify-content: space-between;
+        margin: 30px 0;
+      }
+
+      .stat-box {
+        text-align: center;
+      }
+
+      .stat-box h3 {
+        color: #1f9c8a;
+      }
+
+      /* ================= FAQ ================= */
+      .faq-item {
+        border-bottom: 1px solid #eee;
+        padding: 15px 0;
+        cursor: pointer;
+      }
+
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.4s;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 200px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="hero-solar">
+      <h1>Powering the Future with Solar Energy</h1>
+      <p>
+        Smart, sustainable, and cost-effective solar solutions for homes and
+        businesses.
+      </p>
+    </section>
+    <section class="portfolio-section">
+      <div class="portfolio-container">
+        <!-- LEFT -->
+        <div class="portfolio-left">
+          <div class="info-card">
+            <h3>Project Overview</h3>
+            <ul>
+              <li><strong>Company:</strong> Prosumer Solar</li>
+              <li><strong>Sector:</strong> Solar Energy & Sustainability</li>
+              <li>
+                <strong>Services:</strong> Installation, Consultation,
+                Maintenance
+              </li>
+              <li>
+                <strong>Solutions:</strong> Rooftop, Commercial & Industrial
+              </li>
+              <li><strong>Focus:</strong> Clean Energy & Cost Reduction</li>
+              <li><strong>Region:</strong> India</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="portfolio-right">
+          <h2>Powering Sustainable Energy Solutions with Prosumer Solar</h2>
+
+          <p class="desc">
+            Prosumer Solar provides reliable solar energy solutions for
+            residential, commercial, and industrial applications, helping reduce
+            electricity costs and promote sustainability.
+          </p>
+
+          <p class="highlight">
+            The company focuses on delivering efficient, long-lasting solar
+            systems tailored to meet diverse energy needs.
+          </p>
+
+          <!-- SERVICES -->
+          <div class="services-list">
+            <div>✔ Rooftop Solar</div>
+            <div>✔ Commercial Projects</div>
+            <div>✔ Industrial Solutions</div>
+            <div>✔ Solar Consultation</div>
+          </div>
+
+          <!-- DETAILS -->
+          <div class="services-detail">
+            <div class="service-box">
+              <h4>Residential Solar</h4>
+              <p>Reduce electricity bills with clean rooftop solar systems.</p>
+            </div>
+
+            <div class="service-box">
+              <h4>Commercial Projects</h4>
+              <p>Efficient solar setups for business energy needs.</p>
+            </div>
+
+            <div class="service-box">
+              <h4>Industrial Solutions</h4>
+              <p>High-capacity systems for large-scale operations.</p>
+            </div>
+
+            <div class="service-box">
+              <h4>Consultation</h4>
+              <p>Customized planning and system design.</p>
+            </div>
+          </div>
+
+          <!-- IMAGES -->
+          <div class="portfolio-images">
+            <img src="case-1.jpg" />
+            <img src="case-2.jpg" />
+          </div>
+
+          <!-- FAQ -->
+          <div class="faq">
+            <div class="faq-item active">
+              <div class="faq-question">What services does Prosumer offer?</div>
+              <div class="faq-answer">
+                Residential, commercial, and industrial solar installation
+                solutions.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">Who can benefit?</div>
+              <div class="faq-answer">
+                Homeowners, businesses, and industries.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">Why solar?</div>
+              <div class="faq-answer">Lower costs and sustainable energy.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.querySelectorAll(".faq-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          document
+            .querySelectorAll(".faq-item")
+            .forEach((i) => i.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Website Development | Plutuss Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --accent: #1f9c8a;
+        --dark: #111;
+        --light: #f6f6f6;
+        --gray: #777;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Inter, sans-serif;
+      }
+
+      body {
+        background: #fff;
+        color: var(--dark);
+        line-height: 1.6;
+      }
+
+      section {
+        padding: 90px 10%;
+      }
+
+      h1,
+      h2 {
+        font-weight: 800;
+      }
+
+      h2 {
+        margin-bottom: 40px;
+      }
+
+      /* HERO */
+      .hero {
+        background: #0f2f2b;
+        color: #fff;
+        padding: 130px 10%;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .hero p {
+        margin: 20px 0 35px;
+        max-width: 520px;
+      }
+
+      .hero a {
+        display: inline-block;
+        padding: 14px 36px;
+        border-radius: 40px;
+        background: var(--accent);
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .metric-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .metric {
+        background: rgba(255, 255, 255, 0.08);
+        padding: 25px;
+        border-radius: 16px;
+      }
+
+      .metric strong {
+        font-size: 1.8rem;
+        display: block;
+        color: var(--accent);
+      }
+
+      /* SERVICES - SPLIT LIST */
+      .service-split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+      }
+
+      .service-item {
+        padding: 25px 0;
+        border-bottom: 1px solid #eee;
+      }
+
+      .service-item h3 {
+        margin-bottom: 8px;
+      }
+
+      /* FUNNEL */
+      .funnel {
+        background: var(--light);
+      }
+
+      .funnel-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        text-align: center;
+      }
+
+      .stage {
+        background: #fff;
+        padding: 35px 20px;
+        border-radius: 18px;
+        font-weight: 600;
+      }
+
+      /* CHANNEL STRIP */
+      .channels {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .channel {
+        padding: 12px 22px;
+        border-radius: 30px;
+        border: 1px solid #ddd;
+        font-weight: 600;
+      }
+
+      /* RESULTS */
+      .results {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      .result-box {
+        padding: 40px;
+        border-radius: 20px;
+        background: #111;
+        color: #fff;
+      }
+
+      .result-box strong {
+        font-size: 2.4rem;
+        color: var(--accent);
+      }
+
+      /* FAQ */
+      .faq details {
+        margin-bottom: 12px;
+        background: #f7f7f7;
+        padding: 18px 22px;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+
+      /* CTA */
+      .cta {
+        background: var(--accent);
+        color: #fff;
+        text-align: center;
+        padding: 80px 10%;
+      }
+
+      .cta a {
+        display: inline-block;
+        margin-top: 25px;
+        background: #fff;
+        color: var(--accent);
+        padding: 14px 40px;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      @media (max-width: 480px) {
+        .funnel-row {
+          grid-template-columns: 1fr;
+        }
+        .channels {
+          flex-direction: column;
+          flex-wrap: nowrap;
+          text-align: center;
+        }
+        .results {
+          grid-template-columns: 1fr;
+        }
+        .service-split {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar-container">
+      <div class="upper-bar">
+        <div class="contact-container">
+          <div class="phone">
+            <a href="tel:+9173855 94572">
+              <i class="fa-solid fa-phone"></i>
+              <p>Call Us: +91 73855 94572</p>
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:info.plutuss@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email Us: info.plutuss@gmail.com</p>
+            </a>
+          </div>
+          <div class="location">
+            <a href="https://maps.app.goo.gl/PgFtHWD1CmeK6eT4A" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>212- City Avenue Commercial, Wakad, Pune-57</p>
+            </a>
+          </div>
+        </div>
+        <div class="social-container">
+          <a href="https://www.facebook.com/plutuss.digital" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/plutussdigital/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://x.com/PlutussD" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/plutussdigital"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.youtube.com/@PlutussDigital" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+
+      <header class="navbar">
+        <div class="container nav-container">
+          <a class="logo" href="index.html">
+            <img
+              src="Plutuss Logo Cropped.webp"
+              alt="Digital Marketing Agency"
+            />
+          </a>
+
+          <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <div class="nav-dropdown">
+              <span class="nav-link">
+                Services <i class="fa-solid fa-chevron-down"></i>
+              </span>
+
+              <div class="dropdown-menu">
+                <a href="seo-new.html">SEO</a>
+                <a href="smm-new.html">Social Media Marketing</a>
+                <a href="content-new.html">Content Creation</a>
+                <a href="branding-new.html">Branding & Design</a>
+                <a href="web-dev-new.html">Website Development</a>
+                <a href="performance-marketing-new.html"
+                  >Performance Marketing</a
+                >
+              </div>
+            </div>
+            <a href="blogs.html">Blogs</a>
+            <a href="careers.html">Careers</a>
+            <a href="contact-us.html">Contact Us</a>
+          </nav>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a href="#get-a-quote" class="navbar-btn">Get A Quote</a>
+        </div>
+      </header>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <h1>Performance Marketing That Delivers Measurable Growth</h1>
+          <p>
+            We run data-driven advertising campaigns that maximize ROI, generate
+            qualified leads, and scale your business predictably.
+          </p>
+          <a href="#contact">Start Campaign</a>
+        </div>
+
+        <div class="metric-box">
+          <div class="metric">
+            <strong>3X+</strong>
+            Average ROI Growth
+          </div>
+          <div class="metric">
+            <strong>40%</strong>
+            Lower Cost Per Lead
+          </div>
+          <div class="metric">
+            <strong>90%</strong>
+            Conversion Optimization
+          </div>
+          <div class="metric">
+            <strong>24/7</strong>
+            Campaign Monitoring
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section>
+      <h2>What We Manage</h2>
+
+      <div class="service-split">
+        <div>
+          <div class="service-item">
+            <h3>Google Ads</h3>
+            <p>Search, Display, Shopping & YouTube campaigns.</p>
+          </div>
+          <div class="service-item">
+            <h3>Meta Ads</h3>
+            <p>Facebook & Instagram conversion campaigns.</p>
+          </div>
+          <div class="service-item">
+            <h3>Landing Page Optimization</h3>
+            <p>High-converting page structure & messaging.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="service-item">
+            <h3>Lead Tracking</h3>
+            <p>Pixel, analytics & conversion tracking setup.</p>
+          </div>
+          <div class="service-item">
+            <h3>A/B Testing</h3>
+            <p>Creative testing for maximum performance.</p>
+          </div>
+          <div class="service-item">
+            <h3>Budget Scaling</h3>
+            <p>Data-driven scaling strategies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNNEL -->
+    <section class="funnel">
+      <h2>Our Growth Funnel</h2>
+
+      <div class="funnel-row">
+        <div class="stage">Audience Research</div>
+        <div class="stage">Ad Creation</div>
+        <div class="stage">Conversion Tracking</div>
+        <div class="stage">Scaling & Optimization</div>
+      </div>
+    </section>
+
+    <!-- CHANNELS -->
+    <section>
+      <h2>Advertising Channels</h2>
+
+      <div class="channels">
+        <div class="channel">Google Search</div>
+        <div class="channel">YouTube Ads</div>
+        <div class="channel">Facebook Ads</div>
+        <div class="channel">Instagram Ads</div>
+        <div class="channel">Remarketing</div>
+        <div class="channel">Lead Forms</div>
+        <div class="channel">Local Campaigns</div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section>
+      <h2>Impact We Create</h2>
+
+      <div class="results">
+        <div class="result-box">
+          <strong>+280%</strong>
+          Revenue Growth
+        </div>
+        <div class="result-box">
+          <strong>-52%</strong>
+          Cost Per Lead
+        </div>
+        <div class="result-box">
+          <strong>4.8x</strong>
+          ROAS Average
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>How soon can I see results?</summary>
+        <p>Most campaigns start generating data within 7–14 days.</p>
+      </details>
+
+      <details>
+        <summary>Do you manage ad budgets?</summary>
+        <p>Yes, we optimize spend allocation based on ROI.</p>
+      </details>
+
+      <details>
+        <summary>Do you provide creatives?</summary>
+        <p>We design ads, landing pages and conversion creatives.</p>
+      </details>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+      <h2>Ready to scale your business with paid advertising?</h2>
+      <a href="contact-us.html">Get Free Strategy Call</a>
+    </section>
+  </body>
+</html>

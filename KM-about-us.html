@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="KM-style.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <!-- VIDEO -->
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="contact.mp4" type="video/mp4" />
+      </video>
+
+      <div class="overlay"></div>
+      <header class="navbar">
+        <a href="KM-index.html" class="logo">KALAMANDIR BUILDCON LLP</a>
+
+        <nav class="nav-menu">
+          <a href="KM-index.html">Home</a>
+          <a href="KM-about-us.html">About us</a>
+
+          <!-- DROPDOWN -->
+          <div class="dropdown">
+            <span class="dropdown-toggle">
+              Projects <i class="fa-solid fa-chevron-down"></i>
+            </span>
+
+            <div class="dropdown-menu">
+              <a href="past-projects.html">Past Projects</a>
+              <a href="ongoing-projects.html">Ongoing Projects</a>
+              <a href="upcoming-projects.html">Upcoming Projects</a>
+            </div>
+          </div>
+          <a href="KM-Services.html">Services</a>
+          <a href="KM-our-team.html">Our Team</a>
+          <a href="KM-contact.html">Contact us</a>
+        </nav>
+
+        <a href="KM-contact.html" class="btn-primary">Get Started</a>
+      </header>
+      <div class="project-content">
+        <p class="about-tag">LUXURY REAL-ESTATE</p>
+        <h1>About Us</h1>
+      </div>
+    </section>
+
+    <section class="about-intro">
+      <div class="container intro-grid">
+        <!-- LEFT CONTENT -->
+        <div class="intro-left">
+          <!-- TAG -->
+          <span class="intro-tag">— About Us</span>
+
+          <!-- HEADING -->
+          <h2>
+            Guiding Smart <br />
+            Property Decisions
+          </h2>
+
+          <!-- TABS -->
+          <div class="intro-tabs">
+            <button
+              class="tab-btn active"
+              data-tab="tab1"
+              data-feature="features-tab1"
+            >
+              Why choose us
+            </button>
+            <button
+              class="tab-btn"
+              data-tab="tab2"
+              data-feature="features-tab2"
+            >
+              Our benefits
+            </button>
+            <button
+              class="tab-btn"
+              data-tab="tab3"
+              data-feature="features-tab3"
+            >
+              Our vision
+            </button>
+          </div>
+
+          <!-- TAB CONTENT -->
+          <div
+            class="tab-content active"
+            id="tab1"
+            data-feature="features-tab1"
+          >
+            <p>
+              We are a professional real estate agency dedicated to helping
+              clients buy, sell, and invest in properties with confidence. Our
+              team combines local market knowledge, verified listings, and
+              transparent guidance.
+            </p>
+          </div>
+
+          <div class="tab-content" data-feature="features-tab2" id="tab2">
+            <p>
+              We provide premium property solutions with unmatched quality,
+              strategic locations, and long-term investment value tailored for
+              modern living and luxury experiences.
+            </p>
+          </div>
+
+          <div class="tab-content" data-feature="features-tab3" id="tab3">
+            <p>
+              Our vision is to redefine luxury real estate by delivering
+              innovative, sustainable, and world-class developments that inspire
+              future generations and elevate lifestyles.
+            </p>
+          </div>
+
+          <!-- DIVIDER -->
+          <div class="divider"></div>
+
+          <!-- FEATURES -->
+          <!-- FEATURES TAB 1 -->
+          <div class="intro-features tab-content active" id="features-tab1">
+            <div>
+              <p>+ Architectural plan</p>
+              <p>+ Innovation</p>
+            </div>
+            <div>
+              <p>+ Residential space</p>
+              <p>+ Interior design</p>
+            </div>
+          </div>
+
+          <!-- FEATURES TAB 2 -->
+          <div class="intro-features tab-content" id="features-tab2">
+            <div>
+              <p>+ Premium locations</p>
+              <p>+ High ROI investment</p>
+            </div>
+            <div>
+              <p>+ Modern amenities</p>
+              <p>+ Smart living spaces</p>
+            </div>
+          </div>
+
+          <!-- FEATURES TAB 3 -->
+          <div class="intro-features tab-content" id="features-tab3">
+            <div>
+              <p>+ Sustainable design</p>
+              <p>+ Future-ready homes</p>
+            </div>
+            <div>
+              <p>+ Global standards</p>
+              <p>+ Timeless architecture</p>
+            </div>
+          </div>
+
+          <!-- BUTTON -->
+          <a href="#" class="intro-btn"> More About Us <span>↗</span> </a>
+        </div>
+
+        <!-- RIGHT SIDE (IMAGES + ELEMENTS) -->
+        <div class="about-right-new">
+          <!-- BACK IMAGE -->
+          <div class="img-back">
+            <img src="about-2-1.jpg" alt="" />
+          </div>
+
+          <!-- FRONT IMAGE -->
+          <div class="img-front">
+            <img src="about-2-2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-history">
+      <div class="container history-grid">
+        <!-- LEFT SIDE -->
+        <div class="history-left">
+          <span class="history-tag">• OUR HISTORY</span>
+          <h2>
+            36+ Years Of <br />
+            A Remarkable <br />
+            Journey
+          </h2>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="timeline">
+          <!-- 2010 -->
+          <div class="timeline-item">
+            <div class="card-timeline">
+              <div class="img-box-about">
+                <img src="process-1.jpg" alt="" />
+              </div>
+              <div class="card-content">
+                <h2>2010</h2>
+                <h4>The Vision Begins</h4>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2016 -->
+          <div class="timeline-item">
+            <div class="card-timeline">
+              <div class="img-box-about">
+                <img src="process-2.jpg" alt="" />
+              </div>
+              <div class="card-content">
+                <h2>2016</h2>
+                <h4>First Foundations Built</h4>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2018 -->
+          <div class="timeline-item">
+            <div class="card-timeline">
+              <div class="img-box-about">
+                <img src="process-3.jpg" alt="" />
+              </div>
+              <div class="card-content">
+                <h2>2018</h2>
+                <h4>Expanding Horizons</h4>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="timeline-item">
+            <div class="card-timeline">
+              <div class="img-box-about">
+                <img src="process-4.jpg" alt="" />
+              </div>
+              <div class="card-content">
+                <h2>2024</h2>
+                <h4>Recognition & Growth</h4>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2026 -->
+          <div class="timeline-item">
+            <div class="card-timeline">
+              <div class="img-box-about">
+                <img src="process-5.jpg" alt="" />
+              </div>
+              <div class="card-content">
+                <h2>2026</h2>
+                <h4>Building For The Future</h4>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit
+                  voluptatem.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="residence-section">
+      <div class="container residence-grid">
+        <!-- LEFT SIDE -->
+        <div class="residence-left">
+          <p class="section-tag">— Inside</p>
+          <h2>A Closer Look Inside the Residence</h2>
+
+          <div class="residence-tabs">
+            <div class="residence-tab active" data-tab="1">
+              <span>01.</span> Guest Room
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="residence-tab" data-tab="2">
+              <span>02.</span> Living Room
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="residence-tab" data-tab="3">
+              <span>03.</span> Kitchen <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="residence-tab" data-tab="4">
+              <span>04.</span> Kids Room <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="residence-tab" data-tab="5">
+              <span>05.</span> Master Bedroom
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="residence-tab" data-tab="6">
+              <span>06.</span> Bathroom <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="residence-right">
+          <!-- IMAGE -->
+          <img id="residence-img" src="feautre1-2.jpg" />
+
+          <!-- OVERLAY CONTENT -->
+          <div class="residence-overlay">
+            <div class="overlay-left">
+              <h3 id="room-title">Comfortable Guest Room</h3>
+              <p id="room-desc">
+                A welcoming space designed for visitors, featuring elegant
+                furnishings.
+              </p>
+            </div>
+
+            <div class="overlay-right" id="room-features">
+              <p>• Queen Size Bed</p>
+              <p>• Private Bathroom</p>
+              <p>• Walk-in Closet</p>
+              <p>• Reading Nook</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="difference-section">
+      <!-- BACKGROUND -->
+      <div class="difference-bg"></div>
+
+      <div class="container difference-grid">
+        <!-- LEFT CONTENT -->
+        <div class="difference-left">
+          <span class="diff-tag">● OUR COMMITMENT</span>
+
+          <h2>What Makes Us Different</h2>
+
+          <p>
+            It’s not just about creating something good; it’s about designing,
+            innovating, and collaborating to forge remarkable and unparalleled
+            experiences.
+          </p>
+        </div>
+
+        <!-- RIGHT CARDS -->
+        <div class="difference-right">
+          <!-- CARD 1 -->
+          <div class="diff-card">
+            <div class="icon"><i class="fa-solid fa-user-check"></i></div>
+            <h3>Expertise You Can Trust</h3>
+            <div class="line"></div>
+            <p>
+              Our experienced real estate experts guide you through every step
+              with knowledge, care, and dedication.
+            </p>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="diff-card">
+            <div class="icon"><i class="fa-solid fa-house"></i></div>
+            <h3>Affordable Realty Options</h3>
+            <div class="line"></div>
+            <p>
+              We prioritize clear communication and simplicity, making your
+              property journey smooth and stress-free.
+            </p>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class="diff-card">
+            <div class="icon"><i class="fa-solid fa-building"></i></div>
+            <h3>Building For Long-Term Value</h3>
+            <div class="line"></div>
+            <p>
+              Every project we develop is built with quality and vision,
+              designed to benefit generations to come.
+            </p>
+          </div>
+
+          <!-- CARD 4 -->
+          <div class="diff-card">
+            <div class="icon"><i class="fa-solid fa-handshake"></i></div>
+            <h3>Hassle-Free Process</h3>
+            <div class="line"></div>
+            <p>
+              We ensure seamless processes, so you can focus on what matters
+              while we handle the rest.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="team-section">
+      <div class="container team-container">
+        <!-- TOP -->
+        <div class="team-top">
+          <!-- LEFT -->
+          <div class="team-left">
+            <span class="team-tag">MEET THE TEAM</span>
+
+            <h2>Global Executive Leadership</h2>
+
+            <p>
+              Our team of architects, engineers, and skilled craftsmen bring a
+              wealth of knowledge and expertise to every project. We understand
+              that every project is unique, and we strive to meet the distinct
+              needs and aspirations of our clients.
+            </p>
+
+            <a href="#" class="team-btn"> See All Experts <span>→</span> </a>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+          <div class="team-hero">
+            <img src="h1-banner2.jpg" alt="" />
+          </div>
+        </div>
+
+        <!-- TEAM GRID -->
+        <div class="team-grid">
+          <div class="team-card">
+            <img src="team-1.jpg" alt="" />
+            <h4>Dennis Daniels</h4>
+            <span>Founder & CEO</span>
+          </div>
+
+          <div class="team-card">
+            <img src="team-3.jpg" alt="" />
+            <h4>Nathaniel Brooks</h4>
+            <span>Executive Assistant</span>
+          </div>
+
+          <div class="team-card">
+            <img src="team-4.jpg" alt="" />
+            <h4>Henry Caldwell</h4>
+            <span>Director of Architecture</span>
+          </div>
+
+          <div class="team-card">
+            <img src="team-7.jpg" alt="" />
+            <h4>Carlos Rivera</h4>
+            <span>Construction Manager</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="footer-section">
+      <!-- MARQUEE TEXT -->
+      <div class="marquee-1">
+        <div class="marquee-track-1">
+          <span>Luxury Living Redefined ✱</span>
+          <span>Exclusive Residences Worldwide ✱</span>
+          <span>Invest in Timeless Real Estate ✱</span>
+          <span>Architectural Excellence ✱</span>
+          <span>Prime Locations. Premium Lifestyle ✱</span>
+        </div>
+      </div>
+
+      <!-- FOOTER BOX -->
+      <div class="footer-container">
+        <!-- LEFT -->
+        <div class="footer-left">
+          <h2 class="logo">Luxury Builders</h2>
+
+          <p class="follow">Follow Us:</p>
+
+          <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+
+          <p class="copyright">
+            Copyright © 2026 Luxury Builders. All rights reserved
+          </p>
+        </div>
+
+        <!-- LINKS -->
+        <div class="footer-links">
+          <div class="col">
+            <h4>Quick Links</h4>
+            <a href="#">Overview</a>
+            <a href="#">Features</a>
+            <a href="#">Solutions</a>
+            <a href="#">Tutorials</a>
+            <a href="#">Pricing</a>
+          </div>
+
+          <div class="col">
+            <h4>Company</h4>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">News</a>
+            <a href="#">Media Kit</a>
+            <a href="#">Contact</a>
+          </div>
+
+          <div class="col">
+            <h4>Resources</h4>
+            <a href="#">Blog</a>
+            <a href="#">Help Center</a>
+            <a href="#">Tutorials</a>
+            <a href="#">Support</a>
+            <a href="#">Services</a>
+          </div>
+
+          <div class="col">
+            <h4>Collaborate</h4>
+            <a href="#">Partners</a>
+            <a href="#">Partners Program</a>
+            <a href="#">Affiliate Program</a>
+            <a href="#">Community</a>
+            <a href="#">HR Partner Program</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="cursor-glow"></div>
+    <script src="KM-script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Departments</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f5f7fa;
+      }
+
+      .dept {
+        background: white;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        cursor: pointer;
+        border-left: 5px solid #1f9c8a;
+      }
+
+      .people {
+        margin-top: 10px;
+        display: none;
+      }
+
+      .person {
+        padding: 5px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Departments</h2>
+
+    <div id="departmentList"></div>
+
+    <script>
+      const departments = {
+        "Video Editor": ["Karthik", "Yash", "Mohit"],
+        "Graphic Designer": ["Manish", "Vaibhav", "Shruti", "Shekhar"],
+        "Digital Marketing": ["Akshad", "Sapna", "Gauri", "Shweta"],
+        "Back Office": ["Grishma"],
+        "Web Developer": ["Mitali"],
+        "Content Writer": ["Amol"],
+      };
+
+      const container = document.getElementById("departmentList");
+
+      Object.keys(departments).forEach((dept) => {
+        const div = document.createElement("div");
+        div.className = "dept";
+
+        div.innerHTML = `
+      <strong>${dept}</strong>
+      <div class="people">
+        ${departments[dept]
+          .map(
+            (p) =>
+              `<div class="person" onclick="openEmployee('${p}', '${dept}')">${p}</div>`,
+          )
+          .join("")}
+      </div>
+    `;
+
+        div.onclick = () => {
+          const peopleDiv = div.querySelector(".people");
+          peopleDiv.style.display =
+            peopleDiv.style.display === "block" ? "none" : "block";
+        };
+
+        container.appendChild(div);
+      });
+
+      // 🔥 AUTO OPEN SELECTED DEPARTMENT (STEP 4)
+      const selectedDept = localStorage.getItem("selectedDept");
+
+      if (selectedDept) {
+        setTimeout(() => {
+          const allDepts = document.querySelectorAll(".dept");
+
+          allDepts.forEach((div) => {
+            if (div.innerText.includes(selectedDept)) {
+              const peopleDiv = div.querySelector(".people");
+              peopleDiv.style.display = "block";
+
+              // scroll to department
+              div.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+
+          localStorage.removeItem("selectedDept");
+        }, 300);
+      }
+      function openEmployee(name, dept) {
+        localStorage.setItem("empName", name);
+        localStorage.setItem("empDept", dept);
+        window.location.href = "employee.html";
+      }
+    </script>
+  </body>
+</html>

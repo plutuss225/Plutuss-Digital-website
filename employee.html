@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Employee Profile</title>
+    <style>
+      body {
+        font-family: Arial;
+        background: #f5f7fa;
+        padding: 20px;
+      }
+
+      .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 400px;
+        margin: auto;
+        text-align: center;
+      }
+
+      img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin: 5px 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <img id="empPhoto" src="https://via.placeholder.com/120" />
+
+      <h2 id="empName"></h2>
+      <p><strong>Department:</strong> <span id="empDept"></span></p>
+      <p><strong>Date of Joining:</strong> <span id="empDOJ"></span></p>
+      <p><strong>Email:</strong> <span id="empEmail"></span></p>
+      <p><strong>Phone:</strong> <span id="empPhone"></span></p>
+    </div>
+
+    <script>
+      const name = localStorage.getItem("empName");
+      const dept = localStorage.getItem("empDept");
+
+      // Dummy Data (you can later connect database)
+      const employeeData = {
+        Akshad: {
+          doj: "11 July 2025",
+          email: "akshad.plutuss@gmail.com",
+          phone: "9834415949",
+          photo: "",
+        },
+        Mitali: {
+          doj: "1 August 2025 ",
+          email: "mitaliplutuss@gmail.com",
+          phone: "7776015296",
+          photo: "photo-mitali.png",
+        },
+        Shruti: {
+          doj: "1 August 2025 ",
+          email: "shrutiavhad04@gmail.com",
+          phone: "9011337311",
+          photo: "",
+        },
+        Karthik: {
+          doj: "18 February 2026",
+          email: "nairkarthik133@gmail.com",
+          phone: "9834415949",
+          photo: "",
+        },
+        Manish: {
+          doj: "3 December 2025",
+          email: "manishrathod2007@gmail.com",
+          phone: "9764623134",
+          photo: "photo-manish.jpeg",
+        },
+        Grishma: {
+          doj: "23 March 2026",
+          email: "grishmashivaji@gmail.com",
+          phone: "7039790646",
+          photo: "",
+        },
+        Sapna: {
+          doj: "25 March 2026",
+          email: "sapnadabhade2016@gmail.com",
+          phone: "8999162620",
+          photo: "",
+        },
+        Gauri: {
+          doj: "14 March 2026",
+          email: "gaurikulkarni8767@gmail.com",
+          phone: "8767333735",
+          photo: "photo-gauri.jpeg",
+        },
+        Yash: {
+          doj: "1 April 2026",
+          email: "yashpandhare192005@gmail.com",
+          phone: "9404402600",
+          photo: "photo-yash.jpeg",
+        },
+        Shekhar: {
+          doj: "10 april 2026",
+          email: "shekharpatil2798@gmail.com",
+          phone: "9309978730",
+          photo: "",
+        },
+      };
+
+      document.getElementById("empName").innerText = name;
+      document.getElementById("empDept").innerText = dept;
+
+      if (employeeData[name]) {
+        document.getElementById("empDOJ").innerText = employeeData[name].doj;
+        document.getElementById("empEmail").innerText =
+          employeeData[name].email;
+        document.getElementById("empPhone").innerText =
+          employeeData[name].phone;
+        document.getElementById("empPhoto").src = employeeData[name].photo;
+      } else {
+        document.getElementById("empDOJ").innerText = "-";
+        document.getElementById("empEmail").innerText = "-";
+        document.getElementById("empPhone").innerText = "-";
+      }
+    </script>
+  </body>
+</html>

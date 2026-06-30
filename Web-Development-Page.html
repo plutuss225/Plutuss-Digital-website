@@ -1,0 +1,668 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Website Development | Plutuss Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --primary: #1f7fe0;
+        --gradient: linear-gradient(135deg, #369bff, #1f7fe0);
+        --dark: #111;
+        --light: #ffffff;
+        --gray: #64748b;
+        --border: #eaf4ff;
+      }
+
+      /* RESET */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #fff;
+        color: var(--dark);
+        line-height: 1.6;
+      }
+
+      /* GLOBAL SECTION */
+      section {
+        padding: 120px 8%;
+        background: linear-gradient(to bottom, #ffffff, #f4f9ff);
+      }
+
+      h1,
+      h2 {
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      h2 {
+        font-size: 40px;
+        margin-bottom: 70px;
+        text-align: center;
+        color: var(--baseShade1);
+      }
+
+      /* =========================
+         HERO (BLUE GRADIENT)
+      ========================= */
+
+      .hero {
+        background: var(--gradient);
+        color: #fff;
+        text-align: center;
+        padding: 120px 8%;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .hero p {
+        max-width: 650px;
+        margin: 20px auto 40px;
+        font-size: 1.1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        width: 300px;
+        padding: 15px 38px;
+        border-radius: 40px;
+        background: #fff;
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s ease;
+        margin: 0 auto;
+      }
+
+      .btn:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 50px rgba(54, 155, 255, 0.35);
+      }
+
+      /* =========================
+         SERVICES
+      ========================= */
+
+      .services-card {
+        padding: 40px 30px;
+        border-radius: 20px;
+        background: #ffffff;
+        border: 1px solid var(--border);
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        text-align: center;
+        transition: 0.4s ease;
+      }
+
+      .services-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.22);
+      }
+
+      .services-card h3 {
+        margin-bottom: 10px;
+        color: var(--accentShade);
+      }
+
+      /* =========================
+         PROCESS
+      ========================= */
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+        text-align: center;
+      }
+
+      .step {
+        padding: 30px;
+        border-radius: 20px;
+        background: #ffffff;
+        border: 1px solid var(--border);
+        box-shadow: 0 15px 40px rgba(54, 155, 255, 0.12);
+        font-weight: 600;
+        transition: 0.4s ease;
+        color: var(--baseShade1);
+      }
+
+      .step:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 60px rgba(54, 155, 255, 0.25);
+      }
+
+      /* =========================
+         WORK
+      ========================= */
+
+      .work-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      .work-card {
+        height: 180px;
+        border-radius: 20px;
+        background: #ffffff;
+        border: 1px solid var(--border);
+        box-shadow: 0 15px 40px rgba(54, 155, 255, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--dark);
+        transition: 0.4s ease;
+      }
+
+      .work-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 60px rgba(54, 155, 255, 0.25);
+        color: var(--primary);
+      }
+
+      .work-grid img {
+        width: 100%;
+        border-radius: 20px;
+      }
+      /* =========================
+         TYPES OF WEBSITES SECTION
+      ========================= */
+
+      section h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 60px;
+        color: var(--baseShade1);
+      }
+
+      /* Grid layout */
+
+      /* Card */
+
+      .services-card {
+        background: #ffffff;
+        padding: 40px 30px;
+        border-radius: 20px;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        text-align: center;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Accent top line */
+
+      .services-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--accentShade);
+      }
+
+      /* Hover effect */
+
+      .services-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 60px rgba(54, 155, 255, 0.25);
+      }
+
+      /* Title */
+
+      .services-card h3 {
+        font-size: 20px;
+        margin-bottom: 12px;
+        color: var(--baseShade1);
+      }
+
+      /* Text */
+
+      .services-card p {
+        font-size: 15px;
+        line-height: 1.7;
+        color: #64748b;
+      }
+
+      /* =========================
+         WHY
+      ========================= */
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .why-grid li {
+        list-style: none;
+        font-weight: 600;
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 16px;
+        border: 1px solid var(--border);
+        box-shadow: 0 10px 30px rgba(72, 72, 72, 0.1);
+      }
+
+      .why-grid li::before {
+        content: "✓";
+        color: var(--accentShade);
+        font-weight: bold;
+        margin-right: 8px;
+      }
+
+      /* =========================
+         CTA
+      ========================= */
+
+      .cta-webdev {
+        background: var(--baseShade1);
+        color: #fff;
+        text-align: center;
+        padding: 120px 8%;
+      }
+
+      .cta-webdev .btn {
+        background: #ffffff;
+      }
+      .cta-webdev h2 {
+        color: var(--whiteShade1);
+      }
+      .cta-webdev .btn:hover {
+        box-shadow: 0 20px 50px rgba(54, 155, 255, 0.35);
+      }
+      /* =========================
+         FAQ SECTION
+      ========================= */
+
+      .faq-section {
+        padding: 120px 8%;
+        background: linear-gradient(to bottom, #ffffff, #f4f9ff);
+        text-align: center;
+      }
+
+      .faq-section h2 {
+        font-size: 40px;
+        margin-bottom: 60px;
+        color: var(--baseShade1);
+      }
+
+      /* container */
+
+      .faq-container {
+        max-width: 800px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      /* item */
+
+      .faq-item {
+        background: #ffffff;
+        border-radius: 16px;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+
+      /* question */
+
+      .faq-question {
+        width: 100%;
+        padding: 20px 25px;
+        font-size: 17px;
+        font-weight: 600;
+        color: var(--baseShade1);
+        background: none;
+        border: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      /* icon */
+
+      .faq-question .icon {
+        font-size: 22px;
+        color: var(--accentShade);
+        transition: transform 0.3s ease;
+      }
+
+      /* answer */
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        padding: 0 25px;
+      }
+
+      .faq-answer p {
+        padding-bottom: 20px;
+        color: #64748b;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      /* active */
+
+      .faq-item.active .faq-answer {
+        max-height: 200px;
+      }
+
+      .faq-item.active .icon {
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar-container">
+      <div class="upper-bar">
+        <div class="contact-container">
+          <div class="phone">
+            <a href="tel:+9173855 94572">
+              <i class="fa-solid fa-phone"></i>
+              <p>Call Us: +91 73855 94572</p>
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:info.plutuss@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email Us: info.plutuss@gmail.com</p>
+            </a>
+          </div>
+          <div class="location">
+            <a href="https://maps.app.goo.gl/PgFtHWD1CmeK6eT4A" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>212- City Avenue Commercial, Wakad, Pune-57</p>
+            </a>
+          </div>
+        </div>
+        <div class="social-container">
+          <a href="https://www.facebook.com/plutuss.digital" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/plutussdigital/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://x.com/PlutussD" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/plutussdigital"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.youtube.com/@PlutussDigital" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+
+      <header class="navbar">
+        <div class="container nav-container">
+          <a class="logo" href="index.html">
+            <img
+              src="Plutuss Logo Cropped.webp"
+              alt="Digital Marketing Agency"
+            />
+          </a>
+
+          <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <div class="nav-dropdown">
+              <a href="services-hub.html" class="services-link">
+                Services Hub
+              </a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+
+              <div class="dropdown-menu">
+                <a href="SEO-Page.html">SEO</a>
+                <a href="SMM-Page.html">Social Media Marketing</a>
+                <a href="Content-Creation-Page.html">Content Creation</a>
+                <a href="Branding-Page.html">Branding & Design</a>
+                <a href="Web-Development-Page.html">Web Development</a>
+                <a href="Performance-Marketting-Page.html"
+                  >Performance Marketing</a
+                >
+              </div>
+            </div>
+            <a href="political-strategy.html">Political</a>
+            <a href="blogs.html">Blogs</a>
+
+            <a href="contact-us.html">Contact Us</a>
+          </nav>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a href="contact-us.html" class="navbar-btn">Get A Quote</a>
+        </div>
+      </header>
+    </div>
+    <!-- HERO -->
+    <section class="service-header">
+      <div class="service-overlay"></div>
+
+      <div class="service-content">
+        <h1>Website Development</h1>
+
+        <a href="contact-us.html" class="service-cta-smm-btn">
+          Get Free Website Development Consultation
+        </a>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section>
+      <h2 class="reveal">What We Do</h2>
+
+      <div class="services-grid">
+        <div class="services-card reveal-zoom">
+          <h3>Custom Websites</h3>
+          <p>Tailor-made designs for your brand identity.</p>
+        </div>
+
+        <div class="services-card reveal-zoom">
+          <h3>Fast Performance</h3>
+          <p>Optimized speed, security and stability.</p>
+        </div>
+
+        <div class="services-card reveal-zoom">
+          <h3>Mobile Friendly</h3>
+          <p>Perfect experience on all devices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="reveal">Types of Websites We Build</h2>
+
+      <div class="services-grid">
+        <div class="services-card reveal-zoom">
+          <h3>Business Websites</h3>
+          <p>
+            Professional websites that represent your brand and generate leads.
+          </p>
+        </div>
+
+        <div class="services-card reveal-zoom">
+          <h3>E-Commerce Stores</h3>
+          <p>
+            Online stores with payment gateway integration and product
+            management.
+          </p>
+        </div>
+
+        <div class="services-card reveal-zoom">
+          <h3>Landing Pages</h3>
+          <p>
+            Conversion-focused pages for ads, campaigns and product launches.
+          </p>
+        </div>
+
+        <div class="services-card reveal-zoom">
+          <h3>Portfolio Websites</h3>
+          <p>
+            Showcase your work with modern design and smooth user experience.
+          </p>
+        </div>
+
+        <div class="services-card reveal-zoom">
+          <h3>Political Campaign Websites</h3>
+          <p>
+            High-impact digital presence for political leaders and campaigns.
+          </p>
+        </div>
+
+        <div class="services-card reveal-zoom">
+          <h3>Custom Web Applications</h3>
+          <p>Advanced web systems tailored for business operations.</p>
+        </div>
+      </div>
+    </section>
+    <!-- PROCESS -->
+    <section>
+      <h2 class="reveal">Our Process</h2>
+
+      <div class="process-grid">
+        <div class="step reveal">1. Discuss Requirements</div>
+        <div class="step reveal">2. Design & Development</div>
+        <div class="step reveal">3. Testing & Optimization</div>
+        <div class="step reveal">4. Launch & Support</div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section>
+      <h2>Sample Work</h2>
+
+      <div class="work-grid">
+        <a href="#" class="work-card reveal-zoom">
+          <img src="web dev-1.png" />
+        </a>
+        <a href="#" class="work-card reveal-zoom">
+          <img src="web dev-2.png" />
+        </a>
+        <a href="#" class="work-card reveal-zoom">
+          <img src="web dev-3.png" />
+        </a>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section>
+      <h2>Why Plutuss Digital</h2>
+
+      <ul class="why-grid">
+        <li class="reveal-right">SEO Optimized Structure</li>
+        <li class="reveal-right">Clean & Maintainable Code</li>
+        <li class="reveal-right">Mobile Responsive Design</li>
+        <li class="reveal-right">Fast Delivery</li>
+        <li class="reveal-right">Affordable Pricing</li>
+        <li class="reveal-right">Local Support</li>
+      </ul>
+    </section>
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does a website take to build?
+            <span class="icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>Most websites take between 1–4 weeks depending on complexity.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Will my website be mobile friendly?
+            <span class="icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>
+              Yes, all websites we build are fully responsive for all devices.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can you redesign my existing website?
+            <span class="icon">+</span>
+          </button>
+
+          <div class="faq-answer">
+            <p>Yes, we can redesign outdated websites with modern UI/UX.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA -->
+    <section class="cta-webdev" id="contact">
+      <h2>Ready to build your website?</h2>
+      <a href="contact-us.html" class="btn">Request Quote</a>
+    </section>
+    <script>
+      function revealOnScroll() {
+        const elements = document.querySelectorAll(
+          ".reveal, .reveal-zoom, .reveal-left, .reveal-right",
+        );
+
+        const windowHeight = window.innerHeight;
+
+        elements.forEach((el) => {
+          const elementTop = el.getBoundingClientRect().top;
+
+          if (elementTop < windowHeight - 120) {
+            el.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", revealOnScroll);
+
+      revealOnScroll();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

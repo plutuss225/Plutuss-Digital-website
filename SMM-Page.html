@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Social Media Marketing Services | Plutuss Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <meta
+      name="description"
+      content="Plutuss Digital offers professional social media marketing services to grow your brand visibility, engagement and leads."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f7f7f7;
+        color: #222;
+        line-height: 1.6;
+      }
+
+      /* =====================================================
+   SMM HERO SECTION
+===================================================== */
+
+      .smm-hero {
+        padding: 160px 8% 120px;
+        text-align: center;
+        background: linear-gradient(135deg, #1f7fe0, #369bff);
+        color: #ffffff;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .smm-hero::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 50%;
+        top: -250px;
+        right: -250px;
+      }
+
+      .smm-hero h1 {
+        font-size: 52px;
+        margin-bottom: 20px;
+      }
+
+      .smm-hero p {
+        font-size: 20px;
+        max-width: 750px;
+        margin: 0 auto 40px;
+        line-height: 1.7;
+      }
+
+      .smm-hero a {
+        display: inline-block;
+        padding: 14px 35px;
+        background: #ffffff;
+        color: #369bff;
+        border-radius: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .smm-hero a:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      }
+
+      /* =====================================================
+   SECTION GENERAL
+===================================================== */
+
+      .section {
+        padding: 120px 8%;
+        background: linear-gradient(to bottom, #ffffff, #f4f9ff);
+      }
+
+      .title {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+
+      .title h2 {
+        font-size: 40px;
+        color: var(--baseShade1);
+      }
+
+      .smm-subtitle {
+        margin-top: 10px;
+        color: #64748b;
+      }
+
+      /* =====================================================
+   WHY SECTION
+===================================================== */
+
+      .grid-why {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+      }
+
+      .grid-why .card {
+        padding: 35px;
+        border-radius: 20px;
+        background: #ffffff;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        transition: 0.4s ease;
+      }
+
+      .grid-why .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 60px rgba(54, 155, 255, 0.25);
+      }
+
+      .grid-why h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #060118;
+      }
+
+      .grid-why p {
+        font-size: 14px;
+        color: #64748b;
+        line-height: 1.7;
+      }
+
+      /* =====================================================
+   WHAT WE OFFER
+===================================================== */
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+
+      .grid .card {
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        transition: 0.4s ease;
+      }
+
+      .grid .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 25px 60px rgba(54, 155, 255, 0.25);
+      }
+
+      .grid .card h3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: var(--baseShade1);
+      }
+
+      .grid .card ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .grid .card ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #64748b;
+      }
+
+      .grid .card ul li::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        color: var(--accentShade);
+        font-weight: bold;
+      }
+
+      /* =====================================================
+   STATS SECTION
+===================================================== */
+
+      .stats {
+        display: flex;
+        justify-content: space-around;
+        padding: 100px 8%;
+        background-color: var(--baseShade1);
+        color: #ffffff;
+        text-align: center;
+      }
+
+      .stat h3 {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+
+      .stat p {
+        font-size: 16px;
+        opacity: 0.9;
+        color: var(--accentShade);
+      }
+
+      /* =====================================================
+   PROCESS SECTION (VERTICAL TIMELINE)
+===================================================== */
+
+      .process-ui {
+        background: linear-gradient(to bottom, #ffffff, #f4f9ff);
+      }
+
+      .process-grid {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+
+      .process-grid::before {
+        content: "";
+        position: absolute;
+        left: 28px;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background-color: var(--baseShade1);
+        border-radius: 10px;
+      }
+
+      .process-card {
+        position: relative;
+        background: #ffffff;
+        padding: 35px 30px 35px 70px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        border: 1px solid #eaf4ff;
+        transition: 0.4s ease;
+      }
+
+      .process-card:hover {
+        transform: translateX(10px);
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+      }
+      .process-card h3 {
+        color: var(--baseShade1);
+      }
+      .step-circle {
+        position: absolute;
+        left: -2px;
+        top: 30px;
+        width: 60px;
+        height: 60px;
+        background-color: var(--accentShade);
+        color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+      }
+
+      /* ==========================================
+   PREMIUM ACCORDION – SMM PAGE
+========================================== */
+
+      .accordion {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      /* Card */
+      .accordion-item {
+        background: #ffffff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        border: 1px solid #eaf4ff;
+        transition: 0.3s ease;
+        position: relative;
+      }
+
+      /* Subtle top accent */
+      .accordion-item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        background-color: var(--baseShade1);
+      }
+
+      /* Hover lift */
+      .accordion-item:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 25px 60px rgba(54, 155, 255, 0.25);
+      }
+
+      /* Header */
+      .accordion-header {
+        width: 100%;
+        padding: 22px 30px;
+        background: #ffffff;
+        border: none;
+        text-align: left;
+        font-size: 17px;
+        font-weight: 600;
+        color: #060118;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.3s ease;
+      }
+
+      /* Hover effect */
+      .accordion-header:hover {
+        background: #f4f9ff;
+      }
+
+      /* Toggle icon */
+      .accordion-header::after {
+        content: "+";
+        font-size: 22px;
+        font-weight: 400;
+        color: var(--accentShade);
+        transition: 0.3s ease;
+      }
+
+      /* When active */
+      .accordion-item.active .accordion-header::after {
+        content: "–";
+        transform: rotate(180deg);
+      }
+
+      /* Body */
+      .accordion-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        background: #f9fcff;
+        padding: 0 30px;
+      }
+
+      /* Active state */
+      .accordion-item.active .accordion-body {
+        padding: 20px 30px 25px 30px;
+        max-height: 500px;
+      }
+
+      /* List styling */
+      .accordion-body ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .accordion-body li {
+        position: relative;
+        padding-left: 24px;
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: #475569;
+      }
+
+      .accordion-body li::before {
+        content: "✔";
+        position: absolute;
+        left: 0;
+        color: var(--accentShade);
+        font-size: 14px;
+      }
+      /* =====================================================
+   cta-smm SECTION
+===================================================== */
+
+      .cta-smm {
+        padding: 120px 8%;
+        text-align: center;
+        background-color: var(--baseShade1);
+        color: #ffffff;
+      }
+
+      .cta-smm h2 {
+        color: var(--whiteShade1);
+        font-size: 40px;
+        margin-bottom: 15px;
+        text-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      }
+
+      .cta-smm p {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .cta-smm a {
+        background: #ffffff;
+        color: var(--accentShade);
+        padding: 14px 35px;
+        border-radius: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .cta-smm a:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+      }
+      .stat h3 {
+        color: #ffffff;
+      }
+
+      /* =========================================
+   SMM PAGE – MOBILE (480px & BELOW)
+========================================= */
+
+      @media (max-width: 480px) {
+        /* ===== HERO ===== */
+        .smm-hero {
+          padding: 100px 20px 70px;
+        }
+
+        .smm-hero h1 {
+          font-size: 28px;
+          line-height: 1.3;
+        }
+
+        .smm-hero p {
+          font-size: 14px;
+          margin-bottom: 25px;
+        }
+
+        .smm-hero a {
+          padding: 12px 24px;
+          font-size: 14px;
+        }
+
+        .smm-hero::before {
+          width: 300px;
+          height: 300px;
+          top: -120px;
+          right: -120px;
+        }
+
+        /* ===== SECTION GLOBAL ===== */
+        .section {
+          padding: 70px 20px;
+        }
+
+        .title {
+          margin-bottom: 40px;
+        }
+
+        .title h2 {
+          font-size: 22px;
+        }
+
+        .smm-subtitle {
+          font-size: 13px;
+        }
+
+        /* ===== WHY SECTION ===== */
+        .grid-why {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .grid-why .card {
+          padding: 22px;
+        }
+
+        .grid-why h3 {
+          font-size: 15px;
+        }
+
+        .grid-why p {
+          font-size: 13px;
+        }
+
+        /* ===== WHAT WE OFFER ===== */
+        .grid {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+
+        .grid .card {
+          padding: 25px;
+        }
+
+        .grid .card h3 {
+          font-size: 16px;
+        }
+
+        .grid .card ul li {
+          font-size: 13px;
+        }
+
+        /* ===== STATS ===== */
+        .stats {
+          flex-direction: column;
+          gap: 40px;
+          padding: 70px 20px;
+        }
+
+        .stat h3 {
+          font-size: 32px;
+        }
+
+        .stat p {
+          font-size: 14px;
+        }
+
+        /* ===== PROCESS TIMELINE ===== */
+        .process-grid {
+          gap: 30px;
+        }
+
+        .process-grid::before {
+          left: 18px;
+          width: 3px;
+        }
+
+        .process-card {
+          padding: 25px 20px 25px 55px;
+          margin-top: 2em;
+        }
+
+        .process-card h3 {
+          font-size: 16px;
+        }
+
+        .process-card p {
+          font-size: 13px;
+        }
+
+        .step-circle {
+          width: 42px;
+          height: 42px;
+          font-size: 14px;
+          top: 25px;
+        }
+
+        /* ===== ACCORDION ===== */
+        .accordion {
+          gap: 15px;
+        }
+
+        .accordion-header {
+          padding: 18px 20px;
+          font-size: 14px;
+        }
+
+        .accordion-body {
+          padding: 0 20px;
+        }
+
+        .accordion-item.active .accordion-body {
+          padding: 15px 20px 20px;
+        }
+
+        .accordion-body li {
+          font-size: 13px;
+        }
+
+        /* ===== cta-smm ===== */
+        .cta-smm {
+          padding: 70px 20px;
+        }
+
+        .cta-smm h2 {
+          font-size: 22px;
+        }
+
+        .cta-smm p {
+          font-size: 14px;
+        }
+
+        .cta-smm a {
+          padding: 12px 25px;
+          font-size: 14px;
+        }
+        .nav-links .nav-dropdown .nav-link {
+          color: #060118;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar-container">
+      <div class="upper-bar">
+        <div class="contact-container">
+          <div class="phone">
+            <a href="tel:+9173855 94572">
+              <i class="fa-solid fa-phone"></i>
+              <p>Call Us: +91 73855 94572</p>
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:info.plutuss@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email Us: info.plutuss@gmail.com</p>
+            </a>
+          </div>
+          <div class="location">
+            <a href="https://maps.app.goo.gl/PgFtHWD1CmeK6eT4A" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>212- City Avenue Commercial, Wakad, Pune-57</p>
+            </a>
+          </div>
+        </div>
+        <div class="social-container">
+          <a href="https://www.facebook.com/plutuss.digital" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/plutussdigital/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://x.com/PlutussD" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/plutussdigital"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.youtube.com/@PlutussDigital" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+
+      <header class="navbar">
+        <div class="container nav-container">
+          <a class="logo" href="index.html">
+            <img
+              src="Plutuss Logo Cropped.webp"
+              alt="Digital Marketing Agency"
+            />
+          </a>
+
+          <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <div class="nav-dropdown">
+              <a href="services-hub.html" class="services-link">
+                Services Hub
+              </a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+
+              <div class="dropdown-menu">
+                <a href="SEO-Page.html">SEO</a>
+                <a href="SMM-Page.html">Social Media Marketing</a>
+                <a href="Content-Creation-Page.html">Content Creation</a>
+                <a href="Branding-Page.html">Branding & Design</a>
+                <a href="Web-Development-Page.html">Web Development</a>
+                <a href="Performance-Marketting-Page.html"
+                  >Performance Marketing</a
+                >
+              </div>
+            </div>
+            <a href="political-strategy.html">Political</a>
+            <a href="blogs.html">Blogs</a>
+
+            <a href="contact-us.html">Contact Us</a>
+          </nav>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a href="contact-us.html" class="navbar-btn">Get A Quote</a>
+        </div>
+      </header>
+    </div>
+    <!-- HERO -->
+    <section class="service-header">
+      <div class="service-overlay"></div>
+
+      <div class="service-content">
+        <h1>Social Media Marketting (SMM)</h1>
+
+        <a href="contact-us.html" class="service-cta-smm-btn">
+          Get Free SMM Consultation
+        </a>
+      </div>
+    </section>
+    <!-- WHY CHOOSE US -->
+    <section class="section why">
+      <div class="title reveal">
+        <h2>Why Choose Plutuss Digital?</h2>
+      </div>
+
+      <div class="grid-why">
+        <div class="card reveal-zoom">
+          <h3>🚀 Proven Industry Experience</h3>
+          <p>
+            We manage high-visibility political leaders, real estate brands and
+            growing businesses with consistent performance and credibility.
+          </p>
+        </div>
+
+        <div class="card reveal-zoom">
+          <h3>🎯 Strategy Driven Marketing</h3>
+          <p>
+            Every campaign is backed by research, analytics and clear business
+            objectives — not random posting.
+          </p>
+        </div>
+
+        <div class="card reveal-zoom">
+          <h3>🎨 In-House Creative Team</h3>
+          <p>
+            Designers, editors and marketers work together to deliver powerful
+            branding and engaging content.
+          </p>
+        </div>
+
+        <div class="card reveal-zoom">
+          <h3>📊 Transparent Reporting</h3>
+          <p>
+            Monthly performance reports with real insights, reach growth and ROI
+            tracking.
+          </p>
+        </div>
+
+        <div class="card reveal-zoom">
+          <h3>🤝 Personalized Support</h3>
+          <p>
+            Direct communication, fast response and customized solutions for
+            every client.
+          </p>
+        </div>
+
+        <div class="card reveal-zoom">
+          <h3>📍 Local Market Expertise</h3>
+          <p>
+            Strong understanding of Pune, PCMC and Maharashtra audience behavior
+            and trends.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section">
+      <div class="title">
+        <h2>What We Offer</h2>
+      </div>
+
+      <div class="grid">
+        <div class="card reveal-zoom">
+          <h3>📱 Social Media Management</h3>
+          <ul>
+            <li>Content Planning & Posting</li>
+            <li>Profile Optimization</li>
+            <li>Professional Caption Writing</li>
+            <li>Community Engagement</li>
+          </ul>
+        </div>
+
+        <div class="card reveal-zoom">
+          <h3>🎥 Creative Production</h3>
+          <ul>
+            <li>Graphic Design & Posters</li>
+            <li>Reels & Video Editing</li>
+            <li>Brand Visual Identity</li>
+            <li>Festival & Campaign Creatives</li>
+          </ul>
+        </div>
+
+        <div class="card reveal-zoom">
+          <h3>📈 Growth Strategy</h3>
+          <ul>
+            <li>Hashtag & Trend Research</li>
+            <li>Reach Optimization</li>
+            <li>Audience Growth Planning</li>
+            <li>Performance Analytics</li>
+          </ul>
+        </div>
+
+        <div class="card reveal-zoom">
+          <h3>📢 Paid Advertising</h3>
+          <ul>
+            <li>Instagram & Facebook Ads</li>
+            <li>Lead Generation Campaigns</li>
+            <li>Local Target Promotions</li>
+            <li>ROI Reporting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat">
+        <h3>120%</h3>
+        <p>Average Engagement Growth</p>
+      </div>
+      <div class="stat">
+        <h3>10K+</h3>
+        <p>Monthly Reach Potential</p>
+      </div>
+      <div class="stat">
+        <h3>50+</h3>
+        <p>Leads Generated Monthly</p>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <!-- PROCESS SECTION -->
+    <section class="section process-ui">
+      <div class="title">
+        <h2>Our Process</h2>
+        <p class="smm-subtitle">
+          Simple, transparent and result-driven workflow
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card reveal-left">
+          <div class="step-circle">1</div>
+          <h3>Goal Understanding</h3>
+          <p>
+            We understand your business goals, audience and growth
+            expecta-smmtions.
+          </p>
+        </div>
+
+        <div class="process-card reveal-left">
+          <div class="step-circle">2</div>
+          <h3>Strategy Planning</h3>
+          <p>Creating content roadmap, posting plan and engagement strategy.</p>
+        </div>
+
+        <div class="process-card reveal-left">
+          <div class="step-circle">3</div>
+          <h3>Content Creation</h3>
+          <p>Designing creatives, reels, captions and branding assets.</p>
+        </div>
+
+        <div class="process-card reveal-left">
+          <div class="step-circle">4</div>
+          <h3>Posting & Growth</h3>
+          <p>Consistent publishing, optimization and audience interaction.</p>
+        </div>
+
+        <div class="process-card reveal-left">
+          <div class="step-circle">5</div>
+          <h3>Reporting</h3>
+          <p>Monthly insights, analytics and performance improvements.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ACCORDION SERVICES -->
+    <section class="section accordion-ui">
+      <div class="title">
+        <h2>Social Media Marketing Services</h2>
+        <p class="smm-subtitle">Click to explore our detailed services</p>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">📱 Social Media Management</button>
+          <div class="accordion-body">
+            <ul>
+              <li>Account setup & optimization</li>
+              <li>Profile branding & bio optimization</li>
+              <li>Content calendar planning</li>
+              <li>Posting & scheduling</li>
+              <li>Caption writing (Marathi + English)</li>
+              <li>Comment & DM monitoring</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">🎨 Creative & Design</button>
+          <div class="accordion-body">
+            <ul>
+              <li>Social media posters & creatives</li>
+              <li>Festival & campaign designs</li>
+              <li>Brand templates & thumbnails</li>
+              <li>Political & corporate creatives</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">🎥 Reels & Video Marketing</button>
+          <div class="accordion-body">
+            <ul>
+              <li>Reels editing & transitions</li>
+              <li>Trend-based reels creation</li>
+              <li>Voice-over & subtitles</li>
+              <li>Promotional video editing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">📈 Growth & Optimization</button>
+          <div class="accordion-body">
+            <ul>
+              <li>Hashtag research & strategy</li>
+              <li>Reach optimization</li>
+              <li>Engagement growth planning</li>
+              <li>Audience targeting</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">📢 Paid Advertising</button>
+          <div class="accordion-body">
+            <ul>
+              <li>Instagram & Facebook ads</li>
+              <li>Lead generation campaigns</li>
+              <li>Location based targeting</li>
+              <li>Remarketing campaigns</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">📊 Analytics & Reporting</button>
+          <div class="accordion-body">
+            <ul>
+              <li>Monthly performance reports</li>
+              <li>Insights & recommendations</li>
+              <li>Growth tracking</li>
+              <li>ROI analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- cta-smm -->
+    <section class="cta-smm">
+      <h2>Ready to Boost Your Social Media Presence?</h2>
+      <p>Partner with Plutuss Digital and grow your brand digitally.</p>
+      <a href="contact.html">Start Now</a>
+    </section>
+    <script src="script.js"></script>
+    <script>
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const body = header.nextElementSibling;
+
+          document.querySelectorAll(".accordion-body").forEach((item) => {
+            if (item !== body) {
+              item.style.maxHeight = null;
+            }
+          });
+
+          if (body.style.maxHeight) {
+            body.style.maxHeight = null;
+          } else {
+            body.style.maxHeight = body.scrollHeight + "px";
+          }
+        });
+      });
+      function revealOnScroll() {
+        const elements = document.querySelectorAll(
+          ".reveal, .reveal-zoom, .reveal-left, .reveal-right",
+        );
+
+        const windowHeight = window.innerHeight;
+
+        elements.forEach((el) => {
+          const elementTop = el.getBoundingClientRect().top;
+
+          if (elementTop < windowHeight - 120) {
+            el.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", revealOnScroll);
+
+      revealOnScroll();
+    </script>
+  </body>
+</html>

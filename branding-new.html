@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Branding & Design | Plutuss Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Professional branding and design services including logo design, brand identity, posters, banners and political branding by Plutuss Digital."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: #fff;
+        color: #222;
+        line-height: 1.6;
+      }
+
+      /* HERO */
+      .hero-simple {
+        min-height: 65vh;
+        background: linear-gradient(135deg, #49cdb9, #0d5b4f);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-content {
+        max-width: 800px;
+        padding: 0 8%;
+      }
+      .hero-simple h1 {
+        margin: 0 auto;
+        text-align: center;
+        color: #ffffff;
+      }
+      .hero-simple p {
+        color: #ffffff;
+        text-align: center;
+      }
+      .hero-simple a {
+        display: block;
+        padding: 14px 36px;
+        background: #1f9c8a;
+        color: #ffffff;
+        margin: 2em auto 0 auto;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+        width: 250px;
+        text-align: center;
+        margin-top: 3e, m;
+      }
+
+      /* SECTION */
+      .section {
+        padding: 90px 8%;
+      }
+      .section.soft {
+        background: #f9f9f9;
+      }
+      .title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .title h2 {
+        color: #1f9c8a;
+        font-size: 2.4rem;
+      }
+
+      /* SHOWCASE GRID */
+      .showcase {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+      .showcase div {
+        height: 240px;
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        color: #999;
+        box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+      }
+
+      /* TABS */
+      .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+      .tab-btn {
+        padding: 14px 28px;
+        border: none;
+        border-radius: 40px;
+        background: #f1f1f1;
+        cursor: pointer;
+        font-weight: 600;
+      }
+      .tab-btn.active {
+        background: #1f9c8a;
+        color: #fff;
+      }
+      .tab-panel {
+        display: none;
+        background: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        max-width: 900px;
+        margin: auto;
+      }
+      .tab-panel.active {
+        display: block;
+      }
+      .tab-panel h3 {
+        color: #1f9c8a;
+        margin-bottom: 10px;
+      }
+      .tab-panel ul {
+        padding-left: 18px;
+        margin-top: 15px;
+      }
+
+      /* DIFFERENCE */
+      .difference-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .diff-item {
+        display: flex;
+        gap: 18px;
+        margin-bottom: 20px;
+        background: #fff;
+        padding: 18px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      /* CTA */
+      .cta {
+        background: #1f9c8a;
+        color: #fff;
+        text-align: center;
+        padding: 90px 8%;
+      }
+      .cta a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px 40px;
+        background: #fff;
+        color: #1f9c8a;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+      .showcase div {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+      }
+      .showcase img {
+        width: 100%;
+      }
+      /* MOBILE */
+      @media (max-width: 900px) {
+        .difference-container {
+          grid-template-columns: 1fr;
+        }
+        .hero-simple h1 {
+          font-size: 2.2rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .difference-container h2,
+        .difference-container p {
+          text-align: center;
+        }
+        .showcase {
+          grid-template-columns: 1fr;
+          gap: 2em;
+        }
+        .showcase div {
+          width: 100%;
+        }
+        .tabs {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar-container">
+      <div class="upper-bar">
+        <div class="contact-container">
+          <div class="phone">
+            <a href="tel:+917385594572">
+              <i class="fa-solid fa-phone"></i>
+              <p>Call Us: +91 73855 94572</p>
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:info.plutuss@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email Us: info.plutuss@gmail.com</p>
+            </a>
+          </div>
+          <div class="location">
+            <a href="https://maps.app.goo.gl/PgFtHWD1CmeK6eT4A" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>212- City Avenue Commercial, Wakad, Pune-57</p>
+            </a>
+          </div>
+        </div>
+        <div class="social-container">
+          <a href="https://www.facebook.com/plutuss.digital" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/plutussdigital/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://x.com/PlutussD" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/plutussdigital"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.youtube.com/@PlutussDigital" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a class="logo" href="index.html">
+          <img src="Plutuss Logo Cropped.webp" alt="Digital Marketing Agency" />
+        </a>
+        <nav class="nav-links" id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about-us.html">About Us</a>
+          <div class="nav-dropdown">
+            <span class="nav-link">
+              Services <i class="fa-solid fa-chevron-down"></i>
+            </span>
+
+            <div class="dropdown-menu">
+              <a href="seo-new.html">SEO</a>
+              <a href="smm-new.html">Social Media Marketing</a>
+              <a href="content-new.html">Content Creation</a>
+              <a href="branding-new.html">Branding & Design</a>
+              <a href="web-dev-new.html">Website Development</a>
+              <a href="performance-marketing.html">Performance Marketing</a>
+            </div>
+          </div>
+          <a href="case-study.html">Case Study</a>
+          <a href="blogs.html">Blogs</a>
+          <a href="contact-us.html">Contact Us</a>
+        </nav>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a href="#get-a-quote" class="navbar-btn">Get A Quote</a>
+      </div>
+    </header>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+
+    <!-- HERO -->
+    <section class="hero-simple">
+      <div class="hero-content">
+        <h1>Branding & Design Solutions</h1>
+        <p>
+          Create a strong brand identity that builds trust, recognition and
+          influence.
+        </p>
+        <a href="contact.html">Start Branding</a>
+      </div>
+    </section>
+    <section class="section soft">
+      <div class="difference-container">
+        <div>
+          <h2>What Makes Our Branding Powerful</h2>
+          <p>
+            We blend strategy, psychology and creativity to build brands that
+            connect emotionally and perform commercially.
+          </p>
+        </div>
+
+        <div>
+          <div class="diff-item">🎯 Strategy Driven Design</div>
+          <div class="diff-item">🎨 Creative Excellence</div>
+          <div class="diff-item">⚡ Fast Turnaround</div>
+          <div class="diff-item">🤝 Personalized Support</div>
+        </div>
+      </div>
+    </section>
+    <!-- SHOWCASE -->
+    <section class="section soft">
+      <div class="title">
+        <h2>Visual Brand Showcase</h2>
+      </div>
+      <div class="showcase">
+        <div>
+          <img src="logo.jpeg" />
+          <p>Logo Sample</p>
+        </div>
+        <div>
+          <img src="posters-01.png" />
+          <p>Poster Design</p>
+        </div>
+        <div>
+          <img src="Campaign Creative.jpeg" />
+          <p>Campaign Creative</p>
+        </div>
+        <div>
+          <img src="Brand Identity.jpeg" />
+          <p>Brand Identity</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES TABS -->
+    <section class="section">
+      <div class="title">
+        <h2>Branding Services</h2>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'logo')">
+          Logo Design
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'identity')">
+          Brand Identity
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'posters')">
+          Posters & Banners
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'political')">
+          Political Branding
+        </button>
+      </div>
+
+      <div class="tab-panel active" id="logo">
+        <h3>Logo Design</h3>
+        <p>Unique brand logos crafted for recognition and trust.</p>
+        <ul>
+          <li>Concept design & variations</li>
+          <li>Color psychology & typography</li>
+          <li>Vector & print-ready formats</li>
+          <li>Brand usage guidelines</li>
+        </ul>
+      </div>
+
+      <div class="tab-panel" id="identity">
+        <h3>Brand Identity</h3>
+        <p>Complete visual identity systems for brand consistency.</p>
+        <ul>
+          <li>Color palette & fonts</li>
+          <li>Brand guidelines</li>
+          <li>Template systems</li>
+          <li>Social branding kits</li>
+        </ul>
+      </div>
+
+      <div class="tab-panel" id="posters">
+        <h3>Posters & Banners</h3>
+        <p>High-impact marketing creatives for campaigns.</p>
+        <ul>
+          <li>Social media posters</li>
+          <li>Outdoor hoardings</li>
+          <li>Digital banners</li>
+          <li>Event creatives</li>
+        </ul>
+      </div>
+
+      <div class="tab-panel" id="political">
+        <h3>Political & Corporate Branding</h3>
+        <p>Strategic branding for leadership and authority positioning.</p>
+        <ul>
+          <li>Campaign branding</li>
+          <li>Political creatives</li>
+          <li>Corporate identity systems</li>
+          <li>Public image consistency</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DIFFERENCE -->
+
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Ready to Build a Powerful Brand?</h2>
+      <p>Let’s create an identity that stands out.</p>
+      <a href="contact.html">Get Started</a>
+    </section>
+
+    <script>
+      function openTab(evt, tabName) {
+        const panels = document.querySelectorAll(".tab-panel");
+        const buttons = document.querySelectorAll(".tab-btn");
+
+        panels.forEach((panel) => panel.classList.remove("active"));
+        buttons.forEach((btn) => btn.classList.remove("active"));
+
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

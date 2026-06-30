@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Product</title>
+
+    <link rel="stylesheet" href="anushri-style.css" />
+
+    <style>
+      .product-page {
+        display: flex;
+        gap: 80px;
+        padding: 80px 10%;
+        align-items: center;
+      }
+
+      .product-left img {
+        width: 400px;
+        border-radius: 12px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .product-right {
+        max-width: 500px;
+      }
+
+      .product-title {
+        font-size: 34px;
+        margin-bottom: 15px;
+      }
+
+      .price-box {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .old-price {
+        text-decoration: line-through;
+        color: #888;
+      }
+
+      .new-price {
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      .product-desc {
+        margin: 25px 0;
+        line-height: 1.7;
+        color: #555;
+      }
+
+      .option {
+        margin-bottom: 15px;
+      }
+
+      .option select {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ddd;
+      }
+
+      .qty-input {
+        width: 80px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+      }
+
+      .add-cart {
+        margin-top: 20px;
+        padding: 15px 25px;
+        background: #8b000f;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 6px;
+        font-size: 16px;
+      }
+
+      .add-cart:hover {
+        background: #a00014;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="product-nav">
+      <button onclick="history.back()" class="back-btn">← Back to Shop</button>
+    </div>
+
+    <div class="product-page">
+      <div class="product-left">
+        <img id="product-image" src="" />
+      </div>
+
+      <div class="product-right">
+        <h1 id="product-name" class="product-title"></h1>
+
+        <div class="price-box">
+          <span class="old-price">Rs. 1390</span>
+          <span id="product-price" class="new-price"></span>
+        </div>
+
+        <div class="option">
+          <label>Choose Size</label>
+          <select id="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+          </select>
+        </div>
+
+        <div class="option">
+          <label>Choose Scent</label>
+          <select id="scent">
+            <option>Sandalwood</option>
+            <option>Rose</option>
+            <option>Vanilla</option>
+            <option>Strawberry</option>
+          </select>
+        </div>
+
+        <div class="option">
+          <label>Quantity</label><br />
+          <input type="number" value="1" min="1" class="qty-input" />
+        </div>
+
+        <p class="product-desc">
+          Handcrafted premium soy wax candle designed to bring warmth, fragrance
+          and elegance to your space. Perfect for home decor, gifting,
+          meditation, relaxation and special occasions. Each candle is carefully
+          made to provide a long-lasting aroma and soothing ambience.
+        </p>
+
+        <button class="add-cart" id="add-to-cart">Add To Cart</button>
+      </div>
+    </div>
+
+    <script src="products.js"></script>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get("id");
+
+      const product = products[id];
+
+      if (!product) {
+        document.body.innerHTML = "Product not found";
+      }
+
+      // product info
+      document.getElementById("product-name").innerText = product.name;
+      document.getElementById("product-image").src = product.image;
+      document.querySelector(".product-desc").innerText = product.description;
+
+      const priceText = document.getElementById("product-price");
+
+      // default price
+      let currentPrice = product.sizes.small;
+      priceText.innerText = "Rs. " + currentPrice;
+
+      // size selector
+      const sizeSelect = document.querySelector("select");
+
+      sizeSelect.addEventListener("change", function () {
+        const size = sizeSelect.value.toLowerCase();
+
+        currentPrice = product.sizes[size];
+
+        priceText.innerText = "Rs. " + currentPrice;
+      });
+
+      // ADD TO CART
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      document.getElementById("add-to-cart").addEventListener("click", () => {
+        const size = document.getElementById("size").value;
+        const scent = document.getElementById("scent").value;
+
+        const item = {
+          name: product.name,
+          price: currentPrice,
+          image: product.image,
+          size: size,
+          color: scent,
+        };
+
+        cart.push(item);
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        alert("Added to Cart");
+      });
+    </script>
+  </body>
+</html>

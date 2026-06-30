@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Website Development | Plutuss Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --accent: #1f9c8a;
+        --dark: #111;
+        --light: #f7f7f7;
+        --gray: #777;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background: #fff;
+        color: var(--dark);
+        line-height: 1.6;
+      }
+
+      section {
+        padding: 90px 10%;
+      }
+
+      h1,
+      h2 {
+        font-weight: 900;
+        line-height: 1.2;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+
+      /* HERO */
+      .hero {
+        background: linear-gradient(135deg, #1f9c8a, #0d5147);
+        color: #fff;
+        text-align: center;
+        padding: 120px 10%;
+      }
+
+      .hero h1 {
+        font-size: 3.2rem;
+      }
+
+      .hero p {
+        max-width: 650px;
+        margin: 20px auto 40px;
+        font-size: 1.1rem;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 36px;
+        border-radius: 40px;
+        background: #fff;
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 700;
+        transition: 0.3s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        opacity: 0.9;
+      }
+
+      /* SERVICES */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      .service-card {
+        padding: 35px;
+        border-radius: 18px;
+        background: var(--light);
+        text-align: center;
+        transition: 0.3s;
+      }
+
+      .service-card:hover {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      .service-card h3 {
+        margin-bottom: 10px;
+      }
+
+      /* PROCESS */
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        text-align: center;
+      }
+
+      .step {
+        padding: 25px;
+        border: 1px solid #eee;
+        border-radius: 14px;
+        font-weight: 600;
+      }
+
+      /* WORK */
+      .work-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+      }
+
+      .work-card {
+        height: 160px;
+        border-radius: 16px;
+        background: #eaeaea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--dark);
+        transition: 0.3s;
+      }
+
+      .work-card:hover {
+        background: var(--accent);
+        color: #fff;
+      }
+
+      /* WHY */
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .why-grid li {
+        list-style: none;
+        font-weight: 600;
+      }
+
+      .why-grid li::before {
+        content: "✓";
+        color: var(--accent);
+        font-weight: bold;
+        margin-right: 8px;
+      }
+
+      /* CTA */
+      .cta {
+        background: #111;
+        color: #fff;
+        text-align: center;
+        padding: 70px 10%;
+      }
+
+      .cta .btn {
+        background: var(--accent);
+        color: #fff;
+      }
+      .work-grid img {
+        width: 100%;
+      }
+      /* MOBILE */
+      @media (max-width: 900px) {
+        .services-grid,
+        .process-grid,
+        .work-grid,
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero h1 {
+          font-size: 2.3rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar-container">
+      <div class="upper-bar">
+        <div class="contact-container">
+          <div class="phone">
+            <a href="tel:+9173855 94572">
+              <i class="fa-solid fa-phone"></i>
+              <p>Call Us: +91 73855 94572</p>
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:info.plutuss@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email Us: info.plutuss@gmail.com</p>
+            </a>
+          </div>
+          <div class="location">
+            <a href="https://maps.app.goo.gl/PgFtHWD1CmeK6eT4A" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>212- City Avenue Commercial, Wakad, Pune-57</p>
+            </a>
+          </div>
+        </div>
+        <div class="social-container">
+          <a href="https://www.facebook.com/plutuss.digital" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/plutussdigital/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://x.com/PlutussD" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/plutussdigital"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.youtube.com/@PlutussDigital" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+
+      <header class="navbar">
+        <div class="container nav-container">
+          <a class="logo" href="index.html">
+            <img
+              src="Plutuss Logo Cropped.webp"
+              alt="Digital Marketing Agency"
+            />
+          </a>
+
+          <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <div class="nav-dropdown">
+              <span class="nav-link">
+                Services <i class="fa-solid fa-chevron-down"></i>
+              </span>
+
+              <div class="dropdown-menu">
+                <a href="seo-new.html">SEO</a>
+                <a href="smm-new.html">Social Media Marketing</a>
+                <a href="content-new.html">Content Creation</a>
+                <a href="branding-new.html">Branding & Design</a>
+                <a href="web-dev-new.html">Website Development</a>
+                <a href="performance-marketing-new.html"
+                  >Performance Marketing</a
+                >
+              </div>
+            </div>
+            <a href="case-study.html">Case Study</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="careers.html">Careers</a>
+            <a href="contact-us.html">Contact Us</a>
+          </nav>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a href="#get-a-quote" class="navbar-btn">Get A Quote</a>
+        </div>
+      </header>
+    </div>
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Website Development Services</h1>
+      <p>
+        We build fast, secure, SEO-ready websites that help businesses grow
+        online and convert visitors into customers.
+      </p>
+      <a href="#contact" class="btn">Get Free Consultation</a>
+    </section>
+
+    <!-- SERVICES -->
+    <section>
+      <h2>What We Do</h2>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Custom Websites</h3>
+          <p>Tailor-made designs for your brand identity.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Fast Performance</h3>
+          <p>Optimized speed, security and stability.</p>
+        </div>
+
+        <div class="service-card">
+          <h3>Mobile Friendly</h3>
+          <p>Perfect experience on all devices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section>
+      <h2>Our Process</h2>
+
+      <div class="process-grid">
+        <div class="step">1. Discuss Requirements</div>
+        <div class="step">2. Design & Development</div>
+        <div class="step">3. Testing & Optimization</div>
+        <div class="step">4. Launch & Support</div>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section>
+      <h2>Sample Work</h2>
+
+      <div class="work-grid">
+        <a href="#" class="work-card">
+          <img src="web dev-1.png" />
+        </a>
+        <a href="#" class="work-card">
+          <img src="web dev-2.png" />
+        </a>
+        <a href="#" class="work-card">
+          <img src="web dev-3.png" />
+        </a>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section>
+      <h2>Why Plutuss Digital</h2>
+
+      <ul class="why-grid">
+        <li>SEO Optimized Structure</li>
+        <li>Clean & Maintainable Code</li>
+        <li>Mobile Responsive Design</li>
+        <li>Fast Delivery</li>
+        <li>Affordable Pricing</li>
+        <li>Local Support</li>
+      </ul>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+      <h2>Ready to build your website?</h2>
+      <a href="contact-us.html" class="btn">Request Quote</a>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

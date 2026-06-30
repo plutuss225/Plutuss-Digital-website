@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Website Development | Plutuss Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ======================================
+   GLOBAL SECTION STYLE
+====================================== */
+
+      section {
+        padding: 120px 8%;
+      }
+
+      h2 {
+        font-size: 40px;
+        margin-bottom: 70px;
+        text-align: center;
+        color: var(--baseShade1);
+      }
+
+      /* ======================================
+   HERO
+====================================== */
+
+      .hero {
+        background: linear-gradient(135deg, #369bff, #1f7fe0);
+        color: #ffffff;
+        padding: 120px 8%;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+      }
+
+      .hero a {
+        display: inline-block;
+        padding: 15px 38px;
+        background: #ffffff;
+        color: #1f7fe0;
+        border-radius: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .hero a:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 50px rgba(54, 155, 255, 0.35);
+      }
+
+      /* METRICS */
+
+      .metric-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .metric {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: #ffffff;
+        padding: 25px;
+        border-radius: 20px;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 15px 40px rgba(54, 155, 255, 0.12);
+        text-align: center;
+        transition: 0.4s ease;
+        color: #000000;
+      }
+
+      .metric:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 60px rgba(54, 155, 255, 0.25);
+      }
+
+      .metric strong {
+        display: block;
+        font-size: 1.8rem;
+        color: #1f7fe0;
+        margin-bottom: 5px;
+      }
+
+      /* ======================================
+   SERVICES SPLIT
+====================================== */
+
+      .service-item {
+        background: #ffffff;
+        padding: 35px;
+        border-radius: 20px;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        margin-bottom: 25px;
+        transition: 0.4s ease;
+      }
+
+      .service-item:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 60px rgba(54, 155, 255, 0.25);
+      }
+
+      .service-item h3 {
+        margin-bottom: 10px;
+        color: var(--accentShade);
+      }
+
+      /* ======================================
+   FUNNEL
+====================================== */
+
+      .stage {
+        padding: 30px;
+        border-radius: 20px;
+        background: #ffffff;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        font-weight: 600;
+        transition: 0.4s ease;
+      }
+
+      .stage:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 60px rgba(54, 155, 255, 0.25);
+      }
+
+      /* ======================================
+   CHANNELS
+====================================== */
+
+      .channels {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+      }
+
+      .channel {
+        padding: 25px;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        text-align: center;
+        font-weight: 600;
+        transition: 0.3s ease;
+      }
+
+      .channel:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 50px rgba(54, 155, 255, 0.25);
+        color: #1f7fe0;
+      }
+
+      /* ======================================
+   RESULTS
+====================================== */
+
+      .results {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+      }
+
+      .result-box {
+        padding: 40px;
+        border-radius: 20px;
+        background: #ffffff;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        text-align: center;
+        transition: 0.4s ease;
+      }
+
+      .result-box:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 60px rgba(54, 155, 255, 0.25);
+      }
+
+      .result-box strong {
+        display: block;
+        font-size: 2rem;
+        color: #1f7fe0;
+        margin-bottom: 10px;
+      }
+
+      /* ======================================
+   FAQ
+====================================== */
+
+      .faq details {
+        background: #ffffff;
+        padding: 20px 25px;
+        border-radius: 16px;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        margin-bottom: 20px;
+      }
+
+      .faq summary {
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--accentShade);
+      }
+
+      .faq p {
+        margin-top: 10px;
+        color: #64748b;
+      }
+
+      /* ======================================
+   CTA
+====================================== */
+
+      .cta-performance {
+        background-color: var(--baseShade1);
+        color: #ffffff;
+        text-align: center;
+        padding: 120px 8%;
+      }
+
+      .cta-performance a {
+        display: inline-block;
+        padding: 15px 38px;
+        background: #ffffff;
+        color: var(--accentShade);
+        border-radius: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .cta-performance a:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 50px rgba(54, 155, 255, 0.35);
+      }
+      .hero {
+        position: relative;
+        height: 80vh;
+        background-image: url("header.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        overflow: hidden;
+      }
+      .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #021558;
+        opacity: 0.75;
+        z-index: -1;
+      }
+      .hero h1 {
+        color: var(--whiteShade1);
+      }
+      .hero p {
+        color: var(--whiteShade1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar-container">
+      <div class="upper-bar">
+        <div class="contact-container">
+          <div class="phone">
+            <a href="tel:+9173855 94572">
+              <i class="fa-solid fa-phone"></i>
+              <p>Call Us: +91 73855 94572</p>
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:info.plutuss@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email Us: info.plutuss@gmail.com</p>
+            </a>
+          </div>
+          <div class="location">
+            <a href="https://maps.app.goo.gl/PgFtHWD1CmeK6eT4A" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>212- City Avenue Commercial, Wakad, Pune-57</p>
+            </a>
+          </div>
+        </div>
+        <div class="social-container">
+          <a href="https://www.facebook.com/plutuss.digital" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/plutussdigital/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://x.com/PlutussD" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/plutussdigital"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.youtube.com/@PlutussDigital" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+
+      <header class="navbar">
+        <div class="container nav-container">
+          <a class="logo" href="index.html">
+            <img
+              src="Plutuss Logo Cropped.webp"
+              alt="Digital Marketing Agency"
+            />
+          </a>
+
+          <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <div class="nav-dropdown">
+              <a href="services-hub.html" class="services-link">
+                Services Hub
+              </a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+
+              <div class="dropdown-menu">
+                <a href="SEO-Page.html">SEO</a>
+                <a href="SMM-Page.html">Social Media Marketing</a>
+                <a href="Content-Creation-Page.html">Content Creation</a>
+                <a href="Branding-Page.html">Branding & Design</a>
+                <a href="Web-Development-Page.html">Web Development</a>
+                <a href="Performance-Marketting-Page.html"
+                  >Performance Marketing</a
+                >
+              </div>
+            </div>
+            <a href="political-strategy.html">Political</a>
+            <a href="blogs.html">Blogs</a>
+
+            <a href="contact-us.html">Contact Us</a>
+          </nav>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a href="contact-us.html" class="navbar-btn">Get A Quote</a>
+        </div>
+      </header>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid">
+        <div>
+          <h1>Performance Marketing That Delivers Measurable Growth</h1>
+          <p>
+            We run data-driven advertising campaigns that maximize ROI, generate
+            qualified leads, and scale your business predictably.
+          </p>
+          <a href="#contact">Start Campaign</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section>
+      <h2>What We Manage</h2>
+
+      <div class="service-split">
+        <div>
+          <div class="service-item reveal">
+            <h3>Google Ads</h3>
+            <p>Search, Display, Shopping & YouTube campaigns.</p>
+          </div>
+          <div class="service-item reveal">
+            <h3>Meta Ads</h3>
+            <p>Facebook & Instagram conversion campaigns.</p>
+          </div>
+          <div class="service-item reveal">
+            <h3>Landing Page Optimization</h3>
+            <p>High-converting page structure & messaging.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="service-item reveal">
+            <h3>Lead Tracking</h3>
+            <p>Pixel, analytics & conversion tracking setup.</p>
+          </div>
+          <div class="service-item reveal">
+            <h3>A/B Testing</h3>
+            <p>Creative testing for maximum performance.</p>
+          </div>
+          <div class="service-item reveal">
+            <h3>Budget Scaling</h3>
+            <p>Data-driven scaling strategies.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNNEL -->
+    <section class="funnel">
+      <h2>Our Growth Funnel</h2>
+
+      <div class="funnel-row">
+        <div class="stage reveal-zoom">Audience Research</div>
+        <div class="stage reveal-zoom">Ad Creation</div>
+        <div class="stage reveal-zoom">Conversion Tracking</div>
+        <div class="stage reveal-zoom">Scaling & Optimization</div>
+      </div>
+    </section>
+
+    <!-- CHANNELS -->
+    <section>
+      <h2>Advertising Channels</h2>
+
+      <div class="channels">
+        <div class="channel reveal">Google Search</div>
+        <div class="channel reveal">YouTube Ads</div>
+        <div class="channel reveal">Facebook Ads</div>
+        <div class="channel reveal">Instagram Ads</div>
+        <div class="channel reveal">Remarketing</div>
+        <div class="channel reveal">Lead Forms</div>
+        <div class="channel reveal">Local Campaigns</div>
+      </div>
+    </section>
+
+    <!-- RESULTS -->
+    <section>
+      <h2>Impact We Create</h2>
+
+      <div class="results">
+        <div class="result-box reveal-zoom">
+          <strong>+280%</strong>
+          Revenue Growth
+        </div>
+        <div class="result-box reveal-zoom">
+          <strong>-52%</strong>
+          Cost Per Lead
+        </div>
+        <div class="result-box reveal-zoom">
+          <strong>4.8x</strong>
+          ROAS Average
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <details>
+        <summary>How soon can I see results?</summary>
+        <p>Most campaigns start generating data within 7–14 days.</p>
+      </details>
+
+      <details>
+        <summary>Do you manage ad budgets?</summary>
+        <p>Yes, we optimize spend allocation based on ROI.</p>
+      </details>
+
+      <details>
+        <summary>Do you provide creatives?</summary>
+        <p>We design ads, landing pages and conversion creatives.</p>
+      </details>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-performance" id="contact">
+      <h2>Ready to scale your business with paid advertising?</h2>
+      <a href="contact-us.html">Get Free Strategy Call</a>
+    </section>
+    <script>
+      function revealOnScroll() {
+        const elements = document.querySelectorAll(
+          ".reveal, .reveal-zoom, .reveal-left, .reveal-right",
+        );
+
+        const windowHeight = window.innerHeight;
+
+        elements.forEach((el) => {
+          const elementTop = el.getBoundingClientRect().top;
+
+          if (elementTop < windowHeight - 120) {
+            el.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", revealOnScroll);
+
+      revealOnScroll();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Your Favorites</title>
+
+    <link rel="stylesheet" href="anushri-style.css" />
+  </head>
+
+  <body>
+    <header class="cart-header">
+      <h1>Your Favorites</h1>
+
+      <a href="index.html" class="back-btn">← Continue Shopping</a>
+    </header>
+
+    <section class="cart-section">
+      <div id="favorites-container"></div>
+    </section>
+
+    <script>
+      let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+      const container = document.getElementById("favorites-container");
+
+      function renderFavorites() {
+        container.innerHTML = "";
+
+        if (favorites.length === 0) {
+          container.innerHTML = "<p>No favorites yet.</p>";
+
+          return;
+        }
+
+        favorites.forEach((item, index) => {
+          const div = document.createElement("div");
+
+          div.classList.add("cart-item");
+
+          div.innerHTML = `
+
+<div class="cart-product">
+
+<img src="${item.image}" class="cart-img">
+
+<div class="cart-details">
+
+<h3>${item.name}</h3>
+
+<p class="cart-price">Price: ₹${item.price}</p>
+
+<button onclick="removeFav(${index})">Remove</button>
+
+</div>
+
+</div>
+
+`;
+
+          container.appendChild(div);
+        });
+      }
+
+      renderFavorites();
+
+      function removeFav(index) {
+        favorites.splice(index, 1);
+
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+
+        renderFavorites();
+      }
+    </script>
+  </body>
+</html>

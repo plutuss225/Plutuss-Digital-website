@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Content Creation | Plutuss Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: #fff;
+        color: #222;
+        line-height: 1.6;
+      }
+      .hero-simple {
+        min-height: 70vh;
+        background: linear-gradient(135deg, #4ed5c1, #116256);
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .hero-simple .hero-content {
+        max-width: 750px;
+        padding: 2em;
+        margin-top: 5em;
+        text-align: center;
+      }
+
+      .hero-simple h1 {
+        font-size: 2.5rem;
+        color: #ffffff;
+        margin-bottom: 15px;
+      }
+
+      .hero-simple p {
+        color: #ffffff;
+        font-size: 1.05rem;
+      }
+
+      .hero-simple a {
+        display: inline-block;
+        margin-top: 25px;
+        padding: 14px 36px;
+        background: #ffffff;
+        color: #1f9c8a;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* SECTION */
+      .section {
+        padding: 90px 8%;
+      }
+      .section.soft {
+        background: #f9f9f9;
+      }
+      .title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+      .title h2 {
+        color: #1f9c8a;
+        font-size: 2.5rem;
+      }
+
+      /* HORIZONTAL PORTFOLIO */
+      .portfolio {
+        display: flex;
+        gap: 25px;
+        margin: 0 auto;
+        justify-content: center;
+      }
+      .portfolio img {
+        width: 280px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 18px;
+        scroll-snap-align: center;
+        transition: 0.4s;
+      }
+      .portfolio img:hover {
+        transform: scale(1.05);
+      }
+
+      /* SPLIT FEATURES */
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .feature-list div {
+        margin-bottom: 25px;
+      }
+      .feature-list h3 {
+        color: #1f9c8a;
+        margin-bottom: 5px;
+      }
+
+      /* TIMELINE */
+      .timeline {
+        max-width: 800px;
+        margin: auto;
+        position: relative;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background: #1f9c8a;
+      }
+      .time-item {
+        width: 50%;
+        padding: 25px;
+        position: relative;
+      }
+      .time-item:nth-child(odd) {
+        left: 0;
+        text-align: right;
+      }
+      .time-item:nth-child(even) {
+        left: 50%;
+      }
+      .dot {
+        width: 16px;
+        height: 16px;
+        background: #1f9c8a;
+        border-radius: 50%;
+        position: absolute;
+        top: 30px;
+        right: -8px;
+      }
+      .time-item:nth-child(even) .dot {
+        left: -8px;
+      }
+
+      /* CTA */
+      .cta {
+        text-align: center;
+        padding: 100px 8%;
+        background: #1f9c8a;
+        color: #fff;
+      }
+      .cta h2 {
+        font-size: 2.6rem;
+        margin-bottom: 10px;
+      }
+      .cta a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px 45px;
+        background: #fff;
+        color: #1f9c8a;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      /* DIFFERENCE SECTION */
+      .difference {
+        background: #f9f9f9;
+      }
+
+      .difference-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .difference-left h2 {
+        font-size: 2.5rem;
+        color: #1f9c8a;
+        margin-bottom: 15px;
+      }
+
+      .difference-left p {
+        margin-bottom: 15px;
+        color: #444;
+      }
+
+      .diff-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 14px 36px;
+        background: #1f9c8a;
+        color: #fff;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .difference-right {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .diff-item {
+        display: flex;
+        gap: 18px;
+        align-items: flex-start;
+        background: #fff;
+        padding: 18px 22px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .diff-item span {
+        font-size: 1.8rem;
+      }
+      .features-grid-section {
+        background: #f9f9f9;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .feature-card {
+        background: #fff;
+        padding: 35px 30px;
+        border-radius: 18px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-6px);
+      }
+
+      .feature-icon {
+        font-size: 2.4rem;
+        margin-bottom: 15px;
+      }
+
+      .feature-card h3 {
+        color: #1f9c8a;
+        margin-bottom: 10px;
+      }
+
+      .feature-card p {
+        font-size: 0.95rem;
+        color: #444;
+      }
+      /* SERVICES TABS */
+      .services-tabs {
+        background: #fff;
+      }
+
+      .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+
+      .tab-btn {
+        padding: 14px 28px;
+        border: none;
+        border-radius: 40px;
+        background: #f1f1f1;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .tab-btn:hover {
+        background: #e5e5e5;
+      }
+
+      .tab-btn.active {
+        background: #1f9c8a;
+        color: #fff;
+      }
+
+      .tab-content {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      .tab-panel {
+        display: none;
+        background: #f9f9f9;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+      }
+
+      .tab-panel.active {
+        display: block;
+      }
+
+      .tab-panel h3 {
+        color: #1f9c8a;
+        margin-bottom: 10px;
+      }
+
+      .tab-panel ul {
+        margin-top: 15px;
+        padding-left: 18px;
+      }
+
+      .tab-panel li {
+        margin-bottom: 8px;
+      }
+
+      /* MOBILE */
+      @media (max-width: 900px) {
+        .difference-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* MOBILE */
+      @media (max-width: 900px) {
+        .split {
+          grid-template-columns: 1fr;
+        }
+        .timeline::before {
+          left: 10px;
+        }
+        .time-item {
+          width: 100%;
+          left: 0;
+          text-align: left;
+          padding-left: 40px;
+        }
+        .dot {
+          left: 2px !important;
+        }
+        .hero h1 {
+          font-size: 2.3rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .portfolio {
+          flex-direction: column;
+        }
+        .time-item:nth-child(odd) {
+          text-align: left;
+        }
+        .time-item:nth-child(even) {
+          left: 0;
+        }
+        .section .portfolio img {
+          margin: 0 auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HERO -->
+    <div class="navbar-container">
+      <div class="upper-bar">
+        <div class="contact-container">
+          <div class="phone">
+            <a href="tel:+917385594572">
+              <i class="fa-solid fa-phone"></i>
+              <p>Call Us: +91 73855 94572</p>
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:info.plutuss@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email Us: info.plutuss@gmail.com</p>
+            </a>
+          </div>
+          <div class="location">
+            <a href="https://maps.app.goo.gl/PgFtHWD1CmeK6eT4A" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>212- City Avenue Commercial, Wakad, Pune-57</p>
+            </a>
+          </div>
+        </div>
+        <div class="social-container">
+          <a href="https://www.facebook.com/plutuss.digital" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/plutussdigital/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://x.com/PlutussD" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/plutussdigital"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.youtube.com/@PlutussDigital" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+
+      <header class="navbar">
+        <div class="container nav-container">
+          <a class="logo" href="index.html">
+            <img
+              src="Plutuss Logo Cropped.webp"
+              alt="Digital Marketing Agency"
+            />
+          </a>
+          <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+
+            <div class="nav-dropdown">
+              <span class="nav-link">
+                Services <i class="fa-solid fa-chevron-down"></i>
+              </span>
+
+              <div class="dropdown-menu">
+                <a href="seo-new.html">SEO</a>
+                <a href="smm-new.html">Social Media Marketing</a>
+                <a href="content-new.html">Content Creation</a>
+                <a href="branding-new.html">Branding & Design</a>
+                <a href="web-dev-new.html">Website Development</a>
+                <a href="performance-marketing.html">Performance Marketing</a>
+              </div>
+            </div>
+            <a href="case-study.html">Case Study</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact-us.html">Contact Us</a>
+          </nav>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a href="#get-a-quote" class="navbar-btn">Get A Quote</a>
+        </div>
+      </header>
+    </div>
+    <section class="hero-simple">
+      <div class="hero-content">
+        <h1>Creative Content That Builds Brands</h1>
+        <p>
+          We craft powerful visuals, videos and stories that connect emotionally
+          and perform digitally.
+        </p>
+        <a href="contact.html">Start Your Project</a>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section">
+      <div class="title">
+        <h2>Our Creative Work</h2>
+      </div>
+
+      <div class="portfolio">
+        <img src="cm-1.jpg" />
+        <img src="cm-2.jpg" />
+        <img src="cm-3.jpg" />
+        <img src="cm-4.jpg" />
+      </div>
+    </section>
+
+    <!-- SPLIT FEATURES -->
+    <section class="section soft features-grid-section">
+      <div class="title">
+        <h2>Designed for Impact</h2>
+        <p>High-performance creative services tailored for digital growth</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3>Branding Creatives</h3>
+          <p>High-quality posters, banners, templates and campaign visuals.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎥</div>
+          <h3>Reels & Video</h3>
+          <p>Short-form videos optimized for engagement and reach.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">✍️</div>
+          <h3>Copywriting</h3>
+          <p>Captions and content that convert attention into action.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📸</div>
+          <h3>Photography Direction</h3>
+          <p>Visual planning and shoot guidance for brand storytelling.</p>
+        </div>
+      </div>
+    </section>
+    <!-- SERVICES TABS -->
+    <section class="section services-tabs">
+      <div class="title">
+        <h2>Our Content Services</h2>
+        <p>Explore what we deliver across creative disciplines</p>
+      </div>
+
+      <!-- TAB BUTTONS -->
+      <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'design')">
+          Graphic Design
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'video')">
+          Video Editing
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'photo')">
+          Photography
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'copy')">
+          Copywriting
+        </button>
+      </div>
+
+      <!-- TAB CONTENT -->
+      <div class="tab-content">
+        <!-- DESIGN -->
+        <div id="design" class="tab-panel active">
+          <h3>🎨 Graphic Design</h3>
+          <p>High-impact visuals that strengthen branding and engagement.</p>
+          <ul>
+            <li>Social media posters & banners</li>
+            <li>Political & real estate creatives</li>
+            <li>Brand templates & thumbnails</li>
+            <li>Ad creatives & campaign designs</li>
+          </ul>
+        </div>
+
+        <!-- VIDEO -->
+        <div id="video" class="tab-panel">
+          <h3>🎥 Video Editing & Reels</h3>
+          <p>Short-form videos optimized for trends, reach and conversions.</p>
+          <ul>
+            <li>Reels editing & transitions</li>
+            <li>Subtitles & voice overlays</li>
+            <li>Promotional video editing</li>
+            <li>Motion graphics effects</li>
+          </ul>
+        </div>
+
+        <!-- PHOTO -->
+        <div id="photo" class="tab-panel">
+          <h3>📸 Photography Direction</h3>
+          <p>Creative guidance for professional brand visuals.</p>
+          <ul>
+            <li>Shot planning & composition</li>
+            <li>Lighting & styling guidance</li>
+            <li>Event photography direction</li>
+            <li>Brand shoot curation</li>
+          </ul>
+        </div>
+
+        <!-- COPY -->
+        <div id="copy" class="tab-panel">
+          <h3>✍️ Copywriting & Captions</h3>
+          <p>Words that connect emotionally and drive action.</p>
+          <ul>
+            <li>Social media captions</li>
+            <li>Ad copywriting</li>
+            <li>Website content writing</li>
+            <li>Hashtag & CTA strategy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- TIMELINE -->
+    <section class="section">
+      <div class="title">
+        <h2>Creative Workflow</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="time-item">
+          <div class="dot"></div>
+          <h3>Brief</h3>
+          <p>Understanding brand and objective.</p>
+        </div>
+        <div class="time-item">
+          <div class="dot"></div>
+          <h3>Concept</h3>
+          <p>Idea, storyboard and planning.</p>
+        </div>
+        <div class="time-item">
+          <div class="dot"></div>
+          <h3>Design</h3>
+          <p>Visual creation and refinement.</p>
+        </div>
+        <div class="time-item">
+          <div class="dot"></div>
+          <h3>Delivery</h3>
+          <p>Final export and publishing support.</p>
+        </div>
+      </div>
+    </section>
+    <!-- WHAT MAKES US DIFFERENT -->
+    <section class="section difference">
+      <div class="difference-container">
+        <!-- LEFT -->
+        <div class="difference-left">
+          <h2>What Makes Us Different</h2>
+          <p>
+            Plutuss Digital is not just another digital agency. We combine
+            creativity, strategy and execution to deliver measurable growth for
+            brands, political leaders and businesses.
+          </p>
+
+          <p>
+            Our hands-on approach, local market understanding and strong
+            creative capabilities make us a reliable digital growth partner.
+          </p>
+
+          <a href="contact.html" class="diff-btn">Work With Us</a>
+        </div>
+
+        <!-- RIGHT FEATURES -->
+        <div class="difference-right">
+          <div class="diff-item">
+            <span>🎯</span>
+            <div>
+              <h4>Niche Expertise</h4>
+              <p>
+                Strong experience in political branding, real estate marketing
+                and local businesses.
+              </p>
+            </div>
+          </div>
+
+          <div class="diff-item">
+            <span>🎨</span>
+            <div>
+              <h4>Creative Excellence</h4>
+              <p>
+                In-house designers and editors delivering premium quality
+                visuals.
+              </p>
+            </div>
+          </div>
+
+          <div class="diff-item">
+            <span>📊</span>
+            <div>
+              <h4>Performance Focused</h4>
+              <p>
+                Every campaign is aligned with measurable growth objectives.
+              </p>
+            </div>
+          </div>
+
+          <div class="diff-item">
+            <span>⚡</span>
+            <div>
+              <h4>Fast Turnaround</h4>
+              <p>Quick delivery without compromising quality.</p>
+            </div>
+          </div>
+
+          <div class="diff-item">
+            <span>🤝</span>
+            <div>
+              <h4>Personalized Support</h4>
+              <p>
+                Direct communication and customized solutions for every client.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Let’s Create Something Powerful</h2>
+      <p>Turn your ideas into high-performing content.</p>
+      <a href="contact.html">Get Started</a>
+    </section>
+    <script>
+      function openTab(evt, tabName) {
+        const panels = document.querySelectorAll(".tab-panel");
+        const buttons = document.querySelectorAll(".tab-btn");
+
+        panels.forEach((panel) => panel.classList.remove("active"));
+        buttons.forEach((btn) => btn.classList.remove("active"));
+
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

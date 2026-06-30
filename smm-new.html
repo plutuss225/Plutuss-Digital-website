@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Social Media Marketing Services | Plutuss Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <meta
+      name="description"
+      content="Plutuss Digital offers professional social media marketing services to grow your brand visibility, engagement and leads."
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background: #f7f7f7;
+        color: #222;
+        line-height: 1.6;
+      }
+
+      /* HERO */
+      .smm-hero {
+        background: linear-gradient(135deg, #1f9c8a, #05473d);
+        color: #fff;
+        text-align: center;
+        padding: 110px 8%;
+      }
+
+      .smm-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+      }
+
+      .smm-hero p {
+        max-width: 700px;
+        margin: auto;
+        font-size: 1.1rem;
+      }
+
+      .smm-hero a {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 15px 38px;
+        background: #fff;
+        color: #1f9c8a;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* SECTION */
+      .section {
+        padding: 80px 8%;
+      }
+
+      .title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .title h2 {
+        color: #1f9c8a;
+        font-size: 2.2rem;
+      }
+
+      /* GRID */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 18px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+      }
+
+      .card h3 {
+        color: #1f9c8a;
+        margin-bottom: 10px;
+      }
+
+      .card ul {
+        list-style: none;
+      }
+
+      .card li {
+        padding: 6px 0;
+        font-size: 0.95rem;
+      }
+
+      /* STATS */
+      .stats {
+        background: #fff;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        padding: 70px 8%;
+        text-align: center;
+      }
+
+      .stat h3 {
+        font-size: 2.5rem;
+        color: #1f9c8a;
+      }
+
+      /* PROCESS */
+      .process {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+        text-align: center;
+      }
+
+      .step {
+        background: #fff;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+      }
+
+      .step span {
+        font-size: 1.8rem;
+        color: #1f9c8a;
+        font-weight: 700;
+      }
+
+      /* CTA */
+      .cta {
+        background: #1f9c8a;
+        color: #fff;
+        text-align: center;
+        padding: 90px 8%;
+      }
+
+      .cta h2 {
+        font-size: 2.3rem;
+        margin-bottom: 15px;
+      }
+
+      .cta a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px 40px;
+        background: #fff;
+        color: #1f9c8a;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .why {
+        background: #fff;
+      }
+      .grid-why {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3em;
+      }
+      .why .card {
+        border-left: 4px solid #1f9c8a;
+        border-radius: 0;
+      }
+      /* PROCESS UI */
+      .process-ui {
+        background: #fdfdfd;
+      }
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 25px;
+      }
+
+      .process-card {
+        background: #fff;
+        border-radius: 18px;
+        padding: 35px 25px;
+        text-align: center;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        transition: 0.3s ease;
+      }
+
+      .process-card:hover {
+        transform: translateY(-6px);
+      }
+
+      .step-circle {
+        width: 55px;
+        height: 55px;
+        background: #1f9c8a;
+        color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin: 0 auto 15px;
+      }
+      p.smm-subtitle {
+        top: 0;
+      }
+      /* ACCORDION UI */
+      .accordion-ui {
+        background: #fff;
+      }
+
+      .accordion {
+        max-width: 900px;
+        margin: 40px auto 0;
+      }
+
+      .accordion-item {
+        border-radius: 12px;
+        margin-bottom: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.08);
+      }
+
+      .accordion-header {
+        width: 100%;
+        padding: 18px 25px;
+        background: #dddddd;
+        border: none;
+        font-size: 1.05rem;
+        font-weight: 600;
+        text-align: left;
+        cursor: pointer;
+        transition: 0.3s ease;
+        border: none;
+        outline: none;
+      }
+
+      .accordion-header:hover {
+        background: #dddddd;
+      }
+
+      .accordion-body {
+        max-height: 0;
+        overflow: hidden;
+        background: #fff;
+        transition: max-height 0.4s ease;
+      }
+
+      .accordion-body ul {
+        padding: 20px 30px;
+      }
+
+      .accordion-body li {
+        padding: 6px 0;
+        font-size: 0.95rem;
+      }
+
+      /* MOBILE */
+      @media (max-width: 768px) {
+        .smm-hero h1 {
+          font-size: 2.2rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .grid-why {
+          grid-template-columns: 1fr;
+        }
+        .cta {
+          flex-direction: column;
+          padding: 1em;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar-container">
+      <div class="upper-bar">
+        <div class="contact-container">
+          <div class="phone">
+            <a href="tel:+917385594572">
+              <i class="fa-solid fa-phone"></i>
+              <p>Call Us: +91 73855 94572</p>
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:info.plutuss@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email Us: info.plutuss@gmail.com</p>
+            </a>
+          </div>
+          <div class="location">
+            <a href="https://maps.app.goo.gl/PgFtHWD1CmeK6eT4A" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>212- City Avenue Commercial, Wakad, Pune-57</p>
+            </a>
+          </div>
+        </div>
+        <div class="social-container">
+          <a href="https://www.facebook.com/plutuss.digital" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/plutussdigital/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://x.com/PlutussD" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/plutussdigital"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.youtube.com/@PlutussDigital" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+
+      <header class="navbar">
+        <div class="container nav-container">
+          <a class="logo" href="index.html">
+            <img
+              src="Plutuss Logo Cropped.webp"
+              alt="Digital Marketing Agency"
+            />
+          </a>
+          <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <div class="nav-dropdown">
+              <span class="nav-link">
+                Services <i class="fa-solid fa-chevron-down"></i>
+              </span>
+
+              <div class="dropdown-menu">
+                <a href="seo-service.html">SEO</a>
+                <a href="smm.html">Social Media Marketing</a>
+                <a href="content-new.html">Content Creation</a>
+                <a href="branding-new.html">Branding & Design</a>
+                <a href="web-dev-new.html">Website Development</a>
+                <a href="performance-marketing.html">Performance Marketing</a>
+              </div>
+            </div>
+            <a href="case-study.html">Case Study</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact-us.html">Contact Us</a>
+          </nav>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a href="#get-a-quote" class="navbar-btn">Get A Quote</a>
+        </div>
+      </header>
+    </div>
+    <!-- HERO -->
+    <section class="smm-hero">
+      <h1>Social Media Marketing</h1>
+      <p>
+        Grow your brand visibility, increase engagement and generate real
+        business leads with Plutuss Digital.
+      </p>
+      <a href="contact.html">Get Free Consultation</a>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section why">
+      <div class="title">
+        <h2>Why Choose Plutuss Digital?</h2>
+      </div>
+
+      <div class="grid-why">
+        <div class="card">
+          <h3>🚀 Proven Industry Experience</h3>
+          <p>
+            We manage high-visibility political leaders, real estate brands and
+            growing businesses with consistent performance and credibility.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🎯 Strategy Driven Marketing</h3>
+          <p>
+            Every campaign is backed by research, analytics and clear business
+            objectives — not random posting.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🎨 In-House Creative Team</h3>
+          <p>
+            Designers, editors and marketers work together to deliver powerful
+            branding and engaging content.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>📊 Transparent Reporting</h3>
+          <p>
+            Monthly performance reports with real insights, reach growth and ROI
+            tracking.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>🤝 Personalized Support</h3>
+          <p>
+            Direct communication, fast response and customized solutions for
+            every client.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>📍 Local Market Expertise</h3>
+          <p>
+            Strong understanding of Pune, PCMC and Maharashtra audience behavior
+            and trends.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section">
+      <div class="title">
+        <h2>What We Offer</h2>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>📱 Social Media Management</h3>
+          <ul>
+            <li>Content Planning & Posting</li>
+            <li>Profile Optimization</li>
+            <li>Professional Caption Writing</li>
+            <li>Community Engagement</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>🎥 Creative Production</h3>
+          <ul>
+            <li>Graphic Design & Posters</li>
+            <li>Reels & Video Editing</li>
+            <li>Brand Visual Identity</li>
+            <li>Festival & Campaign Creatives</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>📈 Growth Strategy</h3>
+          <ul>
+            <li>Hashtag & Trend Research</li>
+            <li>Reach Optimization</li>
+            <li>Audience Growth Planning</li>
+            <li>Performance Analytics</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>📢 Paid Advertising</h3>
+          <ul>
+            <li>Instagram & Facebook Ads</li>
+            <li>Lead Generation Campaigns</li>
+            <li>Local Target Promotions</li>
+            <li>ROI Reporting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="stat">
+        <h3>120%</h3>
+        <p>Average Engagement Growth</p>
+      </div>
+      <div class="stat">
+        <h3>10K+</h3>
+        <p>Monthly Reach Potential</p>
+      </div>
+      <div class="stat">
+        <h3>50+</h3>
+        <p>Leads Generated Monthly</p>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <!-- PROCESS SECTION -->
+    <section class="section process-ui">
+      <div class="title">
+        <h2>Our Process</h2>
+        <p class="smm-subtitle">
+          Simple, transparent and result-driven workflow
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-card">
+          <div class="step-circle">1</div>
+          <h3>Goal Understanding</h3>
+          <p>
+            We understand your business goals, audience and growth expectations.
+          </p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-circle">2</div>
+          <h3>Strategy Planning</h3>
+          <p>Creating content roadmap, posting plan and engagement strategy.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-circle">3</div>
+          <h3>Content Creation</h3>
+          <p>Designing creatives, reels, captions and branding assets.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-circle">4</div>
+          <h3>Posting & Growth</h3>
+          <p>Consistent publishing, optimization and audience interaction.</p>
+        </div>
+
+        <div class="process-card">
+          <div class="step-circle">5</div>
+          <h3>Reporting</h3>
+          <p>Monthly insights, analytics and performance improvements.</p>
+        </div>
+      </div>
+    </section>
+    <!-- ACCORDION SERVICES -->
+    <section class="section accordion-ui">
+      <div class="title">
+        <h2>Social Media Marketing Services</h2>
+        <p class="smm-subtitle">Click to explore our detailed services</p>
+      </div>
+
+      <div class="accordion">
+        <div class="accordion-item">
+          <button class="accordion-header">📱 Social Media Management</button>
+          <div class="accordion-body">
+            <ul>
+              <li>Account setup & optimization</li>
+              <li>Profile branding & bio optimization</li>
+              <li>Content calendar planning</li>
+              <li>Posting & scheduling</li>
+              <li>Caption writing (Marathi + English)</li>
+              <li>Comment & DM monitoring</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">🎨 Creative & Design</button>
+          <div class="accordion-body">
+            <ul>
+              <li>Social media posters & creatives</li>
+              <li>Festival & campaign designs</li>
+              <li>Brand templates & thumbnails</li>
+              <li>Political & corporate creatives</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">🎥 Reels & Video Marketing</button>
+          <div class="accordion-body">
+            <ul>
+              <li>Reels editing & transitions</li>
+              <li>Trend-based reels creation</li>
+              <li>Voice-over & subtitles</li>
+              <li>Promotional video editing</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">📈 Growth & Optimization</button>
+          <div class="accordion-body">
+            <ul>
+              <li>Hashtag research & strategy</li>
+              <li>Reach optimization</li>
+              <li>Engagement growth planning</li>
+              <li>Audience targeting</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">📢 Paid Advertising</button>
+          <div class="accordion-body">
+            <ul>
+              <li>Instagram & Facebook ads</li>
+              <li>Lead generation campaigns</li>
+              <li>Location based targeting</li>
+              <li>Remarketing campaigns</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">📊 Analytics & Reporting</button>
+          <div class="accordion-body">
+            <ul>
+              <li>Monthly performance reports</li>
+              <li>Insights & recommendations</li>
+              <li>Growth tracking</li>
+              <li>ROI analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Ready to Boost Your Social Media Presence?</h2>
+      <p>Partner with Plutuss Digital and grow your brand digitally.</p>
+      <a href="contact.html">Start Now</a>
+    </section>
+    <script src="script.js"></script>
+    <script>
+      const accordionHeaders = document.querySelectorAll(".accordion-header");
+
+      accordionHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const body = header.nextElementSibling;
+
+          document.querySelectorAll(".accordion-body").forEach((item) => {
+            if (item !== body) {
+              item.style.maxHeight = null;
+            }
+          });
+
+          if (body.style.maxHeight) {
+            body.style.maxHeight = null;
+          } else {
+            body.style.maxHeight = body.scrollHeight + "px";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

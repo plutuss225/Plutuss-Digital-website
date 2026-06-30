@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Branding & Design | Plutuss Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Professional branding and design services including logo design, brand identity, posters, banners and political branding by Plutuss Digital."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <style>
+      /* =====================================
+   HERO (BLUE GRADIENT)
+===================================== */
+
+      .hero-simple {
+        background: linear-gradient(135deg, #369bff, #1f7fe0);
+        color: #ffffff;
+        text-align: center;
+        padding: 20em 2em 10em 2em;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-simple h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+      }
+
+      .hero-simple p {
+        max-width: 700px;
+        margin: auto;
+        font-size: 1.1rem;
+      }
+
+      .hero-simple a {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 15px 38px;
+        background: #ffffff;
+        color: #1f7fe0;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+        width: 250px;
+        margin: 3em auto 0 auto;
+        transition: 0.3s ease;
+      }
+
+      .hero-simple a:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 50px rgba(54, 155, 255, 0.35);
+      }
+
+      /* =====================================
+   SECTION BACKGROUND
+===================================== */
+
+      .section {
+        padding: 120px 8%;
+        background: linear-gradient(to bottom, #ffffff, #f4f9ff);
+        text-align: center;
+      }
+
+      /* =====================================
+   DIFFERENCE SECTION
+===================================== */
+
+      .difference-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px;
+        align-items: center;
+        text-align: left;
+      }
+
+      .difference-container h2 {
+        font-size: 40px;
+        margin: 0;
+        margin-bottom: 25px;
+        color: var(--baseShade1);
+      }
+
+      .difference-container p {
+        font-size: 15px;
+        color: #64748b;
+        line-height: 1.8;
+      }
+
+      .diff-item {
+        background: #ffffff;
+        padding: 35px 30px;
+        border-radius: 20px;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        margin-bottom: 20px;
+        transition: all 0.4s ease;
+      }
+
+      .diff-item:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 60px rgba(54, 155, 255, 0.25);
+      }
+
+      /* =====================================
+   SHOWCASE
+===================================== */
+
+      .showcase {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+      }
+
+      .showcase div {
+        background: #ffffff;
+        border-radius: 20px;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+        transition: all 0.4s ease;
+        overflow: hidden;
+      }
+
+      .showcase div:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.22);
+      }
+
+      .showcase img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+      }
+
+      .showcase p {
+        padding: 20px;
+        font-weight: 600;
+        color: var(--accentShade);
+      }
+
+      /* =====================================
+   TABS
+===================================== */
+
+      .tabs {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+      }
+
+      .tab-btn {
+        padding: 14px 32px;
+        border-radius: 40px;
+        border: 1px solid #eaf4ff;
+        background: #ffffff;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--baseShade1);
+        transition: all 0.3s ease;
+      }
+
+      .tab-btn.active,
+      .tab-btn:hover {
+        background-color: var(--accentShade);
+        color: #ffffff;
+        box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12);
+      }
+
+      .tab-panel {
+        display: none;
+        max-width: 900px;
+        margin: auto;
+        background: #ffffff;
+        padding: 50px;
+        border-radius: 20px;
+        border: 1px solid #eaf4ff;
+        box-shadow: 0 15px 40px rgba(54, 155, 255, 0.12);
+        animation: fadeIn 0.4s ease;
+        text-align: left;
+      }
+
+      .tab-panel.active {
+        display: block;
+      }
+
+      .tab-panel h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: var(--accentShade);
+      }
+
+      .tab-panel p,
+      .tab-panel li {
+        font-size: 15px;
+        color: #64748b;
+        line-height: 1.7;
+      }
+
+      /* =====================================
+   CTA (SAME BLUE GRADIENT)
+===================================== */
+
+      .cta-branding {
+        background-color: var(--baseShade1);
+        color: #ffffff;
+        text-align: center;
+        padding: 120px 8%;
+      }
+
+      .cta-branding h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: var(--whiteShade1);
+      }
+
+      .cta-branding p {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+      }
+
+      .cta-branding a {
+        display: inline-block;
+        padding: 15px 38px;
+        background: #ffffff;
+        color: #1f7fe0;
+        border-radius: 40px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: 0.3s ease;
+      }
+
+      .cta-branding a:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 50px rgba(54, 155, 255, 0.35);
+      }
+      /* =========================================
+   BRANDING PAGE – MOBILE (480px & BELOW)
+========================================= */
+
+      @media (max-width: 480px) {
+        /* ===== HERO ===== */
+        .nav-container {
+          margin-top: 0;
+        }
+        .hero-simple {
+          padding: 10em 20px 5em 20px;
+        }
+
+        .hero-simple h1 {
+          font-size: 24px;
+          line-height: 1.3;
+        }
+
+        .hero-simple p {
+          font-size: 14px;
+          padding: 0 10px;
+        }
+
+        .hero-simple a {
+          width: 100%;
+          max-width: 220px;
+          padding: 12px 20px;
+          font-size: 14px;
+        }
+
+        /* ===== SECTION ===== */
+        .section {
+          padding: 70px 20px;
+        }
+
+        /* ===== DIFFERENCE SECTION ===== */
+        .difference-container {
+          grid-template-columns: 1fr;
+          gap: 30px;
+          text-align: center;
+        }
+
+        .difference-container h2 {
+          font-size: 22px;
+        }
+
+        .difference-container p {
+          font-size: 14px;
+        }
+
+        .diff-item {
+          padding: 20px;
+          font-size: 14px;
+        }
+
+        /* ===== SHOWCASE ===== */
+        .showcase {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .showcase img {
+          height: 180px;
+        }
+
+        .showcase p {
+          font-size: 14px;
+          padding: 15px;
+        }
+
+        /* ===== TABS ===== */
+        .tabs {
+          gap: 10px;
+          margin-bottom: 30px;
+        }
+
+        .tab-btn {
+          padding: 10px 18px;
+          font-size: 13px;
+        }
+
+        .tab-panel {
+          padding: 25px 20px;
+        }
+
+        .tab-panel h3 {
+          font-size: 16px;
+        }
+
+        .tab-panel p,
+        .tab-panel li {
+          font-size: 13px;
+        }
+
+        /* ===== CTA ===== */
+        .cta-branding {
+          padding: 70px 20px;
+          background-color: orange;
+        }
+
+        .cta-branding h2 {
+          font-size: 22px;
+        }
+
+        .cta-branding p {
+          font-size: 14px;
+        }
+
+        .cta-branding a {
+          padding: 12px 25px;
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navbar-container">
+      <div class="upper-bar">
+        <div class="contact-container">
+          <div class="phone">
+            <a href="tel:+9173855 94572">
+              <i class="fa-solid fa-phone"></i>
+              <p>Call Us: +91 73855 94572</p>
+            </a>
+          </div>
+          <div class="email">
+            <a href="mailto:info.plutuss@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>Email Us: info.plutuss@gmail.com</p>
+            </a>
+          </div>
+          <div class="location">
+            <a href="https://maps.app.goo.gl/PgFtHWD1CmeK6eT4A" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>212- City Avenue Commercial, Wakad, Pune-57</p>
+            </a>
+          </div>
+        </div>
+        <div class="social-container">
+          <a href="https://www.facebook.com/plutuss.digital" target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/plutussdigital/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://x.com/PlutussD" target="_blank"
+            ><i class="fa-brands fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/plutussdigital"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://www.youtube.com/@PlutussDigital" target="_blank"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+        </div>
+      </div>
+
+      <header class="navbar">
+        <div class="container nav-container">
+          <a class="logo" href="index.html">
+            <img
+              src="Plutuss Logo Cropped.webp"
+              alt="Digital Marketing Agency"
+            />
+          </a>
+
+          <nav class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <div class="nav-dropdown">
+              <a href="services-hub.html" class="services-link">
+                Services Hub
+              </a>
+
+              <span class="dropdown-toggle">
+                <i class="fa-solid fa-chevron-down"></i>
+              </span>
+
+              <div class="dropdown-menu">
+                <a href="SEO-Page.html">SEO</a>
+                <a href="SMM-Page.html">Social Media Marketing</a>
+                <a href="Content-Creation-Page.html">Content Creation</a>
+                <a href="Branding-Page.html">Branding & Design</a>
+                <a href="Web-Development-Page.html">Web Development</a>
+                <a href="Performance-Marketting-Page.html"
+                  >Performance Marketing</a
+                >
+              </div>
+            </div>
+            <a href="political-strategy.html">Political</a>
+            <a href="blogs.html">Blogs</a>
+
+            <a href="contact-us.html">Contact Us</a>
+          </nav>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <a href="contact-us.html" class="navbar-btn">Get A Quote</a>
+        </div>
+      </header>
+    </div>
+    <!-- HERO -->
+    <section class="service-header">
+      <div class="service-overlay"></div>
+
+      <div class="service-content">
+        <h1>Branding & Design</h1>
+
+        <a href="contact-us.html" class="service-cta-smm-btn">
+          Get Free Branding & Design Consultation
+        </a>
+      </div>
+    </section>
+    <section class="section soft reveal">
+      <div class="difference-container">
+        <div>
+          <h2>What Makes Our Branding Powerful</h2>
+          <p>
+            We blend strategy, psychology and creativity to build brands that
+            connect emotionally and perform commercially.
+          </p>
+        </div>
+
+        <div>
+          <div class="diff-item reveal-zoom">🎯 Strategy Driven Design</div>
+          <div class="diff-item reveal-zoom">🎨 Creative Excellence</div>
+          <div class="diff-item reveal-zoom">⚡ Fast Turnaround</div>
+          <div class="diff-item reveal-zoom">🤝 Personalized Support</div>
+        </div>
+      </div>
+    </section>
+    <!-- SHOWCASE -->
+    <section class="section soft">
+      <div class="title reveal">
+        <h2>Visual Brand Showcase</h2>
+      </div>
+      <div class="showcase reveal">
+        <div>
+          <img src="logo.jpeg" />
+          <p>Logo Sample</p>
+        </div>
+        <div>
+          <img src="posters-01.png" />
+          <p>Poster Design</p>
+        </div>
+        <div>
+          <img src="Campaign Creative.jpeg" />
+          <p>Campaign Creative</p>
+        </div>
+        <div>
+          <img src="Brand Identity.jpeg" />
+          <p>Brand Identity</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES TABS -->
+    <section class="section">
+      <div class="title">
+        <h2>Branding Services</h2>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="openTab(event, 'logo')">
+          Logo Design
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'identity')">
+          Brand Identity
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'posters')">
+          Posters & Banners
+        </button>
+        <button class="tab-btn" onclick="openTab(event, 'political')">
+          Political Branding
+        </button>
+      </div>
+
+      <div class="tab-panel active" id="logo">
+        <h3>Logo Design</h3>
+        <p>Unique brand logos crafted for recognition and trust.</p>
+        <ul>
+          <li>Concept design & variations</li>
+          <li>Color psychology & typography</li>
+          <li>Vector & print-ready formats</li>
+          <li>Brand usage guidelines</li>
+        </ul>
+      </div>
+
+      <div class="tab-panel" id="identity">
+        <h3>Brand Identity</h3>
+        <p>Complete visual identity systems for brand consistency.</p>
+        <ul>
+          <li>Color palette & fonts</li>
+          <li>Brand guidelines</li>
+          <li>Template systems</li>
+          <li>Social branding kits</li>
+        </ul>
+      </div>
+
+      <div class="tab-panel" id="posters">
+        <h3>Posters & Banners</h3>
+        <p>High-impact marketing creatives for campaigns.</p>
+        <ul>
+          <li>Social media posters</li>
+          <li>Outdoor hoardings</li>
+          <li>Digital banners</li>
+          <li>Event creatives</li>
+        </ul>
+      </div>
+
+      <div class="tab-panel" id="political">
+        <h3>Political & Corporate Branding</h3>
+        <p>Strategic branding for leadership and authority positioning.</p>
+        <ul>
+          <li>Campaign branding</li>
+          <li>Political creatives</li>
+          <li>Corporate identity systems</li>
+          <li>Public image consistency</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DIFFERENCE -->
+
+    <!-- cta-branding -->
+    <section class="cta-branding">
+      <h2>Ready to Build a Powerful Brand?</h2>
+      <p>Let’s create an identity that stands out.</p>
+      <a href="contact.html">Get Started</a>
+    </section>
+
+    <script>
+      function openTab(evt, tabName) {
+        const panels = document.querySelectorAll(".tab-panel");
+        const buttons = document.querySelectorAll(".tab-btn");
+
+        panels.forEach((panel) => panel.classList.remove("active"));
+        buttons.forEach((btn) => btn.classList.remove("active"));
+
+        document.getElementById(tabName).classList.add("active");
+        evt.currentTarget.classList.add("active");
+      }
+      function revealOnScroll() {
+        const elements = document.querySelectorAll(
+          ".reveal, .reveal-zoom, .reveal-left, .reveal-right",
+        );
+
+        const windowHeight = window.innerHeight;
+
+        elements.forEach((el) => {
+          const elementTop = el.getBoundingClientRect().top;
+
+          if (elementTop < windowHeight - 120) {
+            el.classList.add("active");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", revealOnScroll);
+
+      revealOnScroll();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
