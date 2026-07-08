@@ -207,12 +207,8 @@ export default function HomePage() {
       <section className="hero-partner-strip-section" aria-label="Trusted partners">
         <div className="container">
           <div className="hero-partner-strip">
-            <div className="hero-partner-heading">
-              <span className="hero-partner-label">Trusted Partners</span>
-              <span className="hero-partner-subtitle">Brands that trust our growth-driven work</span>
-            </div>
             <div className="hero-partner-track">
-              {[...[
+              {[...[ 
                 { src: '/royal-court-logo.png', alt: 'Royal Court' },
                 { src: '/trimortal-logo.png', alt: 'Trimortal Ventures' },
                 { src: '/prosumers-logo.png', alt: 'Prosumers Solar' },
