@@ -1,0 +1,420 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+.pol-strategy-page {
+  --baseShade1: #021558;
+  --accentShade: #ff5e14;
+  --accentSoft: #eff6ff;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #0a2540;
+  overflow-x: hidden;
+}
+
+.pol-strategy-page .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.pol-strategy-page .reveal.active { opacity: 1; transform: translateY(0); }
+.pol-strategy-page .reveal-left { opacity: 0; transform: translateX(-80px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.pol-strategy-page .reveal-left.active { opacity: 1; transform: translateX(0); }
+.pol-strategy-page .reveal-right { opacity: 0; transform: translateX(80px); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.pol-strategy-page .reveal-right.active { opacity: 1; transform: translateX(0); }
+.pol-strategy-page .reveal-zoom { opacity: 0; transform: scale(0.85); transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
+.pol-strategy-page .reveal-zoom.active { opacity: 1; transform: scale(1); }
+.pol-strategy-page .text-reveal { opacity: 0; transform: translateY(18px); transition: all 0.75s cubic-bezier(0.22, 1, 0.36, 1); }
+.pol-strategy-page .text-reveal.active { opacity: 1; transform: translateY(0); }
+.pol-strategy-page .card-reveal,
+.pol-strategy-page .about-card,
+.pol-strategy-page .specialty-card,
+.pol-strategy-page .service-card,
+.pol-strategy-page .case-block,
+.pol-strategy-page .strategy-item,
+.pol-strategy-page .political-hero-feature-card { opacity: 0; transform: translateY(28px); transition: all 0.75s cubic-bezier(0.22, 1, 0.36, 1); }
+.pol-strategy-page .card-reveal.active,
+.pol-strategy-page .about-card.active,
+.pol-strategy-page .specialty-card.active,
+.pol-strategy-page .service-card.active,
+.pol-strategy-page .case-block.active,
+.pol-strategy-page .strategy-item.active,
+.pol-strategy-page .political-hero-feature-card.active { opacity: 1; transform: translateY(0); }
+.pol-strategy-page .card-reveal:nth-child(2),
+.pol-strategy-page .about-card:nth-child(2),
+.pol-strategy-page .specialty-card:nth-child(2),
+.pol-strategy-page .service-card:nth-child(2),
+.pol-strategy-page .case-block:nth-child(2),
+.pol-strategy-page .strategy-item:nth-child(2),
+.pol-strategy-page .political-hero-feature-card:nth-child(2) { transition-delay: 0.08s; }
+.pol-strategy-page .card-reveal:nth-child(3),
+.pol-strategy-page .about-card:nth-child(3),
+.pol-strategy-page .specialty-card:nth-child(3),
+.pol-strategy-page .service-card:nth-child(3),
+.pol-strategy-page .case-block:nth-child(3),
+.pol-strategy-page .strategy-item:nth-child(3),
+.pol-strategy-page .political-hero-feature-card:nth-child(3) { transition-delay: 0.16s; }
+.pol-strategy-page .card-reveal:nth-child(4),
+.pol-strategy-page .about-card:nth-child(4),
+.pol-strategy-page .specialty-card:nth-child(4),
+.pol-strategy-page .service-card:nth-child(4),
+.pol-strategy-page .case-block:nth-child(4),
+.pol-strategy-page .strategy-item:nth-child(4),
+.pol-strategy-page .political-hero-feature-card:nth-child(4) { transition-delay: 0.24s; }
+.pol-strategy-page .card-reveal:nth-child(5),
+.pol-strategy-page .about-card:nth-child(5),
+.pol-strategy-page .specialty-card:nth-child(5),
+.pol-strategy-page .service-card:nth-child(5),
+.pol-strategy-page .case-block:nth-child(5),
+.pol-strategy-page .strategy-item:nth-child(5),
+.pol-strategy-page .political-hero-feature-card:nth-child(5) { transition-delay: 0.32s; }
+
+.pol-strategy-page .parliament { width: 100%; max-width: 900px; display: block; margin: 120px auto 60px auto; filter: drop-shadow(0 30px 60px rgba(54, 155, 255, 0.15)); }
+.pol-strategy-page .marquee-wrapper { width: 100%; padding: 40px 0; background: linear-gradient(135deg, #ffffff 0%, #f4f9ff 100%); border-top: 1px solid rgba(54, 155, 255, 0.15); border-bottom: 1px solid rgba(54, 155, 255, 0.15); }
+.pol-strategy-page .marquee-track { display: flex; justify-content: center; flex-wrap: wrap; gap: 60px; }
+.pol-strategy-page .marquee-item { font-size: 20px; font-weight: 700; letter-spacing: 0.5px; color: #0a2540; position: relative; }
+.pol-strategy-page .marquee-item:not(:last-child)::after { content: ""; position: absolute; right: -35px; top: 50%; transform: translateY(-50%); width: 8px; height: 8px; background: var(--accentShade); border-radius: 50%; }
+.pol-strategy-page .hero { display: flex; align-items: center; justify-content: space-between; gap: 3rem; padding: 60px 8% 48px; position: relative; overflow: hidden; }
+.pol-strategy-page .hero::before { content: ""; position: absolute; width: 500px; height: 500px; background: radial-gradient( circle, rgba(54, 155, 255, 0.15), transparent 70% ); top: -150px; right: -100px; z-index: 0; }
+.pol-strategy-page .hero-content { max-width: 600px; position: relative; z-index: 1; }
+.pol-strategy-page .hero-kicker { display: inline-block; margin-bottom: 0.85rem; padding: 0.42rem 0.8rem; border-radius: 999px; background: rgba(54, 155, 255, 0.12); color: #1d4ed8; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; }
+.pol-strategy-page .hero-content h1 { line-height: 1.35; color: var(--baseShade1); font-size: clamp(2.2rem, 3.6vw, 3.3rem); font-weight: 800; margin-bottom: 15px; }
+.pol-strategy-page .hero-content p { font-size: 1rem; line-height: 1.9; color: #334155; margin-bottom: 24px; }
+.pol-strategy-page .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
+.pol-strategy-page .btn-primary { padding: 16px 30px; border-radius: 999px; background: linear-gradient(135deg, #369bff, #1f7fe0); color: #ffffff; font-weight: 600; text-decoration: none; box-shadow: 0 16px 34px rgba(54, 155, 255, 0.25); transition: 0.35s ease; }
+.pol-strategy-page .btn-primary:hover { transform: translateY(-4px); }
+.pol-strategy-page .btn-secondary { padding: 15px 28px; border-radius: 999px; color: #1d4ed8; text-decoration: none; font-weight: 600; transition: 0.3s ease; border: 1px solid rgba(54, 155, 255, 0.2); }
+.pol-strategy-page .btn-secondary:hover { background: #369bff; color: #ffffff; }
+.pol-strategy-page .hero-visual { position: relative; z-index: 1; display: flex; justify-content: center; align-items: center; }
+.pol-strategy-page .hero-visual-card {
+  width: min(430px, 100%);
+  padding: 2rem;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(4, 25, 72, 0.96), rgba(10, 39, 103, 0.96));
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 24px 64px rgba(1, 17, 53, 0.28);
+  position: relative;
+  overflow: hidden;
+  color: #f8fbff;
+}
+.pol-strategy-page .hero-info-card h3 { font-size: 1.15rem; line-height: 1.5; color: #ffffff; margin-bottom: 1rem; }
+.pol-strategy-page .hero-feature-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.7rem; }
+.pol-strategy-page .hero-feature-list li { padding: 0.85rem 1rem; border-radius: 14px; background: rgba(255,255,255,0.1); color: #f7fbff; border: 1px solid rgba(255,255,255,0.12); }
+.pol-strategy-page .hero-visual-badge {
+  display: inline-flex;
+  padding: 0.6rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.pol-strategy-page .hero-visual-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  position: relative;
+  z-index: 1;
+}
+.pol-strategy-page .visual-dot {
+  min-height: 100px;
+  padding: 1rem 1.2rem;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  color: #0a2540;
+  transition: transform 0.35s ease;
+}
+.pol-strategy-page .visual-dot:hover { transform: translateY(-6px); }
+.pol-strategy-page .visual-dot-1 { background: rgba(15,23,42,0.03); }
+.pol-strategy-page .visual-dot-2 { background: rgba(15,23,42,0.03); }
+.pol-strategy-page .visual-dot-3 { background: rgba(15,23,42,0.03); grid-column: span 2; }
+.pol-strategy-page .hero-visual-footer {
+  margin-top: 1.8rem;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.5rem;
+}
+.pol-strategy-page .hero-visual-footer span {
+  color: #475569;
+  font-size: 0.95rem;
+}
+.pol-strategy-page .hero-visual-footer strong {
+  color: var(--baseShade1);
+  font-size: 1rem;
+}
+
+/* Feature cards (sequential) - neutral styling */
+.pol-strategy-page .feature-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 1rem;
+  z-index: 1;
+}
+.pol-strategy-page .political-hero-feature-card {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 18px 16px;
+  text-align: left;
+  border: 1px solid rgba(15,23,42,0.06);
+  box-shadow: none;
+  min-height: 140px;
+}
+.pol-strategy-page .political-hero-feature-card h4 {
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--baseShade1);
+}
+.pol-strategy-page .political-hero-feature-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+  .pol-strategy-page .feature-cards { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 576px) {
+  .pol-strategy-page .marquee-wrapper {
+    padding: 20px 0;
+  }
+
+  .pol-strategy-page .marquee-track {
+    gap: 30px;
+  }
+
+  .pol-strategy-page .marquee-item {
+    font-size: 14px;
+  }
+
+  .pol-strategy-page .hero {
+    padding: 30px 4% 24px;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .pol-strategy-page .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .pol-strategy-page .hero-visual-card {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  .pol-strategy-page .feature-cards { 
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 0.5rem;
+  }
+
+  .pol-strategy-page .about-section {
+    padding: 40px 4% 30px;
+  }
+
+  .pol-strategy-page .about-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .pol-strategy-page .about-left {
+    max-width: 100%;
+  }
+
+  .pol-strategy-page .about-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .pol-strategy-page .experience-section {
+    padding: 40px 4% 30px;
+  }
+
+  .pol-strategy-page .experience-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.pol-strategy-page .hero-visual::after {
+  content: '';
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(54, 155, 255, 0.06);
+  top: 8%;
+  right: -10%;
+  z-index: 0;
+  filter: blur(18px);
+  animation: floatOval 7s ease-in-out infinite;
+}
+.pol-strategy-page .hero-visual::before {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(255, 94, 20, 0.06);
+  bottom: -8%;
+  left: -10%;
+  z-index: 0;
+  filter: blur(13px);
+  animation: floatOvalAlt 5.5s ease-in-out infinite;
+}
+
+@keyframes floatOval {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-14px) scale(1.02); }
+}
+
+@keyframes floatOvalAlt {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-10px) scale(1.04); }
+}
+.pol-strategy-page .quick-stats { padding: 120px 8%; background: #f7fbff; }
+.pol-strategy-page .stats-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; }
+.pol-strategy-page .stat-card { background: #ffffff; padding: 60px; border-radius: 30px; text-align: center; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.05), 0 80px 160px rgba(54, 155, 255, 0.08); transition: 0.4s ease; }
+.pol-strategy-page .stat-card:hover { transform: translateY(-10px); }
+.pol-strategy-page .stat-card h2 { font-size: 52px; font-weight: 800; color: #369bff; margin-bottom: 15px; }
+.pol-strategy-page .stat-card p { font-size: 16px; color: #475569; }
+.pol-strategy-page .about-section { padding: 100px 8% 80px; background: linear-gradient(135deg, #ffffff 0%, #f4f9ff 100%); position: relative; overflow: hidden; }
+.pol-strategy-page .about-section::before { content: ""; position: absolute; width: 500px; height: 500px; background: radial-gradient( circle, rgba(54, 155, 255, 0.12), transparent 70% ); top: -150px; left: -150px; z-index: 0; }
+.pol-strategy-page .about-wrapper { display: flex; gap: 100px; align-items: flex-start; position: relative; z-index: 1; }
+.pol-strategy-page .about-left { flex: 1; }
+.pol-strategy-page .about-label { font-size: 14px; letter-spacing: 2px; font-weight: 600; color: var(--accentShade); margin-bottom: 16px; display: inline-block; }
+.pol-strategy-page .about-left h2 { font-size: 48px; font-weight: 800; color: var(--baseShade1); margin: 0; margin-bottom: 20px; line-height: 1.4; }
+.pol-strategy-page .about-left p { font-size: 16px; line-height: 1.9; color: #475569; margin-bottom: 16px; }
+.pol-strategy-page .about-intro { font-weight: 500; }
+.pol-strategy-page .about-right { flex: 1; display: flex; flex-direction: column; gap: 40px; }
+.pol-strategy-page .about-card { background: #ffffff; padding: 50px; border-radius: 30px; box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12); transition: 0.4s ease; }
+.pol-strategy-page .about-card:hover { transform: translateY(-10px); }
+.pol-strategy-page .about-card h3 { font-size: 22px; font-weight: 700; color: var(--baseShade1); margin-bottom: 20px; }
+.pol-strategy-page .quote { font-size: 17px; font-style: italic; color: #0a2540; margin-bottom: 20px; position: relative; padding-left: 20px; }
+.pol-strategy-page .quote::before { content: ""; position: absolute; left: 0; top: 8px; width: 6px; height: 60%; background: var(--accentShade); border-radius: 4px; }
+.pol-strategy-page .about-card ul { list-style: none; padding: 0; }
+.pol-strategy-page .about-card li { font-size: 17px; line-height: 1.9; color: #475569; margin-bottom: 15px; padding-left: 28px; position: relative; }
+.pol-strategy-page .about-card li::before { content: ""; position: absolute; left: 0; top: 10px; width: 8px; height: 8px; background: var(--accentShade); border-radius: 50%; }
+.pol-strategy-page .leadership-section { padding: 100px 8%; background: #f7fbff; }
+.pol-strategy-page .leadership-header { text-align: center; margin-bottom: 60px; }
+.pol-strategy-page .leadership-header h2 { font-size: 48px; font-weight: 800; }
+.pol-strategy-page .leadership-grid { display: flex; flex-direction: column; gap: 60px; }
+.pol-strategy-page .leader-card { background: #ffffff; padding: 60px; border-radius: 30px; display: flex; gap: 50px; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.05), 0 80px 160px rgba(54, 155, 255, 0.08); transition: 0.4s ease; }
+.pol-strategy-page .leader-card:hover { transform: translateY(-10px); }
+.pol-strategy-page .leader-image img { width: 220px; border-radius: 25px; }
+.pol-strategy-page .leader-role { color: var(--baseShade1); font-weight: 600; display: block; margin-bottom: 15px; }
+.pol-strategy-page .experience-section { padding: 100px 8%; background: #ffffff; }
+.pol-strategy-page .experience-header { text-align: center; margin-bottom: 60px; }
+.pol-strategy-page .experience-header h2 { font-size: 48px; font-weight: 800; }
+.pol-strategy-page .experience-wrapper { display: flex; gap: 80px; }
+.pol-strategy-page .experience-right { flex: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+.pol-strategy-page .specialty-card { background: #f7fbff; padding: 40px; border-radius: 25px; box-shadow: 0 20px 50px rgba(54, 155, 255, 0.1); transition: 0.3s ease; }
+.pol-strategy-page .specialty-card:hover { transform: translateY(-8px); }
+.pol-strategy-page .services-section { padding: 100px 8%; background: #f7fbff; }
+.pol-strategy-page .services-header { text-align: center; margin-bottom: 60px; }
+.pol-strategy-page .services-header h2 { font-size: 48px; font-weight: 800; }
+.pol-strategy-page .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
+.pol-strategy-page .service-card { background: #ffffff; padding: 50px; border-radius: 30px; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.05), 0 80px 160px rgba(54, 155, 255, 0.08); transition: 0.4s ease; }
+.pol-strategy-page .service-card:hover { transform: translateY(-10px); }
+.pol-strategy-page .service-icon { font-size: 30px; color: #369bff; margin: 25px 0; }
+.pol-strategy-page .service-btn { display: inline-block; padding: 12px 30px; color: #ffffff; border-radius: 50px; text-decoration: none; font-weight: 600; }
+.pol-strategy-page .contact-section { padding: 100px 8%; background: #ffffff; }
+.pol-strategy-page .contact-header { text-align: center; margin-bottom: 60px; }
+.pol-strategy-page .contact-wrapper { display: flex; gap: 60px; }
+.pol-strategy-page .form-container { flex: 1; background: #f7fbff; padding: 60px; border-radius: 30px; box-shadow: 0 30px 70px rgba(54, 155, 255, 0.1); }
+.pol-strategy-page .form-container input, .pol-strategy-page .form-container textarea { width: 100%; padding: 15px; margin-bottom: 20px; border-radius: 12px; border: 1px solid #dce3ea; }
+.pol-strategy-page .form-container button { width: 100%; padding: 16px; border: none; border-radius: 50px; background-color: var(--accentShade); color: #ffffff; font-weight: 600; cursor: pointer; }
+.pol-strategy-page .contact-info-box { flex: 1; }
+.pol-strategy-page .contact-social a { font-size: 22px; margin-right: 15px; color: var(--accentShade); }
+.pol-strategy-page .map-container iframe { width: 100%; height: 250px; border-radius: 25px; margin-top: 25px; }
+.pol-strategy-page .marquee-wrapper { width: 100%; overflow: hidden; padding: 40px 0; background: linear-gradient(135deg, #ffffff 0%, #f4f9ff 100%); border-top: 1px solid rgba(54, 155, 255, 0.15); border-bottom: 1px solid rgba(54, 155, 255, 0.15); position: relative; }
+.pol-strategy-page .marquee-track { display: flex; gap: 80px; width: max-content; animation: marqueeRight 25s linear infinite; }
+.pol-strategy-page .marquee-item { font-size: 20px; font-weight: 700; letter-spacing: 0.5px; color: var(--baseShade1); white-space: nowrap; position: relative; }
+.pol-strategy-page .marquee-item::after { content: ""; position: absolute; right: -40px; top: 50%; transform: translateY(-50%); width: 8px; height: 8px; background: #369bff; border-radius: 50%; }
+@keyframes marqueeRight { from { transform: translateX(-50%); } to { transform: translateX(0%); } }
+.pol-strategy-page .experience-section { padding: 140px 8%; background: linear-gradient(to bottom, #ffffff, #f6fbff); }
+.pol-strategy-page .experience-header { text-align: center; margin-bottom: 100px; }
+.pol-strategy-page .experience-header h2 { font-size: 48px; font-weight: 800; color: var(--baseShade1); margin-bottom: 20px; }
+.pol-strategy-page .experience-tagline p { font-size: 16px; color: #475569; max-width: 650px; margin: 0 auto; line-height: 1.9; }
+.pol-strategy-page .experience-wrapper { display: flex; gap: 100px; align-items: flex-start; }
+.pol-strategy-page .experience-left { flex: 1; }
+.pol-strategy-page .experience-left h3 { font-size: 28px; font-weight: 700; color: var(--accentShade); margin-bottom: 25px; }
+.pol-strategy-page .experience-left p { font-size: 16px; line-height: 1.9; color: #475569; margin-bottom: 35px; }
+.pol-strategy-page .experience-left h4 { font-size: 20px; font-weight: 700; margin-bottom: 20px; color: var(--baseShade1); }
+.pol-strategy-page .election-list { list-style: none; padding: 0; }
+.pol-strategy-page .election-list li { font-size: 17px; line-height: 1.9; color: #475569; margin-bottom: 15px; padding-left: 28px; position: relative; }
+.pol-strategy-page .election-list li::before { content: ""; position: absolute; left: 0; top: 10px; width: 10px; height: 10px; background: var(--accentShade); border-radius: 50%; }
+.pol-strategy-page .experience-right { flex: 1; display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+.pol-strategy-page .specialty-card { background: #ffffff; padding: 40px; border-radius: 30px; box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12); transition: 0.4s ease; }
+.pol-strategy-page .specialty-card:hover { transform: translateY(-10px); }
+.pol-strategy-page .specialty-card h4 { font-size: 20px; font-weight: 700; color: var(--accentShade); margin-bottom: 15px; }
+.pol-strategy-page .specialty-card p { font-size: 16px; line-height: 1.8; color: #475569; }
+.pol-strategy-page .services-section { padding: 140px 8%; background: linear-gradient(to bottom, #f7fbff, #ffffff); position: relative; }
+.pol-strategy-page .services-header { text-align: center; margin-bottom: 100px; }
+.pol-strategy-page .services-header h2 { font-size: 48px; font-weight: 800; color: #0a2540; margin-bottom: 20px; }
+.pol-strategy-page .services-header p { font-size: 16px; color: #475569; max-width: 650px; margin: 0 auto; line-height: 1.9; }
+.pol-strategy-page .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
+.pol-strategy-page .service-card { background: #ffffff; padding: 50px; border-radius: 30px; box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12); transition: 0.4s ease; display: flex; flex-direction: column; justify-content: space-between; }
+.pol-strategy-page .service-card h3 { font-size: 22px; font-weight: 700; color: var(--baseShade1); margin-bottom: 15px; }
+.pol-strategy-page .service-desc { font-size: 16px; line-height: 1.8; color: #475569; margin-bottom: 20px; }
+.pol-strategy-page .service-icon { font-size: 30px; color: #369bff; margin: 20px 0; }
+.pol-strategy-page .service-card ul { list-style: none; padding: 0; margin-bottom: 25px; }
+.pol-strategy-page .service-card li { font-size: 16px; line-height: 1.9; color: #475569; margin-bottom: 12px; padding-left: 26px; position: relative; }
+.pol-strategy-page .service-card li::before { content: ""; position: absolute; left: 0; top: 10px; width: 8px; height: 8px; background: var(--accentShade); border-radius: 50%; }
+.pol-strategy-page .service-btn { align-self: flex-start; padding: 12px 28px; border-radius: 50px; background-color: var(--accentShade); color: #ffffff; text-decoration: none; font-weight: 600; font-size: 14px; transition: 0.3s ease; box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12); }
+.pol-strategy-page .case-study-section { padding: 100px 8%; background: linear-gradient(to bottom, #ffffff, #f6fbff); position: relative; }
+.pol-strategy-page .case-study-wrapper { max-width: 1100px; margin: 0 auto; }
+.pol-strategy-page .case-study-header { text-align: center; margin-bottom: 60px; }
+.pol-strategy-page .case-label { font-size: 14px; letter-spacing: 2px; font-weight: 600; color: #369bff; display: block; margin-bottom: 12px; }
+.pol-strategy-page .case-study-header h2 { font-size: 48px; font-weight: 800; color: #0a2540; margin-bottom: 20px; }
+.pol-strategy-page .party-badge { font-size: 16px; font-weight: 600; color: #475569; }
+.pol-strategy-page .case-block { background: #ffffff; padding: 60px; border-radius: 30px; margin-bottom: 50px; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.05), 0 80px 160px rgba(54, 155, 255, 0.08); transition: 0.4s ease; }
+.pol-strategy-page .case-block:hover { transform: translateY(-8px); }
+.pol-strategy-page .case-block h3 { font-size: 26px; font-weight: 700; color: #369bff; margin-bottom: 25px; }
+.pol-strategy-page .case-block p { font-size: 16px; line-height: 1.9; color: #475569; margin-bottom: 20px; }
+.pol-strategy-page .strategy-list { list-style: none; padding: 0; }
+.pol-strategy-page .strategy-list li { margin-bottom: 40px; }
+.pol-strategy-page .strategy-list h4 { font-size: 20px; font-weight: 700; color: #0a2540; margin-bottom: 10px; }
+.pol-strategy-page .strategy-list p { font-size: 17px; line-height: 1.9; color: #475569; }
+.pol-strategy-page .case-highlight { background: linear-gradient(135deg, #ffffff 0%, #eef6ff 100%); border-left: 6px solid #369bff; }
+.pol-strategy-page .case-closing { margin-top: 30px; font-size: 20px; font-weight: 700; color: #0a2540; line-height: 1.6; }
+.pol-strategy-page .case-study-section { padding: 140px 8%; background: linear-gradient(to bottom, #ffffff, #f6fbff); }
+.pol-strategy-page .case-study-wrapper { max-width: 1100px; margin: 0 auto; }
+.pol-strategy-page .case-study-header { text-align: center; margin-bottom: 100px; }
+.pol-strategy-page .case-label { font-size: 14px; letter-spacing: 2px; font-weight: 600; color: var(--accentShade); display: block; margin-bottom: 15px; }
+.pol-strategy-page .case-study-header h2 { font-size: 48px; font-weight: 800; color: var(--baseShade1); margin-bottom: 20px; }
+.pol-strategy-page .party-badge { font-size: 16px; font-weight: 600; color: #475569; margin-bottom: 8px; }
+.pol-strategy-page .confidential-note { font-size: 14px; color: #999; font-style: italic; }
+.pol-strategy-page .case-block { background: #ffffff; padding: 60px; border-radius: 30px; margin-bottom: 50px; box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12); transition: 0.4s ease; }
+.pol-strategy-page .case-block:hover { transform: translateY(-8px); }
+.pol-strategy-page .case-block h3 { font-size: 26px; font-weight: 700; color: var(--accentShade); margin-bottom: 30px; }
+.pol-strategy-page .case-block p { font-size: 16px; line-height: 1.9; color: #475569; margin-bottom: 20px; }
+.pol-strategy-page .challenge-item { margin-bottom: 40px; }
+.pol-strategy-page .challenge-item h4 { font-size: 20px; font-weight: 700; color: #0a2540; margin-bottom: 10px; }
+.pol-strategy-page .strategy-list { list-style: none; padding: 0; }
+.pol-strategy-page .strategy-list > li { margin-bottom: 45px; }
+.pol-strategy-page .strategy-list h4 { font-size: 20px; font-weight: 700; color: #0a2540; margin-bottom: 10px; }
+.pol-strategy-page .strategy-list p { font-size: 17px; line-height: 1.9; color: #475569; }
+.pol-strategy-page .sub-list { list-style: none; padding: 0; margin: 15px 0 15px 0; }
+.pol-strategy-page .sub-list li { font-size: 16px; line-height: 1.9; color: #475569; padding-left: 25px; margin-bottom: 10px; position: relative; }
+.pol-strategy-page .sub-list li::before { content: ""; position: absolute; left: 0; top: 10px; width: 8px; height: 8px; background: #369bff; border-radius: 50%; }
+.pol-strategy-page .case-quote { font-size: 22px; font-weight: 700; color: #0a2540; margin-top: 25px; padding: 25px 30px; background: linear-gradient(135deg, #eef6ff, #ffffff); border-left: 6px solid var(--accentShade); border-radius: 15px; }
+.pol-strategy-page .case-highlight { background: linear-gradient(135deg, #ffffff 0%, #eef6ff 100%); border-left: 6px solid var(--accentShade); }
+.pol-strategy-page .case-closing { margin-top: 30px; font-size: 22px; font-weight: 700; color: #0a2540; line-height: 1.6; }
+.pol-strategy-page .strategy-list { list-style: none; padding: 0; margin: 0; }
+.pol-strategy-page .strategy-list > li { margin-bottom: 60px; }
+.pol-strategy-page .strategy-item { display: flex; gap: 40px; align-items: center; background: #ffffff; padding: 50px; border-radius: 30px; box-shadow: 0 0 80px rgba(110, 65, 255, 0.2); transition: 0.4s ease; }
+.pol-strategy-page .strategy-item:hover { transform: translateY(-10px); }
+.pol-strategy-page .strategy-image { flex-shrink: 0; }
+.pol-strategy-page .strategy-image img { width: 220px; height: auto; border-radius: 20px; display: block; transition: 0.3s ease; }
+.pol-strategy-page .strategy-item:hover .strategy-image img { transform: scale(1.03); }
+.pol-strategy-page .strategy-content { flex: 1; }
+.pol-strategy-page .strategy-content h4 { font-size: 22px; font-weight: 700; color: #0a2540; margin-bottom: 15px; }
+.pol-strategy-page .strategy-content p { font-size: 17px; line-height: 1.9; color: #475569; }
+.pol-strategy-page .btn-primary, .pol-strategy-page .btn-secondary { box-shadow: 0 15px 40px rgba(72, 72, 72, 0.12); }
+@media (max-width: 480px) { h1 { font-size: 32px !important; line-height: 1.3; } h2 { text-align: center; font-size: 28px !important; } h3 { font-size: 20px !important; } section { padding: 80px 6% !important; } .hero { flex-direction: column; text-align: center; padding: 100px 6%; gap: 40px; } .hero-content { max-width: 100%; } .hero-content p { font-size: 16px; } .hero-buttons { justify-content: center; flex-wrap: wrap; } .hero-visual img { width: 100%; max-width: 320px; } .parliament { width: 90%; margin: 80px auto 40px auto; } .marquee-track { gap: 40px; } .marquee-item { font-size: 16px; } .stats-container { grid-template-columns: 1fr; gap: 30px; } .stat-card { padding: 40px; } .stat-card h2 { font-size: 36px; } .about-wrapper { flex-direction: column; gap: 50px; } .about-left h2 { font-size: 30px; } .about-card { padding: 35px; } .leader-card { flex-direction: column; padding: 40px; text-align: center; } .leader-image img { width: 140px; margin: auto; } .experience-wrapper { flex-direction: column; gap: 60px; } .experience-right { grid-template-columns: 1fr; } .services-grid { grid-template-columns: 1fr; gap: 35px; } .service-card { padding: 40px; } .strategy-item { flex-direction: column; text-align: center; padding: 35px; } .strategy-image img { width: 100%; max-width: 250px; } .contact-wrapper { flex-direction: column; } .form-container { padding: 0px; } .map-container iframe { height: 200px; } .nav-links { position: absolute; top: 80px; left: 0; width: 100%; background: #fff; flex-direction: column; align-items: center; padding: 30px 0; display: none; } .nav-links a { padding: 10px 0; } .hamburger { display: block; } }

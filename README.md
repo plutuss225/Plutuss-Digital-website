@@ -1,110 +1,16 @@
-# 🚀 Plutuss Digital Website
+# React + Vite
 
-Official website of **Plutuss Digital** — A creative digital marketing and web development agency delivering innovative solutions for businesses to establish and grow their online presence.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## 📖 About
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-Plutuss Digital specializes in providing end-to-end digital solutions that help brands achieve measurable growth through creativity, technology, and strategy.
+## React Compiler
 
-### Our Services
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- 🌐 Website Design & Development
-- 📱 Social Media Marketing
-- 🔍 Search Engine Optimization (SEO)
-- 💼 Branding & Identity Design
-- 🎯 Performance Marketing
-- ✍️ Content Marketing
-- 🛒 E-commerce Development
-- 📊 Analytics & Reporting
+## Expanding the ESLint configuration
 
----
-
-## ✨ Features
-
-- Responsive Design
-- Modern User Interface
-- Fast Performance
-- SEO Friendly
-- Interactive Components
-- Contact Form
-- Services Showcase
-- Portfolio Section
-- Mobile Optimized
-
----
-
-## 🛠️ Tech Stack
-
-- React.js
-- Vite
-- Tailwind CSS
-- JavaScript
-- HTML5
-- CSS3
-
----
-
-## 📦 Installation
-
-```bash
-git clone https://github.com/plutuss225/Plutuss-Digital-website.git
-
-cd Plutuss-Digital-website
-
-npm install
-
-npm run dev
-```
-
----
-
-## 📁 Project Structure
-
-```text
-src/
- ├── assets/
- ├── components/
- ├── pages/
- ├── layouts/
- ├── App.jsx
- └── main.jsx
-
-public/
-package.json
-vite.config.js
-README.md
-```
-
----
-
-## 🤝 Contributing
-
-Contributions, feature requests, and suggestions are welcome.
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to your branch
-5. Open a Pull Request
-
----
-
-## 📧 Contact
-
-**Plutuss Digital**
-
-🌐 Website: https://plutussdigital.com
-
-🐙 GitHub: https://github.com/plutuss225
-
----
-
-## ⭐ Support
-
-If you like this project, please give it a ⭐ on GitHub!
-
----
-
-© 2026 Plutuss Digital. All Rights Reserved.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

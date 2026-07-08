@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://plutussdigital.com/sitemap.xml

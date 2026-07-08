@@ -1,0 +1,1886 @@
+:root {
+  --brand-navy: #0A1F2E;
+  --brand-blue: #1B4F9C;
+  --brand-teal: #00BFA6;
+  --brand-green: #16A34A;
+  --brand-gray: #F1F5F9;
+  --brand-gradient: linear-gradient(90deg, #1B4F9C 0%, #00BFA6 100%);
+  --brand-gradient-dark: linear-gradient(90deg, #0A1F2E 0%, #1B4F9C 100%);
+
+  /* Compatibility for existing theme variables */
+  --primary-dark: #0A1F2E;
+  --primary-mid: #1B4F9C;
+  --primary-bright: #00BFA6;
+  --accent-pink: #00BFA6;
+  --accent-pink-light: rgba(0, 191, 166, 0.16);
+  --bg-light: #F1F5F9;
+  --bg-white: #ffffff;
+
+  --dm-primary: #1B4F9C;
+  --dm-primary-dark: #0A1F2E;
+  --dm-secondary: #00BFA6;
+  --dm-gradient: linear-gradient(90deg, #1B4F9C 0%, #00BFA6 100%);
+  --dm-gray-bg: #F1F5F9;
+  --dm-white: #ffffff;
+  --brand-teal-soft: rgba(0, 191, 166, 0.08);
+  --brand-blue-soft: rgba(27, 79, 156, 0.08);
+  --brand-border: rgba(27, 79, 156, 0.16);
+  --brand-shadow: rgba(0, 191, 166, 0.18);
+
+  /* Legacy theme compatibility aliases */
+  --accentShade: var(--brand-teal);
+  --baseShade1: var(--brand-blue);
+
+  --brand: var(--brand-blue);
+  --brand-light: rgba(0, 191, 166, 0.14);
+  --brand-2: var(--brand-teal);
+  --surface: #ffffff;
+  --text: #334155;
+  --text-muted: #64748b;
+  --heading: #0f172a;
+  --bg-base: #ffffff;
+  --bg-subtle: rgba(0, 191, 166, 0.06);
+  --accent-purple: var(--brand-blue);
+  --accent-blue: var(--brand-teal);
+  --accent-green: #16A34A;
+}
+
+/* Global legacy palette aliasing */
+.accent-pink,
+.accent-purple,
+.accent-blue,
+.accent-green {
+  background: linear-gradient(180deg, rgba(0, 191, 166, 0.12), rgba(27, 79, 156, 0.08)) !important;
+  border-color: rgba(0, 191, 166, 0.18) !important;
+  color: var(--brand-blue) !important;
+}
+
+.accent-pink:hover,
+.accent-purple:hover,
+.accent-blue:hover,
+.accent-green:hover,
+.dm-page .service-cta-btn:hover,
+.dm-page .btn-hero-primary:hover,
+.dm-page .seo-btn-primary:hover,
+.btn-request-demo:hover,
+.service-cta-btn:hover {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+
+.service-page .service-link:hover,
+.service-page .service-link.active,
+.dm-page .service-link:hover,
+.dm-page .service-link.active {
+  background: rgba(0, 191, 166, 0.12) !important;
+  color: var(--brand-blue) !important;
+}
+
+.blog-page .blog-search-btn {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+
+.blog-page .blog-search-btn:hover {
+  background: var(--brand-teal) !important;
+}
+
+.blog-page .blog-sidebar-cat-link.active,
+.blog-page .blog-sidebar-cat-link:hover {
+  color: var(--brand-blue) !important;
+}
+
+.blog-page .blog-tag-pill {
+  border-color: rgba(27, 79, 156, 0.12) !important;
+}
+
+.service-page .service-cta-btn {
+  background: var(--brand-gradient) !important;
+  box-shadow: 0 12px 28px rgba(0, 191, 166, 0.18) !important;
+}
+
+.service-page .service-cta-btn:hover {
+  background: var(--brand-blue) !important;
+}
+
+.social-service-card:hover {
+  border-color: rgba(0, 191, 166, 0.14) !important;
+  color: #0f172a !important;
+}
+
+.social-service-card:hover span {
+  color: #0f172a !important;
+}
+
+.seo-hero-badge {
+  background: #ffffff !important;
+  color: var(--brand-blue) !important;
+  border: 1px solid rgba(27, 79, 156, 0.16) !important;
+}
+
+.seo-hero-badge::before {
+  background: var(--brand-teal) !important;
+}
+
+.seo-stat-value {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* Global header + nav */
+.site-header {
+  background: var(--brand-gradient-dark) !important;
+  box-shadow: 0 18px 35px rgba(0, 191, 166, 0.18) !important;
+}
+
+.navmenu a,
+.nav-dropdown-toggle {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.navmenu a:hover,
+.navmenu a.active,
+.nav-dropdown-toggle:hover {
+  color: #ffffff !important;
+}
+
+.nav-cta-btn,
+.mobile-cta-btn,
+.btn-request-demo,
+.service-cta-btn,
+.dg-hero .btn-hero-primary,
+.dg-hero .btn-hero-outline,
+.about-btn-primary {
+  background: var(--brand-gradient) !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 16px 40px rgba(0, 191, 166, 0.22) !important;
+}
+
+.nav-cta-btn:hover,
+.mobile-cta-btn:hover,
+.btn-request-demo:hover,
+.service-cta-btn:hover,
+.dg-hero .btn-hero-primary:hover,
+.dg-hero .btn-hero-outline:hover,
+.about-btn-primary:hover {
+  background: linear-gradient(90deg, #0A1F2E 0%, #00BFA6 100%) !important;
+}
+
+.btn-hero-outline,
+.hero-link,
+.about-btn-ghost {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Hero and badges */
+.dg-hero {
+  background: var(--brand-navy) !important;
+  border-bottom: 1px solid rgba(0, 191, 166, 0.12) !important;
+}
+
+.dg-hero .hero-copy h1,
+.dg-hero .hero-copy p,
+.dg-hero .hero-copy span,
+.hero-wrapper .hero-copy h1,
+.hero-wrapper .hero-copy p,
+.service-hero-title,
+.about-hero-title,
+.contact-hero-title {
+  color: #ffffff !important;
+}
+
+.hero-badge,
+.about-badge,
+.service-hero-badge,
+.contact-hero-badge,
+.page-section-kicker {
+  background: rgba(0, 191, 166, 0.12) !important;
+  color: var(--brand-teal) !important;
+  border: 1px solid rgba(0, 191, 166, 0.18) !important;
+}
+
+/* Footer */
+.footer-bar {
+  background: var(--brand-navy) !important;
+  color: #ffffff !important;
+}
+
+.footer-bar::before {
+  background: linear-gradient(90deg, rgba(27, 79, 156, 0.8), transparent 50%, rgba(0, 191, 166, 0.8)) !important;
+}
+
+.footer-bar::after {
+  background: radial-gradient(circle, rgba(0, 191, 166, 0.2) 0%, transparent 70%) !important;
+}
+
+.footer-heading,
+.footer-links a,
+.footer-contact-list a,
+.footer-social-icon,
+.footer-social-icon:hover,
+.footer-bottom p {
+  color: #ffffff !important;
+}
+
+.footer-divider {
+  background: rgba(255, 255, 255, 0.18) !important;
+}
+
+.footer-social-icon {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+}
+
+.footer-social-icon:hover {
+  background: rgba(255, 255, 255, 0.28) !important;
+}
+
+/* Service page accents */
+.service-page .service-description,
+.service-page .content-card,
+.service-page .services-sidebar {
+  border-color: rgba(0, 191, 166, 0.14) !important;
+}
+
+.service-page .service-benefits li::before,
+.service-page .service-benefits li i,
+.page-feature-list li i {
+  background: var(--brand-teal) !important;
+  color: var(--brand-teal) !important;
+}
+
+.page-feature-list li {
+  background: rgba(0, 191, 166, 0.08) !important;
+  box-shadow: inset 0 0 0 1px rgba(0, 191, 166, 0.12) !important;
+}
+
+.page-visual-card {
+  background: linear-gradient(135deg, rgba(27, 79, 156, 0.08), rgba(0, 191, 166, 0.08)) !important;
+  box-shadow: 0 18px 45px rgba(10, 31, 46, 0.08) !important;
+}
+
+.branding-showcase-card,
+.content-card,
+.about-value-card,
+.about-team-card,
+.about-timeline-card,
+.about-mv-card,
+.service-card,
+.faq-item {
+  border-color: rgba(0, 191, 166, 0.12) !important;
+}
+
+.service-section-tag {
+  color: var(--brand-teal) !important;
+}
+
+.text-muted,
+.page-section-subtitle,
+.service-page .service-desc-text,
+.service-page .content-card p {
+  color: #64748b !important;
+}
+
+/* Buttons in footer and contact */
+.btn-request-demo,
+.btn-primary,
+button[type="submit"],
+.floating-inquiry-submit {
+  background: var(--brand-gradient) !important;
+  color: #ffffff !important;
+}
+
+.floating-whatsapp-button,
+.floating-whatsapp-button:hover,
+.floating-inquiry-toggle,
+.floating-inquiry-toggle:hover {
+  box-shadow: 0 16px 40px rgba(0, 191, 166, 0.24) !important;
+}
+
+.floating-inquiry-toggle {
+  background: var(--brand-gradient) !important;
+}
+
+.floating-inquiry-toggle.is-open {
+  background: var(--brand-gradient-dark) !important;
+}
+
+.nav-item-has-dropdown .dropdown-menu a:hover,
+.nav-item-has-dropdown .dropdown-menu a.active {
+  background: rgba(0, 191, 166, 0.12) !important;
+  color: var(--brand-teal) !important;
+}
+
+.mobile-nav {
+  background: var(--brand-gradient-dark) !important;
+}
+
+.mobile-nav-inner ul li {
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.mobile-nav-inner ul a,
+.mobile-submenu-toggle {
+  color: rgba(255, 255, 255, 0.96) !important;
+}
+
+.mobile-nav-close {
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.hero-carousel-btn {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(0, 191, 166, 0.2) !important;
+  color: var(--brand-blue) !important;
+  box-shadow: 0 6px 18px rgba(0, 191, 166, 0.18) !important;
+}
+
+.hero-carousel-btn:hover {
+  background: var(--brand-blue) !important;
+  color: #FFFFFF !important;
+}
+
+.hero-carousel-dots .dot {
+  background: rgba(0, 191, 166, 0.18) !important;
+  border-color: rgba(0, 191, 166, 0.32) !important;
+}
+
+.hero-carousel-dots .dot:hover {
+  background: rgba(0, 191, 166, 0.35) !important;
+}
+
+.hero-carousel-dots .dot.active {
+  background: var(--brand-teal) !important;
+  box-shadow: 0 0 8px rgba(0, 191, 166, 0.4) !important;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 191, 166, 0.16) !important;
+  border-color: rgba(0, 191, 166, 0.2) !important;
+}
+
+.feature-card-icon {
+  background: linear-gradient(135deg, rgba(27, 79, 156, 0.12), rgba(0, 191, 166, 0.12)) !important;
+  color: var(--brand-blue) !important;
+}
+
+.feature-card-label {
+  color: var(--brand-teal) !important;
+}
+
+.service-cta-btn,
+.btn-request-demo {
+  box-shadow: 0 16px 40px rgba(0, 191, 166, 0.22) !important;
+}
+
+.footer-bottom p,
+.footer-legal {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+/* Keep white backgrounds crisp */
+.bg-light,
+.gray-light-bg,
+.white-bg,
+.service-page .service-description,
+.content-card,
+.footer-bar {
+  background: #ffffff !important;
+}
+
+/* Legacy pink/purple cleanup */
+.footer-top-dm,
+.footer-top-dm h4,
+.footer-top-dm h5,
+.footer-top-dm p,
+.dm-page .footer-nav-dm,
+.footer-nav-dm ul li,
+.footer-nav-dm ul li a {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+
+.footer-top-dm p,
+.footer-top-dm a,
+.footer-nav-dm ul li a {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.footer-bar {
+  background: var(--brand-navy) !important;
+  color: #ffffff !important;
+}
+
+.footer-bar::before,
+.footer-bar::after {
+  background: none !important;
+}
+
+.dg-hero,
+.dg-hero.hero-bg-section,
+.dg-hero.hero-bg-slider,
+.hero-visual-card {
+  background: var(--brand-navy) !important;
+  border-bottom: 1px solid rgba(0, 191, 166, 0.12) !important;
+}
+
+.dg-hero .hero-copy h1,
+.dg-hero .hero-copy p,
+.dg-hero .hero-copy span,
+.hero-wrapper .hero-copy h1,
+.hero-wrapper .hero-copy p,
+.service-hero-title,
+.about-hero-title,
+.contact-hero-title {
+  color: #ffffff !important;
+}
+
+.dg-hero .hero-badge,
+.about-badge,
+.service-hero-badge,
+.contact-hero-badge,
+.page-section-kicker,
+.dm-page .service-link:hover,
+.dm-page .service-link.active,
+.dm-page .channel-pill,
+.dm-page .branding-service-pill,
+.dm-page .seo-process-dot,
+.dm-page .seo-process-line,
+.dm-page .seo-cta-btn-white,
+.dm-page .seo-cta-btn-outline-white:hover {
+  background: rgba(0, 191, 166, 0.12) !important;
+  color: var(--brand-teal) !important;
+  border-color: rgba(0, 191, 166, 0.2) !important;
+}
+
+.dm-page .seo-cta-btn-white,
+.dm-page .btn-request-demo,
+.btn-primary,
+button[type="submit"],
+.floating-inquiry-submit,
+.btn-request-demo,
+.dm-page .service-cta-btn,
+.dm-page .btn-hero-primary,
+.dm-page .seo-btn-primary,
+.dm-page .about-read-more-btn {
+  background: var(--brand-gradient) !important;
+  border-color: transparent !important;
+  color: #ffffff !important;
+}
+
+.dm-page .seo-cta-btn-outline-white:hover,
+.btn-hero-outline:hover,
+.dg-hero .btn-hero-outline:hover,
+.hero-carousel-btn:hover,
+.btn-request-demo:hover,
+.dm-page .service-cta-btn:hover,
+.dm-page .btn-hero-primary:hover,
+.dm-page .seo-btn-primary:hover {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+
+.reviews-section {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+.review-full-width-pink {
+  background: linear-gradient(90deg, rgba(27, 79, 156, 0.95) 0%, rgba(0, 191, 166, 0.95) 100%) !important;
+}
+
+.review-main-card {
+  background: rgba(255, 255, 255, 0.98) !important;
+  color: #0f172a !important;
+  box-shadow: 0 30px 55px rgba(15, 23, 42, 0.12) !important;
+}
+
+/* Residual DigiMark / legacy theme cleanup */
+.call-to-action::before,
+.dm-page .seo-stats-section::before {
+  background: linear-gradient(90deg, rgba(27, 79, 156, 0.88), rgba(0, 191, 166, 0.88)) !important;
+}
+
+.color-secondary {
+  color: var(--brand-teal) !important;
+}
+
+.color-primary {
+  color: var(--brand-blue) !important;
+}
+
+/* Residual legacy purple/pink visuals */
+.about-team-avatar {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-teal)) !important;
+  box-shadow: 0 14px 34px rgba(0, 191, 166, 0.18) !important;
+}
+
+.about-team-avatar-ring,
+.about-team-linkedin {
+  border-color: rgba(0, 191, 166, 0.24) !important;
+}
+
+.about-team-linkedin {
+  background: rgba(27, 79, 156, 0.08) !important;
+  color: var(--brand-blue) !important;
+}
+
+.about-team-linkedin:hover {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+
+.about-team-role,
+.about-stat-number,
+.service-section-tag,
+.breadcrumb-link,
+.page-section-kicker,
+.about-section-label,
+.page-feature-list li i,
+.service-page .service-benefits li::before,
+.service-page .service-benefits li i {
+  color: var(--brand-blue) !important;
+}
+
+.about-process-line {
+  background: linear-gradient(180deg, var(--brand-blue), var(--brand-teal)) !important;
+}
+
+.about-process-item::before {
+  background: linear-gradient(90deg, rgba(0, 191, 166, 0.9), rgba(0, 191, 166, 0)) !important;
+}
+
+.about-process-item.right::before {
+  background: linear-gradient(270deg, rgba(0, 191, 166, 0.9), rgba(0, 191, 166, 0)) !important;
+}
+
+.about-process-item::after {
+  border-color: var(--brand-teal) !important;
+}
+
+.process-step-badge,
+.about-process-card .process-step {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-teal)) !important;
+  color: #ffffff !important;
+}
+
+.about-process-card .process-step {
+  box-shadow: 0 10px 22px rgba(0, 191, 166, 0.14) !important;
+}
+
+.sub-service-card:hover {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+  box-shadow: 0 26px 60px rgba(0, 191, 166, 0.16) !important;
+}
+
+.review-underline {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.96) 20%, rgba(0, 191, 166, 0.95) 100%) !important;
+}
+
+.reviews-dots .dot.active {
+  background: var(--brand-teal) !important;
+  box-shadow: 0 6px 18px rgba(0, 191, 166, 0.18) !important;
+}
+
+.review-large-card .review-card-ribbon,
+.review-card-blank {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+  box-shadow: 0 22px 44px rgba(0, 191, 166, 0.18) !important;
+}
+
+.client-logo-section__eyebrow {
+  color: var(--brand-teal) !important;
+}
+
+.client-logo-section__decor--triangle {
+  border-bottom-color: rgba(0, 191, 166, 0.28) !important;
+}
+
+.client-logo-section__decor--circle {
+  border-color: rgba(0, 191, 166, 0.35) !important;
+}
+
+.client-logo-section__decor--bar {
+  background: rgba(0, 191, 166, 0.28) !important;
+}
+
+.client-logo-section__box {
+  border-color: rgba(0, 191, 166, 0.12) !important;
+}
+
+.client-logo-section__card {
+  box-shadow: 0 22px 70px rgba(0, 191, 166, 0.08) !important;
+}
+
+.blog-empty i {
+  color: rgba(0, 191, 166, 0.35) !important;
+}
+
+.gradient-bg,
+.text-gradient {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.secondary-solid-btn,
+.dm-page .service-cta-btn,
+.btn-hero-primary,
+.seo-btn-primary,
+.about-read-more-btn,
+.btn-primary,
+.solid-white-btn,
+.dm-page .seo-cta-btn-white,
+.service-cta-btn {
+  background: var(--brand-gradient) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+
+.secondary-solid-btn:hover,
+.dm-page .service-cta-btn:hover,
+.btn-hero-primary:hover,
+.seo-btn-primary:hover,
+.about-read-more-btn:hover,
+.btn-primary:hover,
+.service-cta-btn:hover,
+.dm-page .seo-cta-btn-white:hover {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+
+.about-team-avatar {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-teal)) !important;
+  box-shadow: 0 14px 34px rgba(0, 191, 166, 0.18) !important;
+}
+
+.about-team-avatar-ring,
+.about-team-linkedin {
+  border-color: rgba(0, 191, 166, 0.24) !important;
+}
+
+.about-team-linkedin {
+  background: rgba(27, 79, 156, 0.08) !important;
+  color: var(--brand-blue) !important;
+}
+
+.about-team-linkedin:hover {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+
+.about-team-role,
+.about-stat-number,
+.service-section-tag,
+.breadcrumb-link,
+.page-section-kicker,
+.about-section-label,
+.page-feature-list li i,
+.service-page .service-benefits li::before,
+.service-page .service-benefits li i {
+  color: var(--brand-blue) !important;
+}
+
+.about-clients-section::before,
+.about-clients-section::after,
+.page-visual-card,
+.about-cta-inner,
+.blog-newsletter,
+.blog-newsletter-inner,
+.blog-newsletter-input {
+  border-color: rgba(0, 191, 166, 0.12) !important;
+}
+
+.about-clients-section::before,
+.about-clients-section::after,
+.page-visual-card {
+  background: rgba(0, 191, 166, 0.08) !important;
+}
+
+.about-clients-card,
+.client-logo-section__box,
+.content-card,
+.service-card,
+.about-value-card,
+.about-team-card,
+.about-timeline-card,
+.about-mv-card,
+.faq-item {
+  border-color: rgba(0, 191, 166, 0.12) !important;
+}
+
+.review-large-card .review-card-ribbon,
+.review-card-blank {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+}
+
+/* Additional legacy cleanups */
+.dg-hero.hero-bg-slider .hero-badge,
+.dg-hero.hero-bg-section .hero-badge,
+.hero-wrapper .hero-badge,
+.service-hero-badge,
+.about-badge,
+.contact-hero-badge {
+  color: var(--brand-teal) !important;
+  background: rgba(0, 191, 166, 0.12) !important;
+  border-color: rgba(0, 191, 166, 0.18) !important;
+}
+
+.dg-hero .hero-badge::before,
+.hero-wrapper .hero-badge::before {
+  background: var(--brand-teal) !important;
+}
+
+.dg-hero,
+.dg-hero.hero-bg-section,
+.dg-hero.hero-bg-slider,
+.hero-wrapper,
+.service-hero,
+.about-hero,
+.contact-hero,
+.hero-bg-section {
+  background: var(--brand-navy) !important;
+  border-bottom: 1px solid rgba(0, 191, 166, 0.12) !important;
+}
+
+.dg-hero .btn-hero-primary,
+.dg-hero .btn-hero-outline,
+.hero-wrapper .btn-hero-outline,
+.btn-hero-outline,
+.hero-link,
+.btn-hero-primary,
+.dm-page .btn-hero-primary,
+.dm-page .btn-hero-outline,
+.dm-page .hero-link {
+  color: #ffffff !important;
+}
+
+.dg-hero .btn-hero-outline,
+.hero-wrapper .btn-hero-outline,
+.btn-hero-outline {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.dg-hero .btn-hero-outline:hover,
+.hero-wrapper .btn-hero-outline:hover,
+.btn-hero-outline:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  color: #ffffff !important;
+}
+
+.hero-carousel,
+.hero-carousel-btn,
+.hero-carousel-dots .dot,
+.hero-carousel-dots .dot:hover,
+.hero-carousel-dots .dot.active {
+  box-shadow: 0 20px 50px rgba(0, 191, 166, 0.12) !important;
+}
+
+.hero-carousel-dots .dot.active {
+  background: var(--brand-teal) !important;
+  border-color: rgba(0, 191, 166, 0.4) !important;
+}
+
+.review-full-width-pink {
+  background: linear-gradient(90deg, rgba(27, 79, 156, 0.95) 0%, rgba(0, 191, 166, 0.95) 100%) !important;
+}
+
+.review-underline {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.96) 20%, rgba(0, 191, 166, 0.95) 60%, rgba(0, 191, 166, 0.95) 100%) !important;
+}
+
+.reviews-dots .dot.active {
+  background: var(--brand-teal) !important;
+  box-shadow: 0 0 0 3px rgba(0, 191, 166, 0.18) !important;
+}
+
+.review-card-blank,
+.review-large-card .review-card-ribbon {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+}
+
+.review-card-avatar {
+  border-color: rgba(255, 255, 255, 0.32) !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.review-main-card {
+  background: rgba(255, 255, 255, 0.98) !important;
+  color: #0f172a !important;
+  box-shadow: 0 30px 55px rgba(15, 23, 42, 0.12) !important;
+}
+
+.footer-bar {
+  background: var(--brand-navy) !important;
+  color: #ffffff !important;
+}
+
+.footer-bar::before,
+.footer-bar::after {
+  background: none !important;
+}
+
+.footer-top-dm,
+.footer-top-dm h4,
+.footer-top-dm h5,
+.footer-top-dm p,
+.footer-nav-dm,
+.footer-nav-dm ul li,
+.footer-nav-dm ul li a {
+  background: transparent !important;
+  color: #ffffff !important;
+}
+
+.footer-top-dm p,
+.footer-top-dm a,
+.footer-nav-dm ul li a {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.client-logo-section {
+  background: #ffffff !important;
+}
+
+.client-logo-section__eyebrow {
+  color: var(--brand-blue) !important;
+}
+
+.client-logo-section__decor--triangle {
+  border-bottom-color: rgba(0, 191, 166, 0.28) !important;
+}
+
+.client-logo-section__decor--circle {
+  border-color: rgba(0, 191, 166, 0.35) !important;
+}
+
+.client-logo-section__decor--bar {
+  background: rgba(0, 191, 166, 0.28) !important;
+}
+
+.about-title-gradient {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.hero-wrapper,
+.service-hero,
+.about-hero,
+.contact-hero {
+  border-bottom: 1px solid rgba(0, 191, 166, 0.12) !important;
+}
+
+.about-cta-inner {
+  box-shadow: 0 12px 40px rgba(0, 191, 166, 0.08) !important;
+  border-color: rgba(0, 191, 166, 0.12) !important;
+}
+
+.page-visual-card,
+.about-clients-section::before,
+.about-clients-section::after,
+.blog-newsletter,
+.blog-newsletter-inner,
+.blog-newsletter-input {
+  background: rgba(0, 191, 166, 0.08) !important;
+}
+
+.page-visual-card,
+.about-clients-section::before,
+.about-clients-section::after,
+.about-cta-inner,
+.blog-newsletter,
+.blog-newsletter-inner,
+.blog-newsletter-input {
+  border-color: rgba(0, 191, 166, 0.12) !important;
+}
+
+.about-clients-card,
+.content-card,
+.service-card,
+.about-value-card,
+.about-team-card,
+.about-timeline-card,
+.about-mv-card,
+.faq-item {
+  border-color: rgba(0, 191, 166, 0.12) !important;
+}
+
+.review-large-card .review-card-ribbon,
+.review-card-blank {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+}
+
+.reviews-dots .dot.active {
+  background: var(--brand-teal) !important;
+  box-shadow: 0 6px 18px rgba(0, 191, 166, 0.18) !important;
+}
+
+.reviews-dots .dot.active {
+  background: var(--brand-teal) !important;
+  box-shadow: 0 0 0 3px rgba(0, 191, 166, 0.24) !important;
+}
+
+.dm-page .contact-point-icon,
+.dm-page .contact-icon,
+.dm-page .about-stat-icon,
+.dm-page .seo-process-dot,
+.dm-page .seo-process-line {
+  background: rgba(0, 191, 166, 0.1) !important;
+  color: var(--brand-teal) !important;
+}
+
+.dm-page .contact-input:focus {
+  border-color: var(--brand-teal) !important;
+  box-shadow: 0 0 0 3px rgba(0, 191, 166, 0.12) !important;
+}
+
+.dm-page .sidebar-header {
+  background: var(--brand-gradient) !important;
+  color: #ffffff !important;
+}
+
+.dm-page .sidebar-header i {
+  color: #ffffff !important;
+}
+
+.dm-page .service-link:hover,
+.dm-page .service-link.active {
+  background: rgba(0, 191, 166, 0.12) !important;
+  color: var(--brand-blue) !important;
+}
+
+.dm-page .service-link {
+  color: #334155 !important;
+}
+
+.dm-page .web-dev-cta-panel {
+  background: var(--brand-gradient) !important;
+}
+
+.dm-page .web-dev-cta-panel h3,
+.dm-page .web-dev-cta-panel p,
+.dm-page .web-dev-cta-panel .service-section-tag {
+  color: #ffffff !important;
+}
+
+.dm-page .seo-cta-btn-outline-white,
+.dm-page .seo-cta-btn-outline-white:hover,
+.dm-page .btn-hero-outline,
+.dm-page .seo-btn-outline,
+.btn-hero-outline {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.dm-page .seo-btn-outline:hover,
+.dm-page .btn-hero-outline:hover,
+.btn-hero-outline:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.dm-page .about-stat-number,
+.dm-page .service-section-tag,
+.dm-page .about-goal-item,
+.dm-page .channel-pill,
+.dm-page .branding-service-pill {
+  color: var(--brand-blue) !important;
+}
+
+.dm-page .about-goal-item,
+.dm-page .channel-pill,
+.dm-page .branding-service-pill {
+  background: rgba(0, 191, 166, 0.1) !important;
+  border-color: rgba(0, 191, 166, 0.2) !important;
+}
+
+.dm-page .about-read-more-btn,
+.dm-page .btn-hero-primary,
+.dm-page .seo-btn-primary,
+.dm-page .service-cta-btn {
+  background: var(--brand-gradient) !important;
+  color: #ffffff !important;
+}
+
+.dm-page .about-read-more-btn:hover,
+.dm-page .btn-hero-primary:hover,
+.dm-page .seo-btn-primary:hover,
+.dm-page .service-cta-btn:hover {
+  background: var(--brand-blue) !important;
+}
+
+.dm-page .contact-input,
+.dm-page .service-link,
+.dm-page .seo-btn-outline,
+.dm-page .btn-hero-outline,
+.dm-page .service-cta-btn-outline {
+  transition: all 0.3s ease !important;
+}
+
+.review-card-blank {
+  background: linear-gradient(90deg, rgba(27, 79, 156, 0.18), rgba(0, 191, 166, 0.18)) !important;
+}
+
+.review-underline {
+  background: var(--brand-gradient) !important;
+}
+
+.reviews-dots .dot.active {
+  background: var(--brand-teal) !important;
+  box-shadow: 0 0 0 3px rgba(0, 191, 166, 0.24) !important;
+}
+
+.client-logo-section {
+  background: #f1f5f9 !important;
+}
+
+.client-logo-section__eyebrow {
+  color: var(--brand-teal) !important;
+}
+
+.client-logo-section__box {
+  border-color: rgba(27, 79, 156, 0.12) !important;
+}
+
+.client-logo-section__decor--triangle {
+  border-bottom-color: rgba(0, 191, 166, 0.28) !important;
+}
+
+.client-logo-section__decor--circle {
+  border-color: rgba(0, 191, 166, 0.35) !important;
+}
+
+.client-logo-section__decor--bar {
+  background: rgba(0, 191, 166, 0.28) !important;
+}
+
+.about-process-line {
+  background: linear-gradient(180deg, var(--brand-blue), var(--brand-teal)) !important;
+}
+
+.process-step-badge {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-teal)) !important;
+  color: #ffffff !important;
+}
+
+.dm-page.pol-strategy-page .btn-primary,
+.dm-page.pol-strategy-page .btn-secondary:hover {
+  background: var(--brand-teal) !important;
+  color: #ffffff !important;
+  border-color: var(--brand-teal) !important;
+}
+
+.dm-page.pol-strategy-page .stat-card h2,
+.dm-page.pol-strategy-page .about-label,
+.dm-page.pol-strategy-page .service-link.active .service-name {
+  color: var(--brand-teal) !important;
+}
+
+/* Strong page-level pink cleanup */
+.dg-hero .hero-badge::before,
+.hero-wrapper .hero-badge::before {
+  background: rgba(0, 191, 166, 0.18) !important;
+}
+
+.dg-hero .btn-hero-outline,
+.hero-wrapper .btn-hero-outline,
+.dg-hero .hero-link,
+.hero-wrapper .hero-link,
+.about-btn-ghost,
+.page-section-kicker,
+.about-section-label,
+.page-feature-list li,
+.service-page .service-benefits li,
+.service-page .service-benefits li i,
+.service-page .service-benefits li::before,
+.about-hero-subtitle,
+.service-hero-text,
+.breadcrumb-link {
+  color: var(--brand-blue) !important;
+}
+
+.dg-hero .btn-hero-outline,
+.hero-wrapper .btn-hero-outline,
+.about-btn-ghost {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.dg-hero .btn-hero-outline:hover,
+.hero-wrapper .btn-hero-outline:hover,
+.btn-hero-outline:hover,
+.dg-hero .btn-hero-outline:hover {
+  background: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+.hero-wrapper,
+.service-hero,
+.about-hero,
+.contact-hero {
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(0, 191, 166, 0.12) !important;
+}
+
+.hero-wrapper .hero-badge,
+.about-badge,
+.service-hero-badge,
+.contact-hero-badge {
+  color: var(--brand-blue) !important;
+  background: rgba(0, 191, 166, 0.12) !important;
+  border: 1px solid rgba(0, 191, 166, 0.18) !important;
+}
+
+.breadcrumb-link {
+  color: var(--brand-blue) !important;
+}
+
+.about-stat-number,
+.page-section-kicker,
+.about-section-label,
+.service-page .service-benefits li::before,
+.service-page .service-benefits li i,
+.page-feature-list li i {
+  color: var(--brand-blue) !important;
+}
+
+.page-section-kicker,
+.about-section-label,
+.page-feature-list li,
+.service-page .service-benefits li {
+  background: rgba(0, 191, 166, 0.08) !important;
+  border-color: rgba(0, 191, 166, 0.1) !important;
+}
+
+.about-title-gradient {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+.about-btn-primary,
+.btn-request-demo,
+.dm-page .service-cta-btn,
+.dm-page .btn-hero-primary,
+.dm-page .seo-btn-primary,
+.dm-page .about-read-more-btn,
+button[type="submit"],
+.floating-inquiry-submit {
+  background: var(--brand-gradient) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+}
+
+.about-btn-primary:hover,
+.btn-request-demo:hover,
+.dm-page .service-cta-btn:hover,
+.dm-page .btn-hero-primary:hover,
+.dm-page .seo-btn-primary:hover {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+
+.about-btn-ghost {
+  border-color: rgba(27, 79, 156, 0.18) !important;
+}
+
+.about-cta-inner {
+  border-color: rgba(0, 191, 166, 0.15) !important;
+  box-shadow: 0 12px 40px rgba(0, 191, 166, 0.08) !important;
+}
+
+.about-value-card,
+.about-team-card,
+.about-timeline-card,
+.about-mv-card,
+.service-card,
+.content-card,
+.faq-item {
+  border-color: rgba(0, 191, 166, 0.12) !important;
+}
+
+.page-visual-card {
+  background: linear-gradient(135deg, rgba(27, 79, 156, 0.08), rgba(0, 191, 166, 0.08)) !important;
+}
+
+.service-page .seo-solution-card.pink {
+  background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-teal) 100%) !important;
+}
+
+.service-page .seo-solution-card.purple {
+  background: linear-gradient(135deg, #1B4F9C 0%, #0A1F2E 100%) !important;
+}
+
+.blog-newsletter,
+.blog-newsletter-inner,
+.blog-newsletter-input {
+  border-color: rgba(0, 191, 166, 0.12) !important;
+}
+
+.seo-btn-primary {
+  background: var(--brand-gradient) !important;
+  box-shadow: 0 18px 45px rgba(0, 191, 166, 0.22) !important;
+}
+
+.seo-btn-primary:hover {
+  background: var(--brand-blue) !important;
+}
+
+.review-large-card .review-card-ribbon {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+  box-shadow: 0 22px 44px rgba(0, 191, 166, 0.18) !important;
+}
+
+.review-card-avatar {
+  border-color: rgba(0, 191, 166, 0.32) !important;
+}
+
+.footer-top-dm {
+  background: var(--brand-blue) !important;
+}
+
+/* Residual pink/orange cleanup */
+.dg-overlay,
+.dg-shape::before,
+.dg-shape::after {
+  background: transparent !important;
+}
+
+.dg-overlay {
+  background: linear-gradient(135deg, rgba(27, 79, 156, 0.82) 0%, rgba(0, 191, 166, 0.7) 45%, rgba(0, 191, 166, 0.7) 100%) !important;
+}
+
+.dg-hero.hero-bg-slider .hero-badge,
+.hero-badge,
+.about-badge,
+.service-hero-badge,
+.contact-hero-badge,
+.page-section-kicker {
+  color: var(--brand-teal) !important;
+  background: rgba(0, 191, 166, 0.14) !important;
+  border-color: rgba(0, 191, 166, 0.28) !important;
+}
+
+.dg-hero .btn-hero-primary,
+.btn-hero-primary,
+.dg-hero .hero-link,
+.hero-link,
+.btn-hero-outline,
+.dg-hero .btn-hero-outline {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.dg-hero .btn-hero-primary,
+.btn-hero-primary {
+  background: var(--brand-gradient) !important;
+}
+
+.dg-hero .btn-hero-primary:hover,
+.btn-hero-primary:hover,
+.dg-hero .btn-hero-outline:hover,
+.btn-hero-outline:hover {
+  background: rgba(255, 255, 255, 0.16) !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.hero-bg-section,
+.hero-wrapper,
+.service-hero,
+.about-hero,
+.contact-hero {
+  background: #ffffff !important;
+}
+
+.hero-wrapper::before,
+.service-hero-bg,
+.about-hero-bg,
+.about-values-bg,
+.about-team-bg {
+  display: none !important;
+}
+
+.about-stats-bar {
+  background: linear-gradient(90deg, rgba(0, 191, 166, 0.08), rgba(255, 255, 255, 0.15)) !important;
+}
+
+.about-cta-inner {
+  border-color: rgba(0, 191, 166, 0.15) !important;
+  box-shadow: 0 12px 40px rgba(0, 191, 166, 0.08) !important;
+}
+
+.about-team-avatar {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-teal)) !important;
+  box-shadow: 0 14px 34px rgba(0, 191, 166, 0.18) !important;
+}
+
+.about-team-avatar-ring {
+  border-color: rgba(0, 191, 166, 0.24) !important;
+}
+
+.about-team-linkedin {
+  background: rgba(27, 79, 156, 0.08) !important;
+  color: var(--brand-blue) !important;
+}
+
+.about-team-linkedin:hover {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+
+.about-process-card .process-step,
+.process-step-badge {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+  box-shadow: 0 10px 22px rgba(0, 191, 166, 0.14) !important;
+}
+
+.about-process-item::before {
+  background: linear-gradient(90deg, rgba(0, 191, 166, 0.9), rgba(0, 191, 166, 0)) !important;
+}
+
+.about-process-item.right::before {
+  background: linear-gradient(270deg, rgba(0, 191, 166, 0.9), rgba(0, 191, 166, 0)) !important;
+}
+
+.about-process-item::after {
+  border-color: var(--brand-teal) !important;
+}
+
+.about-goal-item,
+.channel-pill,
+.branding-service-pill {
+  border-color: rgba(0, 191, 166, 0.18) !important;
+}
+
+.about-goal-item:hover,
+.channel-pill:hover,
+.branding-service-pill:hover {
+  background: rgba(0, 191, 166, 0.08) !important;
+}
+
+.about-clients-section,
+.about-clients-section::before,
+.about-clients-section::after {
+  background: #f6f4fb !important;
+}
+
+.about-clients-section::before,
+.about-clients-section::after {
+  background: rgba(0, 191, 166, 0.12) !important;
+}
+
+.about-clients-card,
+.about-value-card,
+.about-team-card,
+.about-mv-card,
+.about-timeline-card,
+.faq-item,
+.service-card,
+.content-card {
+  border-color: rgba(0, 191, 166, 0.12) !important;
+}
+
+.client-logo-section__eyebrow {
+  color: var(--brand-blue) !important;
+}
+
+.client-logo-section__box {
+  border-color: rgba(27, 79, 156, 0.12) !important;
+}
+
+.client-logo-section__decor--triangle {
+  border-bottom-color: rgba(0, 191, 166, 0.28) !important;
+}
+
+.client-logo-section__decor--circle {
+  border-color: rgba(0, 191, 166, 0.35) !important;
+}
+
+.client-logo-section__decor--bar {
+  background: rgba(0, 191, 166, 0.28) !important;
+}
+
+.client-logo-section__card {
+  background: linear-gradient(135deg, rgba(27, 79, 156, 0.04), rgba(0, 191, 166, 0.04)) !important;
+}
+
+.footer-top-dm h4,
+.footer-top-dm h5,
+.footer-top-dm p,
+.footer-nav-dm ul li a {
+  color: #ffffff !important;
+}
+
+.about-title-gradient,
+.page-section-title,
+.page-section-subtitle,
+.page-feature-list li,
+.service-page .service-desc-text,
+.service-page .content-card p,
+.service-page .service-benefits li,
+.service-page .content-card li {
+  color: #0f172a !important;
+}
+
+.reviews-section {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+.review-underline {
+  background: var(--brand-gradient) !important;
+}
+
+.reviews-dots .dot.active {
+  background: var(--brand-teal) !important;
+  box-shadow: 0 0 0 3px rgba(0, 191, 166, 0.24) !important;
+}
+
+.review-main-card {
+  background: rgba(255, 255, 255, 0.98) !important;
+  color: #0f172a !important;
+}
+
+.review-card-text,
+.review-card-name,
+.review-card-role,
+.review-card-role,
+.review-card-meta,
+.review-card-header,
+.review-card-body {
+  color: #0f172a !important;
+}
+
+/* Final global blue/teal palette override */
+.dg-overlay {
+  background: linear-gradient(135deg, rgba(27, 79, 156, 0.75) 0%, rgba(27, 79, 156, 0.6) 50%, rgba(0, 191, 166, 0.75) 100%) !important;
+}
+.dg-shape::before {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%) !important;
+}
+.dg-hero,
+.dg-hero.hero-bg-slider,
+.dg-hero.hero-bg-section,
+.hero-wrapper,
+.service-hero,
+.about-hero,
+.contact-hero {
+  background: var(--brand-navy) !important;
+  border-bottom: 1px solid rgba(0, 191, 166, 0.12) !important;
+}
+.dg-hero .hero-copy h1,
+.dg-hero .hero-copy p,
+.hero-wrapper .hero-copy h1,
+.hero-wrapper .hero-copy p,
+.service-hero-title,
+.about-hero-title,
+.contact-hero-title {
+  color: #ffffff !important;
+}
+.hero-badge,
+.about-badge,
+.service-hero-badge,
+.contact-hero-badge,
+.page-section-kicker,
+.about-section-label,
+.breadcrumb-link,
+.dm-page .service-link:hover,
+.dm-page .service-link.active,
+.dm-page .channel-pill,
+.dm-page .branding-service-pill,
+.dm-page .seo-process-dot,
+.dm-page .seo-process-line,
+.page-feature-list li,
+.service-page .service-benefits li,
+.service-page .service-benefits li i,
+.service-page .service-benefits li::before {
+  background: rgba(0, 191, 166, 0.12) !important;
+  color: var(--brand-blue) !important;
+  border-color: rgba(0, 191, 166, 0.18) !important;
+}
+.dg-hero .hero-badge::before,
+.hero-wrapper .hero-badge::before {
+  background: rgba(0, 191, 166, 0.18) !important;
+}
+.dg-hero .btn-hero-primary,
+.dg-hero .btn-hero-outline,
+.hero-wrapper .btn-hero-outline,
+.about-btn-primary,
+.about-btn-ghost,
+.dm-page .service-cta-btn,
+.dm-page .btn-hero-primary,
+.dm-page .seo-btn-primary,
+.dm-page .about-read-more-btn,
+.btn-primary,
+button[type='submit'],
+.floating-inquiry-submit,
+.btn-request-demo,
+.service-cta-btn,
+.seo-btn-primary,
+.seo-cta-btn-white {
+  background: var(--brand-gradient) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  box-shadow: 0 16px 40px rgba(0, 191, 166, 0.22) !important;
+}
+.dg-hero .btn-hero-outline,
+.hero-wrapper .btn-hero-outline,
+.about-btn-ghost,
+.dm-page .service-cta-btn-outline,
+.dm-page .btn-hero-outline,
+.dm-page .seo-btn-outline,
+.seo-btn-outline,
+.btn-hero-outline {
+  background: transparent !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+}
+.dg-hero .btn-hero-outline:hover,
+.hero-wrapper .btn-hero-outline:hover,
+.btn-hero-outline:hover,
+.dg-hero .btn-hero-outline:hover,
+.about-btn-ghost:hover,
+.dm-page .service-cta-btn:hover,
+.dm-page .btn-hero-primary:hover,
+.dm-page .seo-btn-primary:hover,
+.btn-request-demo:hover,
+.seo-btn-primary:hover,
+.seo-cta-btn-white:hover {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+.hero-link,
+.dg-hero .hero-link,
+.hero-wrapper .hero-link {
+  color: #ffffff !important;
+}
+.footer-bar {
+  background: var(--brand-navy) !important;
+  color: #ffffff !important;
+}
+.footer-bar::before,
+.footer-bar::after {
+  background: none !important;
+}
+.footer-heading,
+.footer-links a,
+.footer-contact-list a,
+.footer-social-icon,
+.footer-bottom p {
+  color: #ffffff !important;
+}
+.footer-social-icon {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+}
+.footer-social-icon:hover {
+  background: rgba(255, 255, 255, 0.28) !important;
+}
+.hero-carousel-btn {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(0, 191, 166, 0.2) !important;
+  color: var(--brand-blue) !important;
+}
+.hero-carousel-btn:hover {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+.hero-carousel-dots .dot {
+  background: rgba(0, 191, 166, 0.18) !important;
+  border-color: rgba(0, 191, 166, 0.32) !important;
+}
+.hero-carousel-dots .dot:hover {
+  background: rgba(0, 191, 166, 0.35) !important;
+}
+.hero-carousel-dots .dot.active {
+  background: var(--brand-teal) !important;
+  box-shadow: 0 0 8px rgba(0, 191, 166, 0.4) !important;
+}
+.page-visual-card {
+  background: linear-gradient(135deg, rgba(27, 79, 156, 0.08), rgba(0, 191, 166, 0.08)) !important;
+  box-shadow: 0 18px 45px rgba(10, 31, 46, 0.08) !important;
+}
+.about-title-gradient,
+.seo-hero-title span,
+.dm-page .seo-cta-btn-white,
+.dm-page .seo-cta-btn-outline-white:hover {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+.seo-hero-badge {
+  background: #ffffff !important;
+  color: var(--brand-blue) !important;
+  border: 1px solid rgba(27, 79, 156, 0.16) !important;
+}
+.seo-hero-badge::before {
+  background: var(--brand-teal) !important;
+}
+.seo-btn-primary,
+.seo-cta-btn-white {
+  background: var(--brand-gradient) !important;
+  box-shadow: 0 18px 45px rgba(0, 191, 166, 0.22) !important;
+}
+.seo-btn-primary:hover,
+.seo-cta-btn-white:hover {
+  background: var(--brand-blue) !important;
+}
+.seo-breadcrumb-link:hover,
+.seo-breadcrumb-current {
+  color: var(--brand-blue) !important;
+}
+.seo-stat-value {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+.seo-page-wrapper {
+  color: #0f172a !important;
+}
+.client-logo-section {
+  background: #f1f5f9 !important;
+}
+.client-logo-section__eyebrow {
+  color: var(--brand-teal) !important;
+}
+.client-logo-section__box {
+  border-color: rgba(27, 79, 156, 0.12) !important;
+}
+.client-logo-section__decor--triangle {
+  border-bottom-color: rgba(0, 191, 166, 0.28) !important;
+}
+.client-logo-section__decor--circle {
+  border-color: rgba(0, 191, 166, 0.35) !important;
+}
+.client-logo-section__decor--bar {
+  background: rgba(0, 191, 166, 0.28) !important;
+}
+.review-large-card .review-card-ribbon,
+.review-card-blank {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+  box-shadow: 0 22px 44px rgba(0, 191, 166, 0.18) !important;
+}
+.review-card-avatar {
+  border-color: rgba(0, 191, 166, 0.32) !important;
+}
+.review-underline {
+  background: var(--brand-gradient) !important;
+}
+.reviews-dots .dot.active {
+  background: var(--brand-teal) !important;
+  box-shadow: 0 0 0 3px rgba(0, 191, 166, 0.24) !important;
+}
+.about-process-line {
+  background: linear-gradient(180deg, var(--brand-blue), var(--brand-teal)) !important;
+}
+.process-step-badge {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-teal)) !important;
+  color: #ffffff !important;
+}
+.social-service-card:hover {
+  border-color: rgba(0, 191, 166, 0.14) !important;
+  color: #0f172a !important;
+}
+.branding-service-card.pink,
+.branding-service-card.purple,
+.branding-service-card.violet,
+.branding-service-card.blue,
+.service-page .seo-solution-card.pink,
+.service-page .seo-solution-card.purple {
+  background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-teal) 100%) !important;
+}
+.branding-service-card.pink .branding-service-card-title,
+.branding-service-card.pink .branding-service-card-text,
+.branding-service-card.purple .branding-service-card-title,
+.branding-service-card.purple .branding-service-card-text,
+.branding-service-card.violet .branding-service-card-title,
+.branding-service-card.violet .branding-service-card-text,
+.branding-service-card.blue .branding-service-card-title,
+.branding-service-card.blue .branding-service-card-text {
+  color: #ffffff !important;
+}
+.dm-page .service-link:hover,
+.dm-page .service-link.active {
+  background: rgba(0, 191, 166, 0.12) !important;
+  color: var(--brand-blue) !important;
+}
+.dm-page .sidebar-header {
+  background: var(--brand-gradient) !important;
+}
+.dm-page .sidebar-header i,
+.dm-page .web-dev-cta-panel h3,
+.dm-page .web-dev-cta-panel p,
+.dm-page .web-dev-cta-panel .service-section-tag {
+  color: #ffffff !important;
+}
+.dm-page .seo-cta-btn-outline-white,
+.dm-page .seo-cta-btn-outline-white:hover {
+  color: #ffffff !important;
+}
+
+/* Final residual pink/purple cleanup */
+.footer-social-icon,
+.footer-social-icon:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+  color: #ffffff !important;
+}
+
+.footer-divider {
+  background: rgba(255, 255, 255, 0.18) !important;
+}
+
+.review-full-width-pink,
+.review-card-blank {
+  background: linear-gradient(90deg, rgba(27, 79, 156, 0.95), rgba(0, 191, 166, 0.95)) !important;
+}
+
+.reviews-section {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+.reviews-section .review-heading,
+.reviews-section .section-description,
+.reviews-section .review-intro,
+.review-card-name,
+.review-card-role,
+.review-card-text,
+.review-quote-mark,
+.reviews-dots .dot,
+.reviews-dots .dot.active {
+  color: #0f172a !important;
+}
+
+.review-quote-mark {
+  color: rgba(15, 23, 42, 0.16) !important;
+}
+
+.review-underline {
+  background: linear-gradient(90deg, rgba(27, 79, 156, 0.95), rgba(0, 191, 166, 0.95)) !important;
+}
+
+.review-main-card {
+  background: rgba(255, 255, 255, 0.98) !important;
+  color: #0f172a !important;
+  box-shadow: 0 30px 55px rgba(15, 23, 42, 0.12) !important;
+}
+
+.footer-bar::before,
+.footer-bar::after {
+  display: none !important;
+  background: none !important;
+}
+
+.about-stats-bar {
+  background: linear-gradient(90deg, rgba(0, 191, 166, 0.08), rgba(255, 255, 255, 0.15)) !important;
+}
+
+.about-cta-inner {
+  border-color: rgba(0, 191, 166, 0.15) !important;
+  box-shadow: 0 12px 40px rgba(0, 191, 166, 0.08) !important;
+}
+
+.about-team-avatar {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-teal)) !important;
+  box-shadow: 0 14px 34px rgba(0, 191, 166, 0.18) !important;
+}
+
+.about-team-avatar-ring,
+.about-team-linkedin {
+  border-color: rgba(0, 191, 166, 0.24) !important;
+}
+
+.about-team-linkedin {
+  background: rgba(27, 79, 156, 0.08) !important;
+  color: var(--brand-blue) !important;
+}
+
+.about-team-linkedin:hover {
+  background: var(--brand-blue) !important;
+  color: #ffffff !important;
+}
+
+.about-process-card .process-step {
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-teal)) !important;
+  box-shadow: 0 10px 22px rgba(0, 191, 166, 0.14) !important;
+}
+
+.about-process-line {
+  background: linear-gradient(180deg, var(--brand-blue), var(--brand-teal)) !important;
+}
+
+.about-process-item::before {
+  background: linear-gradient(90deg, rgba(0, 191, 166, 0.9), rgba(0, 191, 166, 0)) !important;
+}
+
+.about-process-item.right::before {
+  background: linear-gradient(270deg, rgba(0, 191, 166, 0.9), rgba(0, 191, 166, 0)) !important;
+}
+
+.about-process-item::after {
+  border-color: var(--brand-teal) !important;
+}
+
+.sub-service-card:hover {
+  background: linear-gradient(90deg, var(--brand-blue), var(--brand-teal)) !important;
+  box-shadow: 0 26px 60px rgba(0, 191, 166, 0.16) !important;
+}
+
+.hero-carousel {
+  box-shadow: 0 20px 50px rgba(0, 191, 166, 0.12) !important;
+}
+
+.dg-overlay {
+  background: linear-gradient(135deg, rgba(27, 79, 156, 0.82) 0%, rgba(0, 191, 166, 0.7) 45%, rgba(0, 191, 166, 0.7) 100%) !important;
+}
+
+.dg-hero.hero-bg-slider .hero-badge,
+.dg-hero.hero-bg-section .hero-badge,
+.hero-wrapper .hero-badge,
+.service-hero-badge,
+.about-badge,
+.contact-hero-badge,
+.page-section-kicker {
+  background: rgba(0, 191, 166, 0.14) !important;
+  border-color: rgba(0, 191, 166, 0.28) !important;
+  color: var(--brand-teal) !important;
+}
+
+.client-logo-section__eyebrow {
+  color: var(--brand-teal) !important;
+}
+
+.client-logo-section__decor--triangle {
+  border-bottom-color: rgba(0, 191, 166, 0.28) !important;
+}
+
+.client-logo-section__decor--circle {
+  border-color: rgba(0, 191, 166, 0.35) !important;
+}
+
+.client-logo-section__decor--bar {
+  background: rgba(0, 191, 166, 0.28) !important;
+}
+
+.client-logo-section__box {
+  border-color: rgba(27, 79, 156, 0.12) !important;
+}
+
+.blog-empty i {
+  color: rgba(0, 191, 166, 0.35) !important;
+}
