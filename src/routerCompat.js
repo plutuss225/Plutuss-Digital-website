@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import NextLink from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
 
@@ -7,11 +7,21 @@ export function useLocation() {
   return { pathname: router.asPath.split('?')[0] }
 }
 
+export function useNavigate() {
+  const router = useRouter()
+  return (to, options) => router.push(to, undefined, options)
+}
+
+export function useParams() {
+  const router = useRouter()
+  return router.query || {}
+}
+
 export function LinkShim({ to, children, ...props }) {
   return (
-    <Link href={to} legacyBehavior>
+    <NextLink href={to} legacyBehavior>
       <a {...props}>{children}</a>
-    </Link>
+    </NextLink>
   )
 }
 
@@ -30,9 +40,9 @@ export function NavLink({ to, children, className, end, ...rest }) {
   }
 
   return (
-    <Link href={to} legacyBehavior>
+    <NextLink href={to} legacyBehavior>
       <a className={resolvedClass} {...rest}>{children}</a>
-    </Link>
+    </NextLink>
   )
 }
 
@@ -41,4 +51,6 @@ export default {
   Link: LinkShim,
   NavLink,
   useLocation,
+  useNavigate,
+  useParams,
 }

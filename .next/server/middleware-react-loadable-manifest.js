@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"src\\\\ClientRouterWrapper.jsx -> react-router-dom\":{\"id\":\"src\\\\ClientRouterWrapper.jsx -> react-router-dom\",\"files\":[\"static/chunks/node_modules_react-router-dom_dist_index_mjs.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST='{"src\\\\ClientRouterWrapper.jsx -> react-router-dom":{"id":6875,"files":["static/chunks/875.179815de9cf0a6e5.js"]}}';
