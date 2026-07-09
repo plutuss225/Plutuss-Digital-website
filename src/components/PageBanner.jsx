@@ -29,7 +29,7 @@ export default function PageBanner({ title, breadcrumbs = [], backgroundImage, m
   }, [])
 
   // Use mobile image on mobile screens if available, otherwise use default
-  const bannerSrc = (isMobile && mobileBackgroundImage) ? mobileBackgroundImage : (backgroundImage || '/Banner.png')
+  const bannerSrc = backgroundImage || '/Banner.png'
   const bannerAlt = backgroundImage ? 'Political hero banner' : 'Banner'
 
   return (
@@ -38,7 +38,12 @@ export default function PageBanner({ title, breadcrumbs = [], backgroundImage, m
       className={`page-banner sticky-banner ${isInView ? 'in-view' : ''} ${bannerClass || ''}`}
       aria-hidden={false}
     >
-      <img src={bannerSrc} alt={bannerAlt} className="page-banner-img" />
+      <picture>
+        {mobileBackgroundImage ? (
+          <source media="(max-width: 576px)" srcSet={mobileBackgroundImage.replace(/ /g, '%20')} />
+        ) : null}
+        <img src={bannerSrc.replace(/ /g, '%20')} alt={bannerAlt} className="page-banner-img" />
+      </picture>
       <div className="page-banner-overlay">
         <h1 className="page-banner-title">{title}</h1>
         <div className="page-banner-breadcrumbs">

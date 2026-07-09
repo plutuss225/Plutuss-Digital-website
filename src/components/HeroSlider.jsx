@@ -4,6 +4,7 @@ export default function HeroSlider() {
   const heroSlides = [
     {
       src: '/hero-slide-1.png',
+      mobileSrc: '/hero image1 mobile.png',
       badge: 'Trusted SEO & Marketing Experts',
       title: ['Boost Your SEO', 'and Brand Growth'],
       description: 'Drive more traffic, improve search rankings, and increase conversions with our professional SEO and marketing solutions.',
@@ -15,6 +16,7 @@ export default function HeroSlider() {
     },
     {
       src: '/hero-slide-2.png',
+      mobileSrc: '/hero image2 mobile.png',
       badge: 'Performance-Driven Creative Strategy',
       title: ['Grow Your Brand', 'With Smart Campaigns'],
       description: 'Create impactful campaigns that sharpen presence and turn attention into measurable business growth.',
@@ -26,6 +28,7 @@ export default function HeroSlider() {
     },
     {
       src: '/hero-slide-3.png',
+      mobileSrc: '/mobile image3 mobile.png',
       badge: 'Digital Growth Made Simple',
       title: ['Scale Visibility', 'Across Every Channel'],
       description: 'From SEO to social media and content strategy, we build a digital presence that keeps delivering.',
@@ -38,16 +41,32 @@ export default function HeroSlider() {
   ]
 
   const [activeIndex, setActiveIndex] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const interval = window.setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % heroSlides.length)
     }, 2800)
 
-    return () => window.clearInterval(interval)
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 576)
+    }
+
+    handleResize()
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.clearInterval(interval)
+      window.removeEventListener('resize', handleResize)
+    }
   }, [heroSlides.length])
 
   const heroSlide = heroSlides[activeIndex]
+
+  const getSlideImage = (slide) => {
+    const source = isMobile ? slide.mobileSrc || slide.src : slide.src
+    return source.replace(/ /g, '%20')
+  }
 
   return (
     <div className="dg-hero hero-bg-slider">
@@ -56,7 +75,7 @@ export default function HeroSlider() {
           <div
             key={slide.src}
             className={`hero-bg-slide-item ${index === activeIndex ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${slide.src})` }}
+            style={{ backgroundImage: `url(${getSlideImage(slide)})` }}
           />
         ))}
       </div>
