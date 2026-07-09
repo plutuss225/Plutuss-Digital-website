@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function TopNav() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [servicesOpen, setServicesOpen] = useState(false)
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
   const [isHeroPast, setIsHeroPast] = useState(false)
-  const location = useLocation()
-  const isHomePage = location.pathname === '/'
+  const router = useRouter()
+  const isHomePage = router.pathname === '/'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +35,7 @@ export default function TopNav() {
   useEffect(() => {
     setMenuOpen(false)
     setMobileServicesOpen(false)
-  }, [location])
+  }, [router.pathname])
 
   const servicesLinks = [
     { to: '/services/seo', label: 'SEO', icon: 'bi-search-heart', desc: 'Boost search visibility and rankings' },
@@ -45,30 +46,32 @@ export default function TopNav() {
     { to: '/services/performance', label: 'Performance Marketing', icon: 'bi-graph-up-arrow', desc: 'Drive measurable growth and ROI' },
   ]
 
+  const isActive = (path) => router.pathname === path
+
   return (
     <header className={`site-header${isHeroPast ? ' scrolled' : ''}`}>
       <div className="nav-container">
         {/* Brand */}
-        <NavLink className="brand-mark" to="/">
+        <Link className="brand-mark" href="/">
           <img
             src={isHeroPast ? '/plutus-logo.png' : '/plutus-logo.png'}
             alt="Plutus Digital Asset Logo"
             className={`brand-logo${isHeroPast ? '' : ' brand-logo--light'}`}
           />
-        </NavLink>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="navmenu d-none d-lg-flex">
           <ul>
             <li>
-              <NavLink to="/" end>
+              <Link href="/" className={isActive('/') ? 'active' : ''}>
                 Home
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/about">
+              <Link href="/about" className={isActive('/about') ? 'active' : ''}>
                 About Us
-              </NavLink>
+              </Link>
             </li>
             <li
               className={`nav-item-has-dropdown${servicesOpen ? ' open' : ''}`}
@@ -81,7 +84,7 @@ export default function TopNav() {
               <ul className="dropdown-menu services-dropdown">
                 {servicesLinks.map((item) => (
                   <li key={item.to}>
-                    <NavLink to={item.to} className="services-dropdown__link">
+                    <Link href={item.to} className="services-dropdown__link">
                       <span className="services-dropdown__icon">
                         <i className={`bi ${item.icon}`} />
                       </span>
@@ -89,37 +92,34 @@ export default function TopNav() {
                         <strong>{item.label}</strong>
                         <small>{item.desc}</small>
                       </span>
-                    </NavLink>
+                    </Link>
                   </li>
                 ))}
               </ul>
             </li>
             <li>
-              <NavLink to="/political">
+              <Link href="/political" className={isActive('/political') ? 'active' : ''}>
                 Political
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/blogs">
+              <Link href="/blogs" className={isActive('/blogs') ? 'active' : ''}>
                 Blogs
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/contact">
+              <Link href="/contact" className={isActive('/contact') ? 'active' : ''}>
                 Contact Us
-              </NavLink>
+              </Link>
             </li>
           </ul>
         </nav>
 
         {/* Right Side Actions */}
         <div className="nav-actions d-flex align-items-center gap-3">
-          {/* <NavLink to="/login" className="nav-login-btn d-none d-lg-flex">
-            <i className="bi bi-person me-1"></i> Login
-          </NavLink> */}
-          <NavLink to="/contact#contact-form" className="nav-cta-btn d-none d-lg-flex">
+          <Link href="/contact#contact-form" className="nav-cta-btn d-none d-lg-flex">
             Try It Free <i className="bi bi-arrow-right ms-2"></i>
-          </NavLink>
+          </Link>
           <button type="button" className="nav-icon-btn d-none d-lg-flex" aria-label="More actions">
             <i className="bi bi-grid-3x3-gap"></i>
           </button>
@@ -146,52 +146,52 @@ export default function TopNav() {
           </button>
           <ul>
             <li>
-              <NavLink to="/" end>
+              <Link href="/" className={isActive('/') ? 'active' : ''}>
                 Home
                 <i className="bi bi-chevron-right ms-2" />
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/about">
+              <Link href="/about" className={isActive('/about') ? 'active' : ''}>
                 About Us
                 <i className="bi bi-chevron-right ms-2" />
-              </NavLink>
+              </Link>
             </li>
             <li className={`mobile-has-submenu ${mobileServicesOpen ? ' open' : ''}`}>
               <button className="mobile-submenu-toggle" onClick={() => setMobileServicesOpen(s => !s)} aria-expanded={mobileServicesOpen}>
                 Services Hub <i className="bi bi-caret-down-fill ms-2" />
               </button>
               <ul className={`mobile-submenu ${mobileServicesOpen ? ' open' : ''}`}>
-                <li><NavLink to="/services/seo">SEO</NavLink></li>
-                <li><NavLink to="/services/social-media">Social Media Marketing</NavLink></li>
-                <li><NavLink to="/services/content">Content Creation</NavLink></li>
-                <li><NavLink to="/services/branding">Branding & Design</NavLink></li>
-                <li><NavLink to="/services/web">Web Development</NavLink></li>
-                <li><NavLink to="/services/performance">Performance Marketing</NavLink></li>
+                <li><Link href="/services/seo">SEO</Link></li>
+                <li><Link href="/services/social-media">Social Media Marketing</Link></li>
+                <li><Link href="/services/content">Content Creation</Link></li>
+                <li><Link href="/services/branding">Branding & Design</Link></li>
+                <li><Link href="/services/web">Web Development</Link></li>
+                <li><Link href="/services/performance">Performance Marketing</Link></li>
               </ul>
             </li>
             <li>
-              <NavLink to="/political">
+              <Link href="/political" className={isActive('/political') ? 'active' : ''}>
                 Political
                 <i className="bi bi-chevron-right ms-2" />
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/blogs">
+              <Link href="/blogs" className={isActive('/blogs') ? 'active' : ''}>
                 Blogs
                 <i className="bi bi-chevron-right ms-2" />
-              </NavLink>
+              </Link>
             </li>
             <li>
-              <NavLink to="/contact">
+              <Link href="/contact" className={isActive('/contact') ? 'active' : ''}>
                 Contact
                 <i className="bi bi-chevron-right ms-2" />
-              </NavLink>
+              </Link>
             </li>
           </ul>
-          <NavLink to="/contact#contact-form" className="mobile-cta-btn" onClick={() => setMenuOpen(false)}>
+          <Link href="/contact#contact-form" className="mobile-cta-btn" onClick={() => setMenuOpen(false)}>
             Request Demo <i className="bi bi-arrow-right ms-2"></i>
-          </NavLink>
+          </Link>
         </div>
       </div>
     </header>

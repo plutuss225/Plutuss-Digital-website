@@ -1,9 +1,4 @@
-import './digimark-theme.css'
-import './digimark-pages.css'
-import './App.css'
-import './page-banner.css'
-import './site-theme.css'
-import './plutus-palette.css'
+// Global styles are imported by Next in pages/_app.jsx
 import { useEffect, useState } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import AOS from 'aos'

@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -40,11 +40,11 @@ export default function Footer() {
           <div className="col-lg-2 col-md-6">
             <h5 className="footer-heading">Navigation</h5>
             <ul className="footer-links">
-              <li><NavLink to="/">Home</NavLink></li>
-              <li><NavLink to="/about">About Us</NavLink></li>
-              <li><NavLink to="/political">Political</NavLink></li>
-              <li><NavLink to="/blogs">Blogs</NavLink></li>
-              <li><NavLink to="/contact">Contact</NavLink></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/political">Political</Link></li>
+              <li><Link href="/blogs">Blogs</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
 
@@ -52,12 +52,12 @@ export default function Footer() {
           <div className="col-lg-3 col-md-6">
             <h5 className="footer-heading">Services</h5>
             <ul className="footer-links">
-              <li><NavLink to="/services/seo">SEO Marketing</NavLink></li>
-              <li><NavLink to="/services/social-media">Social Media</NavLink></li>
-              <li><NavLink to="/services/content">Content Creation</NavLink></li>
-              <li><NavLink to="/services/branding">Branding & Design</NavLink></li>
-              <li><NavLink to="/services/web">Web Development</NavLink></li>
-              <li><NavLink to="/services/performance">Performance Marketing</NavLink></li>
+              <li><Link href="/services/seo">SEO Marketing</Link></li>
+              <li><Link href="/services/social-media">Social Media</Link></li>
+              <li><Link href="/services/content">Content Creation</Link></li>
+              <li><Link href="/services/branding">Branding & Design</Link></li>
+              <li><Link href="/services/web">Web Development</Link></li>
+              <li><Link href="/services/performance">Performance Marketing</Link></li>
             </ul>
           </div>
 

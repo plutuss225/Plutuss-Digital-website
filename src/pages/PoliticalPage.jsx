@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import '../political-page.css'
+import { useRouter } from 'next/router'
 import PageBanner from '../components/PageBanner'
 
 function useScrollReveal() {
@@ -20,6 +20,7 @@ function useScrollReveal() {
 }
 
 export default function PoliticalPage() {
+  const router = useRouter()
   useScrollReveal()
 
   return (

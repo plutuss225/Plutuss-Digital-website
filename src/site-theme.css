@@ -160,6 +160,14 @@ section,
   box-shadow: 0 20px 50px rgba(101, 37, 138, 0.12) !important;
 }
 
+@media (max-width: 576px) {
+  .dg-hero.hero-bg-slider {
+    min-height: 100svh !important;
+    height: 100svh !important;
+    padding: 6rem 0 2.5rem !important;
+  }
+}
+
 /* Inner page heroes */
 .hero-wrapper,
 .service-hero,
@@ -394,6 +402,37 @@ section,
   gap: 0.7rem;
   padding: 0.7rem 0;
   border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+@media (max-width: 768px) {
+  .service-page .service-benefits li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 0.85rem 0;
+  }
+
+  .service-page .service-benefits li i {
+    margin-left: 0;
+  }
+
+  .service-page .service-description,
+  .service-page .content-card {
+    padding: 1.6rem;
+  }
+
+  .service-page .content-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .service-page .service-img-wrapper {
+    text-align: center;
+  }
+
+  .service-page .service-img-wrapper .service-img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .service-page .service-benefits li::before {
