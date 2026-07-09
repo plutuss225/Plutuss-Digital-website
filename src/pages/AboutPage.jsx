@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 import PageBanner from '../components/PageBanner'
 import ClientLogoSection from '../components/ClientLogoSection'
 import { useEffect } from 'react'
@@ -389,9 +389,9 @@ export default function AboutPage() {
                 Your success story starts with a conversation.
               </p>
               <div className="d-flex gap-3 justify-content-center flex-wrap mt-4">
-                <NavLink to="/contact" className="about-btn-primary" data-aos="fade-up" data-aos-delay="120">
+                <Link href="/contact" className="about-btn-primary" data-aos="fade-up" data-aos-delay="120">
                   Get Free Consultation <i className="bi bi-arrow-right ms-2"></i>
-                </NavLink>
+                </Link>
                 <a href="mailto:info.plutuss@gmail.com" className="about-btn-ghost" data-aos="fade-up" data-aos-delay="180">
                   <i className="bi bi-envelope me-2"></i> Email Us
                 </a>

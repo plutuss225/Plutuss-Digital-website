@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 import PageBanner from '../components/PageBanner'
 
 export default function WebDevelopmentPage() {
@@ -43,9 +43,9 @@ export default function WebDevelopmentPage() {
                       <li><i className="bi bi-check-circle-fill"></i> E-commerce solutions</li>
                       <li><i className="bi bi-check-circle-fill"></i> Performance optimization</li>
                     </ul>
-                    <NavLink to="/contact" className="service-cta-btn mt-4">
+                    <Link href="/contact" className="service-cta-btn mt-4">
                       Get Started <i className="bi bi-arrow-right ms-2"></i>
-                    </NavLink>
+                    </Link>
                   </div>
                 </div>
 
@@ -199,9 +199,9 @@ export default function WebDevelopmentPage() {
               <div className="content-card h-100 p-4">
                 <h3 className="fw-bold">Ready To Build Your Website?</h3>
                 <p className="text-muted">Let’s discuss your website requirements and launch a digital presence that drives leads.</p>
-                <NavLink to="/contact" className="service-cta-btn mt-3 d-inline-flex align-items-center">
-                  Request Quote <i className="bi bi-arrow-right ms-2"></i>
-                </NavLink>
+                <Link href="/contact" className="service-cta-btn mt-3 d-inline-flex align-items-center">
+                  Get Started <i className="bi bi-arrow-right ms-2"></i>
+                </Link>
               </div>
             </div>
           </div>
@@ -213,9 +213,9 @@ export default function WebDevelopmentPage() {
           <span className="service-section-tag">Ready To Build Your Website?</span>
           <h2 className="fw-bold">Launch A Website That Works For Your Business</h2>
           <p className="text-muted mb-4">Start with a strategy-led website designed for growth and conversions.</p>
-          <NavLink to="/contact" className="service-cta-btn">
-            Request Quote <i className="bi bi-arrow-right ms-2"></i>
-          </NavLink>
+          <Link href="/contact" className="service-cta-btn">
+            Get Started <i className="bi bi-arrow-right ms-2"></i>
+          </Link>
         </div>
       </section>
     </main>

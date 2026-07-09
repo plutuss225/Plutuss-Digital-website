@@ -301,7 +301,7 @@ button:hover,
 }
 
 .brand-logo {
-  height: 78px;
+  height: 98px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -2971,7 +2971,10 @@ button:hover,
 
 @media (max-width: 768px) {
   .page-banner-img { width: 140%; max-height: 220px; }
-  .page-banner-title { font-size: 1.3rem; }
+.page-banner-title {
+  font-size: 0.33rem;
+  padding-top: 20px; /* Increase as needed */
+}
   .page-banner-breadcrumbs { font-size: 0.8rem; }
 }
 
@@ -3459,7 +3462,7 @@ button:hover,
   }
 
   .brand-logo {
-    height: 58px;
+    height: 78px;
   }
 
   .mobile-toggle {

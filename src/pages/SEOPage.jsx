@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 import PageBanner from '../components/PageBanner'
 
 export default function SEOPage() {
@@ -33,9 +33,9 @@ export default function SEOPage() {
                       <li><i className="bi bi-check-circle-fill"></i> Increase conversions</li>
                       <li><i className="bi bi-check-circle-fill"></i> Long-term results</li>
                     </ul>
-                    <NavLink to="/contact" className="service-cta-btn mt-4" data-aos="fade-up" data-aos-delay="220">
+                    <Link href="/contact" className="service-cta-btn mt-4" data-aos="fade-up" data-aos-delay="220">
                       Get Started <i className="bi bi-arrow-right ms-2"></i>
-                    </NavLink>
+                    </Link>
                   </div>
                 </div>
 
@@ -153,9 +153,9 @@ export default function SEOPage() {
           <span className="service-section-tag">Want More Traffic?</span>
           <h2 className="fw-bold">Let Our SEO Experts Grow Your Online Visibility</h2>
           <p className="text-muted mb-4">Start ranking higher and attracting qualified customers with a data-led SEO strategy.</p>
-          <NavLink to="/contact" className="service-cta-btn" data-aos="fade-up" data-aos-delay="160">
+          <Link href="/contact" className="service-cta-btn" data-aos="fade-up" data-aos-delay="160">
             Start SEO Today <i className="bi bi-arrow-right ms-2"></i>
-          </NavLink>
+          </Link>
         </div>
       </section>
     </main>

@@ -1,6 +1,6 @@
 // src/pages/BlogsPage.jsx
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import Link from 'next/link'
 import PageBanner from '../components/PageBanner'
 import { blogs, categories, tags } from '../data/blogData'
 
@@ -90,9 +90,9 @@ export default function BlogsPage() {
                       <h3 className="blog-list-title">{blog.title}</h3>
                       <p className="blog-list-excerpt">{blog.excerpt}</p>
                       <div className="blog-list-footer">
-                        <NavLink to={`/blogs/${blog.id}`} className="blog-card-link">
+                        <Link href={`/blog-detail?blogId=${blog.id}`} className="blog-card-link">
                           Read More <i className="bi bi-arrow-right ms-1" />
-                        </NavLink>
+                        </Link>
                         <span className="blog-list-readtime">{blog.readTime}</span>
                       </div>
                     </div>
@@ -137,10 +137,10 @@ export default function BlogsPage() {
                   <div className="sidebar-widget-title">Recent Posts</div>
                   <div className="blog-recent-list">
                     {recentPosts.map((post, index) => (
-                      <NavLink key={post.id} to={`/blogs/${post.id}`} className="blog-recent-item" data-aos="fade-up" data-aos-delay={140 + index * 40}>
+                      <Link key={post.id} href={`/blog-detail?blogId=${post.id}`} className="blog-recent-item" data-aos="fade-up" data-aos-delay={140 + index * 40}>
                         <span>{post.title}</span>
                         <small>{post.date}</small>
-                      </NavLink>
+                      </Link>
                     ))}
                   </div>
                 </div>

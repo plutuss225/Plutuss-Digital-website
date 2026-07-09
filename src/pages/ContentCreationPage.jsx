@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 import PageBanner from '../components/PageBanner'
 
 export default function ContentCreationPage() {
@@ -43,9 +43,9 @@ export default function ContentCreationPage() {
                       <li><i className="bi bi-check-circle-fill"></i> Infographics & visuals</li>
                       <li><i className="bi bi-check-circle-fill"></i> Content distribution</li>
                     </ul>
-                    <NavLink to="/contact" className="service-cta-btn mt-4">
+                    <Link href="/contact" className="service-cta-btn mt-4">
                       Get Started <i className="bi bi-arrow-right ms-2"></i>
-                    </NavLink>
+                    </Link>
                   </div>
                 </div>
 
@@ -213,9 +213,9 @@ export default function ContentCreationPage() {
           <span className="service-section-tag">Let’s Create Something Powerful</span>
           <h2 className="fw-bold">Turn Ideas Into High-Performing Content</h2>
           <p className="text-muted mb-4">Work with our creative team to build content that engages, converts and grows your brand.</p>
-          <NavLink to="/contact" className="service-cta-btn">
+          <Link href="/contact" className="service-cta-btn">
             Get Started <i className="bi bi-arrow-right ms-2"></i>
-          </NavLink>
+          </Link>
         </div>
       </section>
     </main>

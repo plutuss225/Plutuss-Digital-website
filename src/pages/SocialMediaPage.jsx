@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 import PageBanner from '../components/PageBanner'
 
 export default function SocialMediaPage() {
@@ -43,9 +43,9 @@ export default function SocialMediaPage() {
                       <li><i className="bi bi-check-circle-fill"></i> Drive website traffic</li>
                       <li><i className="bi bi-check-circle-fill"></i> Build community</li>
                     </ul>
-                    <NavLink to="/contact" className="service-cta-btn mt-4">
+                    <Link href="/contact" className="service-cta-btn mt-4">
                       Get Started <i className="bi bi-arrow-right ms-2"></i>
-                    </NavLink>
+                    </Link>
                   </div>
                 </div>
 
@@ -139,9 +139,9 @@ export default function SocialMediaPage() {
           <span className="service-section-tag">Ready To Boost Your Social Presence?</span>
           <h2 className="fw-bold">Partner With Plutuss Digital For Better Engagement</h2>
           <p className="text-muted mb-4">Grow your brand with creative content, community building and performance-led posting.</p>
-          <NavLink to="/contact" className="service-cta-btn">
-            Start Now <i className="bi bi-arrow-right ms-2"></i>
-          </NavLink>
+          <Link href="/contact" className="service-cta-btn">
+            Get Started <i className="bi bi-arrow-right ms-2"></i>
+          </Link>
         </div>
       </section>
     </main>

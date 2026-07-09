@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 import PageBanner from '../components/PageBanner'
 
 export default function BrandingPage() {
@@ -43,9 +43,9 @@ export default function BrandingPage() {
                       <li><i className="bi bi-check-circle-fill"></i> Visual design guidelines</li>
                       <li><i className="bi bi-check-circle-fill"></i> Brand consistency</li>
                     </ul>
-                    <NavLink to="/contact" className="service-cta-btn mt-4">
+                    <Link href="/contact" className="service-cta-btn mt-4">
                       Get Started <i className="bi bi-arrow-right ms-2"></i>
-                    </NavLink>
+                    </Link>
                   </div>
                 </div>
 
@@ -148,9 +148,9 @@ export default function BrandingPage() {
           <span className="service-section-tag">Ready To Build A Powerful Brand?</span>
           <h2 className="fw-bold">Create An Identity That Stands Out</h2>
           <p className="text-muted mb-4">From logos to campaign visuals, we create branding that makes an impact.</p>
-          <NavLink to="/contact" className="service-cta-btn">
+          <Link href="/contact" className="service-cta-btn">
             Get Started <i className="bi bi-arrow-right ms-2"></i>
-          </NavLink>
+          </Link>
         </div>
       </section>
     </main>

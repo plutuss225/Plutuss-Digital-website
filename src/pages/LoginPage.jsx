@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { NavLink, useNavigate } from 'react-router-dom'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function LoginPage() {
-  const navigate = useNavigate()
+  const router = useRouter()
   const [form, setForm] = useState({ email: '', password: '' })
   const [showPwd, setShowPwd] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -23,7 +24,7 @@ export default function LoginPage() {
     // Simulate login — redirect to home after success
     setTimeout(() => {
       setLoading(false)
-      navigate('/')
+      router.push('/')
     }, 1200)
   }
 
@@ -32,14 +33,14 @@ export default function LoginPage() {
       {/* Left panel */}
       <div className="login-left d-none d-lg-flex">
         <div className="login-left-inner">
-          <NavLink to="/" className="d-flex align-items-center gap-2 text-decoration-none mb-5">
+          <Link href="/" className="d-flex align-items-center gap-2 text-decoration-none mb-5">
             <img
               src="https://plutusdigitalasset.com/assets/img/logo.png"
               alt="Plutus"
               style={{ height: '55px' }}
             />
             <span className="login-brand-name">Plutus Digital Asset</span>
-          </NavLink>
+          </Link>
           <h2 className="login-left-title">
             Your gateway to digital asset markets
           </h2>
@@ -58,14 +59,14 @@ export default function LoginPage() {
       <div className="login-right">
         <div className="login-form-box">
           {/* Mobile logo */}
-          <NavLink to="/" className="d-flex d-lg-none align-items-center gap-2 text-decoration-none mb-4 justify-content-center">
+          <Link href="/" className="d-flex d-lg-none align-items-center gap-2 text-decoration-none mb-4 justify-content-center">
             <img
               src="https://plutusdigitalasset.com/assets/img/logo.png"
               alt="Plutus"
               style={{ height: '50px' }}
             />
             <span className="login-brand-name-dark">Plutus Digital Asset</span>
-          </NavLink>
+          </Link>
 
           <h2 className="login-title">Sign in</h2>
           <p className="login-subtitle">Welcome back — enter your credentials to continue.</p>
@@ -130,7 +131,7 @@ export default function LoginPage() {
 
           <p className="login-footer-note">
             Don't have an account?{' '}
-            <NavLink to="/contact" className="login-link">Request a Demo</NavLink>
+            <Link href="/contact" className="login-link">Request a Demo</Link>
           </p>
         </div>
       </div>

@@ -29,7 +29,7 @@ export const blogs = [
   {
     id: 1,
     category: 'Digital Marketing',
-    title: '10 Digital Marketing Trends Dominating 2025',
+    title: 'Digital Marketing Trends',
     excerpt:
       'From AI‑generated content to hyper‑personalized ads — discover the top trends shaping digital marketing this year and how to leverage them for your brand.',
     date: 'June 15, 2025',
@@ -66,7 +66,7 @@ export const blogs = [
   {
     id: 2,
     category: 'SEO',
-    title: 'How to Rank on Google’s First Page in 2025',
+    title: 'Google Ranking',
     excerpt:
       'A practical, no‑fluff guide to modern SEO — covering Core Web Vitals, E‑E‑A‑T, AI‑driven search, and link‑building strategies that actually work.',
     date: 'June 10, 2025',
@@ -103,7 +103,7 @@ export const blogs = [
   {
     id: 3,
     category: 'Social Media',
-    title: 'Instagram Reels vs YouTube Shorts: Where Should Your Brand Be?',
+    title: 'Instagram Reels vs YouTube Shorts',
     excerpt:
       'Short‑form video is king — but which platform wins for your brand? We break down the audience, algorithm, and ROI of each platform with real data.',
     date: 'June 5, 2025',
@@ -136,7 +136,7 @@ export const blogs = [
   {
     id: 4,
     category: 'Branding',
-    title: 'Why Brand Identity is Your Most Valuable Business Asset',
+    title: 'Brand is Valuable Business Asset',
     excerpt:
       'A strong brand isn’t just a logo — it’s the feeling people get when they interact with your business. Here’s how to build one that lasts.',
     date: 'May 28, 2025',
@@ -169,7 +169,7 @@ export const blogs = [
   {
     id: 5,
     category: 'Political',
-    title: 'How Political Campaigns Are Using Digital to Win Elections',
+    title: 'How To Win Elections',
     excerpt:
       'Digital campaigning has transformed modern elections. Learn the strategies top campaigns use — from micro‑targeting voters to viral content creation.',
     date: 'May 20, 2025',
@@ -202,7 +202,7 @@ export const blogs = [
   {
     id: 6,
     category: 'Trends',
-    title: 'AI in Marketing: Hype or the Future?',
+    title: 'AI in Marketing',
     excerpt:
       'Artificial Intelligence is reshaping how brands create content, target audiences, and measure success. Here’s the honest truth about what AI can and cannot do.',
     date: 'May 12, 2025',

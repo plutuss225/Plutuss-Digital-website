@@ -1,9 +1,23 @@
-import { useParams, NavLink } from 'react-router-dom'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 import { blogs } from '../data/blogData'
 import PageBanner from '../components/PageBanner'
 
 export default function BlogDetailPage() {
-  const { blogId } = useParams()
+  const router = useRouter()
+  const { blogId } = router.query
+  
+  // Show loading state while router is initializing
+  if (!router.isReady) {
+    return (
+      <main className="blog-page">
+        <div className="container py-6 text-center">
+          <p>Loading...</p>
+        </div>
+      </main>
+    )
+  }
+  
   const blog = blogs.find((post) => String(post.id) === String(blogId))
 
   if (!blog) {
@@ -14,9 +28,9 @@ export default function BlogDetailPage() {
           <div className="container">
             <h2>Blog not found</h2>
             <p>The blog you’re looking for does not exist or may have been removed.</p>
-            <NavLink to="/blogs" className="btn btn-primary mt-4">
+            <Link href="/blogs" className="btn btn-primary mt-4">
               Back to Blogs
-            </NavLink>
+            </Link>
           </div>
         </section>
       </main>
@@ -83,9 +97,9 @@ export default function BlogDetailPage() {
                   </div>
                 </div>
 
-                <NavLink to="/blogs" className="blog-detail-back-link">
+                <Link href="/blogs" className="blog-detail-back-link">
                   <i className="bi bi-arrow-left" /> Back to all posts
-                </NavLink>
+                </Link>
               </div>
             </div>
 
@@ -102,10 +116,10 @@ export default function BlogDetailPage() {
                     .filter((post) => post.id !== blog.id)
                     .slice(0, 4)
                     .map((suggested) => (
-                      <NavLink key={suggested.id} to={`/blogs/${suggested.id}`} className="blog-recent-item">
+                    <Link key={suggested.id} href={`/blog-detail?blogId=${suggested.id}`} className="blog-recent-item">
                         <span>{suggested.title}</span>
                         <small>{suggested.date}</small>
-                      </NavLink>
+                    </Link>
                     ))}
                 </div>
               </div>

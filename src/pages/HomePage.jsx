@@ -2,7 +2,6 @@ import IconCard from '../components/IconCard'
 import HeroSlider from '../components/HeroSlider'
 import OurWork from '../components/OurWork'
 import { useState, useRef, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
 
 export default function HomePage() {
   const trackRef = useRef(null)

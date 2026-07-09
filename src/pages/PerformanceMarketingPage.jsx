@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 import PageBanner from '../components/PageBanner'
 
 const services = [
@@ -63,9 +63,9 @@ export default function PerformanceMarketingPage() {
                       <li><i className="bi bi-check-circle-fill"></i> Transparent reporting with real-time insights</li>
                       <li><i className="bi bi-check-circle-fill"></i> Strategic budget scaling for sustainable growth</li>
                     </ul>
-                    <NavLink to="/contact" className="service-cta-btn mt-4">
+                    <Link href="/contact" className="service-cta-btn mt-4">
                       Get Started <i className="bi bi-arrow-right ms-2"></i>
-                    </NavLink>
+                    </Link>
                   </div>
                 </div>
  {/* <div className="col-12">
@@ -77,14 +77,14 @@ export default function PerformanceMarketingPage() {
                     </div>
                     <div className="services-list">
                       {services.map((service) => (
-                        <NavLink
+                        <Link
                           key={service.path}
-                          to={service.path}
+                          href={service.path}
                           className={`service-link ${service.active ? 'active' : ''}`}
                         >
                           <span className="service-name">{service.name}</span>
                           <i className="bi bi-arrow-right"></i>
-                        </NavLink>
+                        </Link>
                       ))}
                     </div>
                   </div>
@@ -229,9 +229,9 @@ export default function PerformanceMarketingPage() {
               <div className="content-card h-100 p-4">
                 <h3 className="fw-bold">Ready To Scale Your Business With Paid Advertising?</h3>
                 <p className="text-muted">Talk to our performance team and launch a campaign designed to grow revenue, reduce lead costs and improve conversion efficiency.</p>
-                <NavLink to="/contact" className="service-cta-btn mt-3 d-inline-flex align-items-center">
+                <Link href="/contact" className="service-cta-btn mt-3 d-inline-flex align-items-center">
                   Get Free Strategy Call <i className="bi bi-arrow-right ms-2"></i>
-                </NavLink>
+                </Link>
               </div>
             </div>
           </div>
@@ -243,9 +243,9 @@ export default function PerformanceMarketingPage() {
           <span className="service-section-tag">Ready to Grow</span>
           <h2 className="fw-bold">Ready To Scale Your Business With Paid Advertising?</h2>
           <p className="text-muted mb-4">Book a call or message our team to start performance advertising that scales.</p>
-          <NavLink to="/contact" className="service-cta-btn">
+          <Link href="/contact" className="service-cta-btn">
             Get Free Strategy Call <i className="bi bi-arrow-right ms-2"></i>
-          </NavLink>
+          </Link>
         </div>
       </section>
     </main>
