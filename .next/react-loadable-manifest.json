@@ -1,8 +1,8 @@
 {
   "src\\ClientRouterWrapper.jsx -> react-router-dom": {
-    "id": 6875,
+    "id": "src\\ClientRouterWrapper.jsx -> react-router-dom",
     "files": [
-      "static/chunks/875.179815de9cf0a6e5.js"
+      "static/chunks/src_routerCompat_js.js"
     ]
   }
 }

@@ -11,9 +11,27 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    setSubmitted(true)
+    
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      if (res.ok) {
+        setSubmitted(true)
+        setFormData({ name: '', email: '', company: '', phone: '', message: '', interest: '' })
+      } else {
+        const error = await res.json()
+        alert('Error: ' + (error.error || 'Failed to send request'))
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      alert('Error sending request. Please try again.')
+    }
   }
 
   useEffect(() => {

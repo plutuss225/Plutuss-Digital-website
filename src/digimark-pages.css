@@ -802,6 +802,21 @@
   padding-top: 120px !important;
 }
 
+@media (max-width: 900px) {
+  .dm-page.contact-page .contact-hero {
+    padding-top: 40px !important;
+  }
+
+  .contact-page .container.py-5 {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+  .contact-page .container.pb-5 {
+    padding-bottom: 1.5rem !important;
+  }
+}
+
 .dm-page .contact-point-icon,
 .dm-page .contact-icon {
   background: rgba(232, 5, 102, 0.1) !important;

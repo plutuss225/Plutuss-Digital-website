@@ -1790,20 +1790,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 900px) {
   .contact-hero-section {
-    padding: 1.25rem 0 0;
-    height: 2000px !important;
-    min-height: 2000px !important;
-    display: flex;
-    align-items: center;
+    padding: 1rem 0 0.8rem;
   }
 
   .contact-hero-card {
-    padding: 1.25rem 1rem 1.15rem;
+    padding: 1.2rem 1rem 1.2rem;
     border-radius: 20px;
     gap: 1rem;
-    height: 100% !important;
-    min-height: 2000px !important;
-    align-items: center;
   }
 
   .contact-hero-copy h2 {

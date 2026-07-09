@@ -16,6 +16,7 @@ import '../src/components/ClientLogoSection.css'
 
 import TopNav from '../src/components/TopNav'
 import Footer from '../src/components/Footer'
+import FloatingWidgets from '../src/components/FloatingWidgets'
 import ClientRouterWrapper from '../src/ClientRouterWrapper'
 
 export default function MyApp({ Component, pageProps }) {
@@ -29,6 +30,7 @@ export default function MyApp({ Component, pageProps }) {
         <TopNav />
         <Component {...pageProps} />
         <Footer />
+        <FloatingWidgets />
       </div>
     </ClientRouterWrapper>
   )
