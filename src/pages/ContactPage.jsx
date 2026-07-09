@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useRouter } from 'next/router'
 import PageBanner from '../components/PageBanner'
 
 export default function ContactPage() {
-  const location = useLocation()
+  const router = useRouter()
   const [formData, setFormData] = useState({ name: '', email: '', company: '', phone: '', message: '', interest: '' })
   const [submitted, setSubmitted] = useState(false)
 
@@ -17,12 +17,13 @@ export default function ContactPage() {
   }
 
   useEffect(() => {
-    if (location.hash === '#contact-form') {
+    const asPath = router.asPath || ''
+    if (asPath.includes('#contact-form')) {
       setTimeout(() => {
         document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }, 120)
     }
-  }, [location.hash, location.pathname])
+  }, [router.asPath])
 
   return (
     <main className="main contact-page">

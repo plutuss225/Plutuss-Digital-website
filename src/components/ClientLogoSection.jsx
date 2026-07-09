@@ -1,5 +1,4 @@
 import React from 'react'
-import './ClientLogoSection.css'
 
 const logos = [
   '/plutus-logo.png',
